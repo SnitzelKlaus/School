@@ -1,0 +1,4 @@
+C:\Programmering\SchoolProjects\OOP\MovieNightPartTwo\MovieNightPartTwo\obj\Debug\netcoreapp3.1\MovieNightPartTwo.csprojAssemblyReference.cache
+C:\Programmering\SchoolProjects\OOP\MovieNightPartTwo\MovieNightPartTwo\obj\Debug\netcoreapp3.1\MovieNightPartTwo.AssemblyInfoInputs.cache
+C:\Programmering\SchoolProjects\OOP\MovieNightPartTwo\MovieNightPartTwo\obj\Debug\netcoreapp3.1\MovieNightPartTwo.AssemblyInfo.cs
+C:\Programmering\SchoolProjects\OOP\MovieNightPartTwo\MovieNightPartTwo\obj\Debug\netcoreapp3.1\MovieNightPartTwo.csproj.CoreCompileInputs.cache

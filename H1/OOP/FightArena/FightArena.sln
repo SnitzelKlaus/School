@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightArena", "FightArena\FightArena.csproj", "{A7EA5B48-DE07-4A5F-99FD-757362B7F27E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7EA5B48-DE07-4A5F-99FD-757362B7F27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7EA5B48-DE07-4A5F-99FD-757362B7F27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7EA5B48-DE07-4A5F-99FD-757362B7F27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7EA5B48-DE07-4A5F-99FD-757362B7F27E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {099A901F-DCED-4966-86A9-0DC33274F00A}
+	EndGlobalSection
+EndGlobal

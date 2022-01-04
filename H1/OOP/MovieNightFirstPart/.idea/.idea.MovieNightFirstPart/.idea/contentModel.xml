@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Programming\CSharp\SchoolProjects\OOP\MovieNightFirstPart" t="IncludeFlat">
+      <e p="MovieNightFirstPart" t="IncludeRecursive">
+        <e p="Actor.cs" t="Include" />
+        <e p="ActorsInMovie.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DalManager.cs" t="Include" />
+        <e p="Movie.cs" t="Include" />
+        <e p="MovieManager.cs" t="Include" />
+        <e p="MovieNightFirstPart.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="MovieNightFirstPart.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ParseInput.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Start.cs" t="Include" />
+        <e p="UIGraphics.cs" t="Include" />
+      </e>
+      <e p="MovieNightFirstPart.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\Snitzel Klaus\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Snitzel Klaus\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_MovieNightFirstPart.-1174078809.00" t="ExcludeRecursive" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\bin\Debug\netcoreapp3.1\JediMindTricks.exe
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\bin\Debug\netcoreapp3.1\JediMindTricks.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\bin\Debug\netcoreapp3.1\JediMindTricks.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\bin\Debug\netcoreapp3.1\JediMindTricks.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\bin\Debug\netcoreapp3.1\JediMindTricks.dll
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\bin\Debug\netcoreapp3.1\JediMindTricks.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.dll
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\JediMindTricks\JediMindTricks\obj\Debug\netcoreapp3.1\JediMindTricks.genruntimeconfig.cache

@@ -1,0 +1,92 @@
+﻿Afinstallerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Fjerner EventLog-kilden FileHelper.
+Advarsel! Kilden FileHelper er ikke registreret på den lokale computer.
+Tjenesten FileHelper bliver fjernet fra systemet...
+Der opstod en undtagelse under afinstallation af installationsprogrammet System.ServiceProcess.ServiceInstaller.
+System.ComponentModel.Win32Exception: Den angivne tjeneste findes ikke som en installeret tjeneste
+Der opstod en undtagelse under afinstallationen. Undtagelsen bliver ignoreret, og afinstallationen fortsætter. Programmet er dog muligvis ikke helt fjernet, når afinstallationen er fuldført.
+Installerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Installerer tjenesten FileHelper...
+Tjenesten FileHelper blev installeret.
+Opretter EventLog-kilden FileHelper i logfilen Application...
+Bekræfter assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Afinstallerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Fjerner EventLog-kilden FileHelper.
+Tjenesten FileHelper bliver fjernet fra systemet...
+Tjenesten FileHelper blev fjernet fra systemet.
+Installerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Installerer tjenesten FileHelper...
+Tjenesten FileHelper blev installeret.
+Opretter EventLog-kilden FileHelper i logfilen Application...
+Bekræfter assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Installerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Installerer tjenesten FileHelper...
+Opretter EventLog-kilden FileHelper i logfilen Application...
+Annullerer opdatering af assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Gendanner hændelsesloggen til den foregående tilstand for kilden FileHelper.
+Installerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Installerer tjenesten FileHelper...
+Opretter EventLog-kilden FileHelper i logfilen Application...
+Annullerer opdatering af assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Gendanner hændelsesloggen til den foregående tilstand for kilden FileHelper.
+Afinstallerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Fjerner EventLog-kilden FileHelper.
+Tjenesten FileHelper bliver fjernet fra systemet...
+Tjenesten FileHelper blev fjernet fra systemet.
+Installerer assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+Installerer tjenesten FileHelper...
+Tjenesten FileHelper blev installeret.
+Opretter EventLog-kilden FileHelper i logfilen Application...
+Bekræfter assemblyen 'C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe'.
+De berørte parametre er:
+   logtoconsole = 
+   logfile = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.InstallLog
+   assemblypath = C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe

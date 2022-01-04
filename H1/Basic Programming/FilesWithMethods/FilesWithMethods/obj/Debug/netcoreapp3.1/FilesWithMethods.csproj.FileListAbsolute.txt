@@ -1,0 +1,13 @@
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\bin\Debug\netcoreapp3.1\FilesWithMethods.exe
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\bin\Debug\netcoreapp3.1\FilesWithMethods.deps.json
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\bin\Debug\netcoreapp3.1\FilesWithMethods.runtimeconfig.json
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\bin\Debug\netcoreapp3.1\FilesWithMethods.runtimeconfig.dev.json
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\bin\Debug\netcoreapp3.1\FilesWithMethods.dll
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\bin\Debug\netcoreapp3.1\FilesWithMethods.pdb
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.csprojAssemblyReference.cache
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.AssemblyInfoInputs.cache
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.AssemblyInfo.cs
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.csproj.CoreCompileInputs.cache
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.dll
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.pdb
+C:\Users\Snitzel Klaus\source\repos\FilesWithMethods\FilesWithMethods\obj\Debug\netcoreapp3.1\FilesWithMethods.genruntimeconfig.cache

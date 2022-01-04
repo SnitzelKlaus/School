@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\bin\Debug\netcoreapp3.1\Planeterne.exe
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\bin\Debug\netcoreapp3.1\Planeterne.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\bin\Debug\netcoreapp3.1\Planeterne.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\bin\Debug\netcoreapp3.1\Planeterne.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\bin\Debug\netcoreapp3.1\Planeterne.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\bin\Debug\netcoreapp3.1\Planeterne.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Planeterne\Planeterne\obj\Debug\netcoreapp3.1\Planeterne.genruntimeconfig.cache

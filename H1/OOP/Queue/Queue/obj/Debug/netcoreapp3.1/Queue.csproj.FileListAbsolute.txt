@@ -1,0 +1,26 @@
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csprojAssemblyReference.cache
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfoInputs.cache
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfo.cs
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csproj.CoreCompileInputs.cache
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.exe
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.deps.json
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.json
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.dev.json
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.dll
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.pdb
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.dll
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.pdb
+C:\Users\Snitzel Klaus\source\repos\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.genruntimeconfig.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.exe
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\bin\Debug\netcoreapp3.1\Queue.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Queue\Queue\obj\Debug\netcoreapp3.1\Queue.genruntimeconfig.cache

@@ -1,0 +1,15 @@
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\bin\Debug\FileManager.exe.config
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\bin\Debug\FileManager.exe
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\bin\Debug\FileManager.pdb
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\MainWindow.g.cs
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\App.g.cs
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager_MarkupCompile.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager_MarkupCompile.lref
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\MainWindow.baml
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.g.resources
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.exe
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileManager\FileManager\obj\Debug\FileManager.pdb

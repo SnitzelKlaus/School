@@ -1,0 +1,13 @@
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\bin\Debug\netcoreapp3.1\CodeRefract.exe
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\bin\Debug\netcoreapp3.1\CodeRefract.deps.json
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\bin\Debug\netcoreapp3.1\CodeRefract.runtimeconfig.json
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\bin\Debug\netcoreapp3.1\CodeRefract.runtimeconfig.dev.json
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\bin\Debug\netcoreapp3.1\CodeRefract.dll
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\bin\Debug\netcoreapp3.1\CodeRefract.pdb
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.csprojAssemblyReference.cache
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.AssemblyInfoInputs.cache
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.AssemblyInfo.cs
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.csproj.CoreCompileInputs.cache
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.dll
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.pdb
+C:\Programmering\SchoolProjects\Serveradministration & Sikkerhed\CodeRefract\CodeRefract\obj\Debug\netcoreapp3.1\CodeRefract.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\bin\Debug\netcoreapp3.1\Automaten.exe
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\bin\Debug\netcoreapp3.1\Automaten.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\bin\Debug\netcoreapp3.1\Automaten.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\bin\Debug\netcoreapp3.1\Automaten.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\bin\Debug\netcoreapp3.1\Automaten.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\bin\Debug\netcoreapp3.1\Automaten.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Automaten\Automaten\obj\Debug\netcoreapp3.1\Automaten.genruntimeconfig.cache

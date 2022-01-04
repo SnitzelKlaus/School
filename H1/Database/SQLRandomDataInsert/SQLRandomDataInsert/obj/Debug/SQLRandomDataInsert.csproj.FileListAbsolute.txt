@@ -1,0 +1,10 @@
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\bin\Debug\SQLRandomDataInsert.exe.config
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\bin\Debug\SQLRandomDataInsert.exe
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\bin\Debug\SQLRandomDataInsert.pdb
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\bin\Debug\System.Data.SqlClient.dll
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\bin\Debug\System.Data.SqlClient.xml
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\obj\Debug\SQLRandomDataInsert.csprojAssemblyReference.cache
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\obj\Debug\SQLRandomDataInsert.csproj.CoreCompileInputs.cache
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\obj\Debug\SQLRandomDataInsert.csproj.CopyComplete
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\obj\Debug\SQLRandomDataInsert.exe
+C:\Programmering\SchoolProjects\Database\SQLRandomDataInsert\SQLRandomDataInsert\obj\Debug\SQLRandomDataInsert.pdb

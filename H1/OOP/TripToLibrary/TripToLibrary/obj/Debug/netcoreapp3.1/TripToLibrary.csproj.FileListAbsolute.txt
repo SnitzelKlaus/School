@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\bin\Debug\netcoreapp3.1\TripToLibrary.exe
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\bin\Debug\netcoreapp3.1\TripToLibrary.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\bin\Debug\netcoreapp3.1\TripToLibrary.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\bin\Debug\netcoreapp3.1\TripToLibrary.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\bin\Debug\netcoreapp3.1\TripToLibrary.dll
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\bin\Debug\netcoreapp3.1\TripToLibrary.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.dll
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\TripToLibrary\TripToLibrary\obj\Debug\netcoreapp3.1\TripToLibrary.genruntimeconfig.cache

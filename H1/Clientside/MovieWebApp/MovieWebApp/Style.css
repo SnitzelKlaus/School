@@ -1,0 +1,44 @@
+﻿/* Styling body */
+body {
+    background-image: url("https://i.gifer.com/76YS.gif");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Arial;
+}
+
+/* Header for Title */
+.header{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Padding for content */
+.content {
+    padding: 20px;
+}
+
+/* Movie img */
+.img {
+    border: 2px solid black;
+    border-radius: 5%;
+    margin: 2.5%;
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+    height: 300px;
+    width: 200px;
+}
+
+.whiteback {
+    background-color: white;
+}
+
+/* White text */
+.whitetxt > * {
+    color: white;
+}
+
+/* Mouse hover over picture */
+img:hover {
+    opacity: 1;
+}

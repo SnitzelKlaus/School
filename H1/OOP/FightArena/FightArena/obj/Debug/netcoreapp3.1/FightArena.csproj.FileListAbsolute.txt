@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\bin\Debug\netcoreapp3.1\FightArena.exe
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\bin\Debug\netcoreapp3.1\FightArena.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\bin\Debug\netcoreapp3.1\FightArena.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\bin\Debug\netcoreapp3.1\FightArena.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\bin\Debug\netcoreapp3.1\FightArena.dll
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\bin\Debug\netcoreapp3.1\FightArena.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.dll
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\FightArena\FightArena\obj\Debug\netcoreapp3.1\FightArena.genruntimeconfig.cache

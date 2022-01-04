@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\bin\Debug\netcoreapp3.1\Geometri.exe
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\bin\Debug\netcoreapp3.1\Geometri.deps.json
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\bin\Debug\netcoreapp3.1\Geometri.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\bin\Debug\netcoreapp3.1\Geometri.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\bin\Debug\netcoreapp3.1\Geometri.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\bin\Debug\netcoreapp3.1\Geometri.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.dll
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\Geometri\Geometri\obj\Debug\netcoreapp3.1\Geometri.genruntimeconfig.cache

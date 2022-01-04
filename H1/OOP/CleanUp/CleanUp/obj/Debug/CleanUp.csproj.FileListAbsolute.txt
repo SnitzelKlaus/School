@@ -1,0 +1,7 @@
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\bin\Debug\CleanUp.exe.config
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\bin\Debug\CleanUp.exe
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\bin\Debug\CleanUp.pdb
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\obj\Debug\CleanUp.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\obj\Debug\CleanUp.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\obj\Debug\CleanUp.exe
+C:\Programming\CSharp\SchoolProjects\OOP\CleanUp\CleanUp\obj\Debug\CleanUp.pdb

@@ -1,0 +1,13 @@
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\bin\Debug\netcoreapp3.1\Metoder.exe
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\bin\Debug\netcoreapp3.1\Metoder.deps.json
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\bin\Debug\netcoreapp3.1\Metoder.runtimeconfig.json
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\bin\Debug\netcoreapp3.1\Metoder.runtimeconfig.dev.json
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\bin\Debug\netcoreapp3.1\Metoder.dll
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\bin\Debug\netcoreapp3.1\Metoder.pdb
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.AssemblyInfoInputs.cache
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.AssemblyInfo.cs
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.dll
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.pdb
+C:\Programming\CSharp\SchoolProjects\Metoder\Metoder\obj\Debug\netcoreapp3.1\Metoder.genruntimeconfig.cache

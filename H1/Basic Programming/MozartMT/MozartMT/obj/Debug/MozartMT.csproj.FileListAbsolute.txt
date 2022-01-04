@@ -1,0 +1,7 @@
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\bin\Debug\MozartMT.exe.config
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\bin\Debug\MozartMT.exe
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\bin\Debug\MozartMT.pdb
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\obj\Debug\MozartMT.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\obj\Debug\MozartMT.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\obj\Debug\MozartMT.exe
+C:\Programming\CSharp\SchoolProjects\MozartMT\MozartMT\obj\Debug\MozartMT.pdb

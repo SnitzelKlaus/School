@@ -1,0 +1,10 @@
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe.config
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.exe
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\bin\Debug\FileHelper.pdb
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.csprojAssemblyReference.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.ProjectInstaller.resources
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.FileHelper.resources
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.csproj.GenerateResource.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.csproj.CoreCompileInputs.cache
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.exe
+C:\Programming\CSharp\SchoolProjects\Computerteknologi\FileHelper\FileHelper\obj\Debug\FileHelper.pdb
