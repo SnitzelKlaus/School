@@ -1,0 +1,15 @@
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\bin\Debug\net6.0\ConsumerProducer.exe
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\bin\Debug\net6.0\ConsumerProducer.deps.json
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\bin\Debug\net6.0\ConsumerProducer.runtimeconfig.json
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\bin\Debug\net6.0\ConsumerProducer.dll
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\bin\Debug\net6.0\ConsumerProducer.pdb
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.csproj.AssemblyReference.cache
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.AssemblyInfoInputs.cache
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.AssemblyInfo.cs
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.dll
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\refint\ConsumerProducer.dll
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.pdb
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ConsumerProducer.genruntimeconfig.cache
+C:\Code\School\H2\ConsumerProducer\ConsumerProducer\obj\Debug\net6.0\ref\ConsumerProducer.dll

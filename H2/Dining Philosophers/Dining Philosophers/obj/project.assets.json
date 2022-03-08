@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\Dining Philosophers\\Dining Philosophers\\Dining Philosophers.csproj",
+      "projectUniqueName": "C:\\Code\\School\\H2\\Dining Philosophers\\Dining Philosophers\\Dining Philosophers.csproj",
       "projectName": "Dining Philosophers",
-      "projectPath": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\Dining Philosophers\\Dining Philosophers\\Dining Philosophers.csproj",
+      "projectPath": "C:\\Code\\School\\H2\\Dining Philosophers\\Dining Philosophers\\Dining Philosophers.csproj",
       "packagesPath": "C:\\Users\\beho5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\Dining Philosophers\\Dining Philosophers\\obj\\",
+      "outputPath": "C:\\Code\\School\\H2\\Dining Philosophers\\Dining Philosophers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
