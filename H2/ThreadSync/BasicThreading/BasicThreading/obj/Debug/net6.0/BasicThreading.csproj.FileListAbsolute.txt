@@ -1,0 +1,15 @@
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.csproj.AssemblyReference.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.AssemblyInfoInputs.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.AssemblyInfo.cs
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.csproj.CoreCompileInputs.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\bin\Debug\net6.0\BasicThreading.exe
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\bin\Debug\net6.0\BasicThreading.deps.json
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\bin\Debug\net6.0\BasicThreading.runtimeconfig.json
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\bin\Debug\net6.0\BasicThreading.dll
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\bin\Debug\net6.0\BasicThreading.pdb
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.dll
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\refint\BasicThreading.dll
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.pdb
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\BasicThreading.genruntimeconfig.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\BasicThreading\BasicThreading\obj\Debug\net6.0\ref\BasicThreading.dll
