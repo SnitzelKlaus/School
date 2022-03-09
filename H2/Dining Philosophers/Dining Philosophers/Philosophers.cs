@@ -29,7 +29,7 @@ namespace Dining_Philosophers
                 Random random = new Random();
                 Thread.Sleep(1000);
 
-                if (Monitor.TryEnter(LeftFork)) //Attempts to grabs left or right fork
+                if (Monitor.TryEnter(LeftFork)) //Attempts to grabs left fork
                 {
                     try
                     {
@@ -81,6 +81,7 @@ namespace Dining_Philosophers
                     }
 
                 }
+                Thread.Sleep(2000);
             }
         }
 
