@@ -8,54 +8,85 @@ namespace Dining_Philosophers
 {
     public class Philosophers
     {
-        public bool _leftFork { get; set; }
-        public bool _rightFork { get; set; }
-        static object _lock = new object();
+        public int Id { get; set; }
+        public Fork LeftFork { get; set; }
+        public Fork RightFork { get; set; }
 
-        public Philosophers(bool leftFork, bool rightFork)
+        public Philosophers(int id, Fork leftFork, Fork rightFork) //Constructs philosopher from inserted data
         {
-            _leftFork = leftFork;
-            _rightFork = rightFork;
+            this.LeftFork = leftFork;
+            this.RightFork = rightFork;
+            this.Id = id;
+
+            Thread ph = new Thread(GrabFork); //Starts philosopher thread
+            ph.Start();
         }
 
-        public static void SelectFork()
+        public void GrabFork()
         {
-            int id = Convert.ToInt16(Thread.CurrentThread.Name);
-
-            int leftFork = id;
-            int rightFork = id - 1;
-
             while (true)
             {
-                if (rightFork < Fork._forks.Length)
-                    rightFork = Fork._forks.Length;
+                Random random = new Random();
+                Thread.Sleep(1000);
 
-                lock (_lock)
+                if (Monitor.TryEnter(LeftFork)) //Attempts to grabs left or right fork
                 {
-                    if(Fork._forks[leftFork] == true && Fork._forks[rightFork] == true)
+                    try
                     {
-                        Table.philosophers[id]._leftFork = true;
-                        Table.philosophers[id]._rightFork = true;
-                        Fork._forks[leftFork] = false;
-                        Fork._forks[rightFork] = false;
+                        if (Monitor.IsEntered(LeftFork)) //Grabbed left fork
+                        {
+                            Console.WriteLine($"Ph: {Id} grabbed left fork |(*).");
+                            try
+                            {
+                                int attempt = random.Next(5);
+                                int count = 0;
 
-                        Console.WriteLine($"Ph{id}, is eating with fork {leftFork}, and Fork {rightFork}");
-                        Thread.Sleep(1000);
+                                Thread.Sleep(1000);
+                                Console.WriteLine($"Ph: {Id} is trying to grab right fork |(*).");
 
-                        Table.philosophers[id]._leftFork = false;
-                        Table.philosophers[id]._rightFork = false;
-                        Fork._forks[leftFork] = true;
-                        Fork._forks[rightFork] = true;
+                                while (count < attempt) //Finite number of attempts
+                                {
+                                    if (Monitor.TryEnter(RightFork)) //Attempts to grab right fork
+                                    {
+                                        Console.WriteLine($"Ph: {Id} grabbed right fork |(*)|"); //Grabbed right fork
+                                        try
+                                        {
+                                            Eat(); //Eats!
+                                            Thread.Sleep(random.Next(500));
+                                            break;
+                                        }
+                                        finally
+                                        {
+                                            Console.WriteLine($"Ph: {Id} let go of right fork |(*)."); //Lets go of right fork
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"Ph: {Id} couldn't grab right fork |(*). but will try ({attempt - count}) times");
+                                    }
+                                    count++;
+                                    Thread.Sleep(1000);
+                                }
+                            }
+                            finally //Lets go of left fork
+                            {
+                                Console.WriteLine($"Ph: {Id} let go of left fork .(*).");
+                            }
+                        }
 
-                        Console.WriteLine($"Ph{id} | Done");
                     }
+                    finally //Lets go of left fork
+                    {
+                        Console.WriteLine($"Ph: {Id} lets go of left fork .(*).");
+                    }
+
                 }
             }
         }
 
-        public void Eat()
+        public void Eat() //Eats!
         {
-
+            Console.WriteLine($"Ph: {Id} is eating with left fork {LeftFork.Id} and right fork {RightFork.Id}");
         }
     }
 }

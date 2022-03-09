@@ -8,22 +8,18 @@ namespace Dining_Philosophers
 {
     public class Table
     {
-        public static Philosophers[] philosophers = new Philosophers[5];
-
+        public static Fork[] Forks = new Fork[5];
         public void StartDining()
         {
-            Thread[] ph = new Thread[5];
-
-            for (int i = 0; i < ph.Length; i++) //Puts data in thread array and gives each thread a name
+            for(int i = 0; i < Forks.Length; i++) //Creating philosophers with id and left/right hand, defined from Forks!
             {
-                Thread thread = new Thread(new ThreadStart(Philosophers.SelectFork));
-                thread.Name = i.ToString();
-                ph[i] = thread;
-            }
+                Fork leftHand = new Fork(i);
+                Fork rightHand = new Fork(i-1);
 
-            for (int i = 0; i < ph.Length; i++) //Starts dining philosophers
-            {
-                ph[i].Start();
+                if (rightHand.Id < 0)
+                    rightHand.Id = Forks.Length - 1;
+
+                _ = new Philosophers(i, leftHand, rightHand);
             }
         }
     }
