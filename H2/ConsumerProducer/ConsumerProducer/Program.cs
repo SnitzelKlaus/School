@@ -7,11 +7,14 @@ namespace ConsumerProducer
     {
         static void Main(string[] args)
         {
-            string[] productNames = { "Cola", "My", "Dude" };
-            int[] itemCount = { 5, 3, 8 };
+            //Products
+            string[] productName = { "Cola", "Squash", "Twinkie", "Duff" };
+
+            //Max qty of a products (5 cola, 3 squash, 8 twinkie ect.)
+            int[] productLimit = { 5, 6, 8, 6 };
 
             Manager manager = new Manager();
-            manager.Start(productNames, itemCount);
+            manager.Start(productName, productLimit);
         }
     }
 }

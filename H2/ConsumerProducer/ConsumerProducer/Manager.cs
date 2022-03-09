@@ -8,31 +8,57 @@ namespace ConsumerProducer
 {
     public class Manager
     {
-        public Product[][] products { get; set; }
+        public static Product[][] ProductList { get; set; } //Jagged array list of products
 
-        
-        public void Start(string[] productName, int[] itemCount)
+        //  Example of jagged array:
+        //
+        //              Items in store:
+        //  (Cola)      1,  1,  1,  1,  1
+        //  (Cacao)     1,  1,  1,  1,  1,  1,  1
+        //  (Sprite)    1,  1,  1
+        //  (Beer)      1,  1,  1,  1,  1
+
+        //Starts filling up jagged array with specified products and product count
+        public void Start(string[] productName, int[] productLimit)
         {
+
+            //Makes specified products with a constructor and puts in jagged array
+            #region Make Products Great Again!
+
+            //Temporary jagged array, used to fill up product array
             Product[][] tmp = new Product[productName.Length][];
 
+            //Loops through products
             for (int i = 0; i < productName.Length; i++)
             {
-                for (int j = 0; j < itemCount.Length; j++)
-                {
-                    tmp[i][j].Name = productName[i];
-                    tmp[i][j].Id = j;
-                    tmp[i][j].IsAvailable = true;
-                }
+                tmp[i] = new Product[productLimit[i]];
+
+                ////Adds amount of item for product
+                //for (int j = 0; j < productLimit[i]; j++)
+                //{
+                //    tmp[i][j] = new Product(j, productName[i]);
+                //}
             }
 
+            //Transfers dataset to productList
+            ProductList = tmp;
+            #endregion
 
-            foreach(Product[] product in tmp)
+            //Makes factories and consumers for products
+            for(int i = 0; i < productName.Length; i++)
             {
-                foreach(Product item in product)
-                {
-                    Console.WriteLine($"Name: {item.Name}, ID: {item.Id}, Available: {item.IsAvailable}");
-                }
+                _ = new Factory(i, i, productLimit[i]);
+                _ = new Consumer(i, i);
             }
+
+            ////Writes out products
+            //for(int i = 0; i < ProductList.Length; i++)
+            //{
+            //    for (int j = 0; j < ProductList[i].Length; j++)
+            //    {
+            //        Console.WriteLine($"Name: {ProductList[i][j].Name}, ID: {ProductList[i][j].Id}");
+            //    }
+            //}
 
             Console.ReadKey();
         }

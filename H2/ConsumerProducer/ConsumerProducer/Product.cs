@@ -10,13 +10,11 @@ namespace ConsumerProducer
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsAvailable { get; set; }
 
-        public Product(int id, string name, bool isAvailable)
+        public Product(int id, string name)
         {
             this.Id = id;
             this.Name = name;
-            this.IsAvailable = isAvailable;
         }
     }
 }

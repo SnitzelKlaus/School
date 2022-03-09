@@ -10,21 +10,25 @@ namespace ConsumerProducer
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
+        public int ProductionLimit { get; set; }
 
-        public Factory(int id, int productId)
+        public Factory(int id, int productId, int productionLimit)
         {
             this.Id = id;
             this.ProductId = productId;
+            this.ProductionLimit = productionLimit;
 
             Thread pr = new Thread(MakeProduct);
             pr.Start();
-        }
+            ProductionLimit = productionLimit;
 
-        public static void MakeProduct()
+         }
+
+        public void MakeProduct()
         {
             while (true)
             {
-
+                Console.WriteLine($"Factory: {Id}, is producing {Manager.ProductList[ProductId][0].Name}");
             }
         }
     }

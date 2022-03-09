@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsumerProducer
 {
-    public class Costumer
+    public class Consumer
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
-        public Costumer(int id, int productId)
+        public Consumer(int id, int productId)
         {
             this.Id = id;
             this.ProductId = productId;
@@ -19,10 +19,11 @@ namespace ConsumerProducer
             co.Start();
         }
 
-        public static void ConsumeProduct()
+        public void ConsumeProduct()
         {
             while (true)
             {
+                Console.WriteLine($"Consumer: {Id}, is consuming {Manager.ProductList[ProductId][0].Name}");
             }
         }
     }
