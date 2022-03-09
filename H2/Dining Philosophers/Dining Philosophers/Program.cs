@@ -7,8 +7,8 @@ namespace Dining_Philosophers
     {
         static void Main(string[] args)
         {
-            Philosophers[] philosophers = new Philosophers[5];
-            
+            Table table = new Table();
+            table.StartDining();
         }
     }
 }

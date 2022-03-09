@@ -7,6 +7,7 @@ namespace ThreadPooling
     class Program
     {
         static int sum = 0;
+        private Object _lock = new Object();
 
         static void Main(string[] args)
         {
@@ -16,18 +17,44 @@ namespace ThreadPooling
             inc.Start();
             dec.Start();
 
-            Console.WriteLine(sum);
+            while(true)
+            {
+                Console.WriteLine(sum);
+                Thread.Sleep(1000);
+            }
         }
         static void Increase()
         {
-            Interlocked.Increment(ref sum);
-            Thread.Sleep(1000);
+            while (true)
+            {
+                Monitor.Enter(sum);
+                try
+                {
+                    sum = sum + 2;
+                }
+                finally
+                {
+                    Monitor.Exit(sum);
+                }
+                Thread.Sleep(1000);
+            }
         }
 
         static void Decrease()
         {
-            Interlocked.Increment(ref sum);
-            Thread.Sleep(1000);
+            while (true)
+            {
+                Monitor.Enter(sum);
+                try
+                {
+                    sum--;
+                }
+                finally
+                {
+                    Monitor.Exit(sum);
+                    Thread.Sleep(2000);
+                }
+            }
         }
     }
 }

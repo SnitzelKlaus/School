@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\BasicThreading\\BasicThreading\\BasicThreading.csproj": {}
+    "C:\\Code\\School\\H2\\ThreadSync\\BasicThreading\\BasicThreading\\BasicThreading.csproj": {}
   },
   "projects": {
-    "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\BasicThreading\\BasicThreading\\BasicThreading.csproj": {
+    "C:\\Code\\School\\H2\\ThreadSync\\BasicThreading\\BasicThreading\\BasicThreading.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\BasicThreading\\BasicThreading\\BasicThreading.csproj",
+        "projectUniqueName": "C:\\Code\\School\\H2\\ThreadSync\\BasicThreading\\BasicThreading\\BasicThreading.csproj",
         "projectName": "BasicThreading",
-        "projectPath": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\BasicThreading\\BasicThreading\\BasicThreading.csproj",
+        "projectPath": "C:\\Code\\School\\H2\\ThreadSync\\BasicThreading\\BasicThreading\\BasicThreading.csproj",
         "packagesPath": "C:\\Users\\beho5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\BasicThreading\\BasicThreading\\obj\\",
+        "outputPath": "C:\\Code\\School\\H2\\ThreadSync\\BasicThreading\\BasicThreading\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

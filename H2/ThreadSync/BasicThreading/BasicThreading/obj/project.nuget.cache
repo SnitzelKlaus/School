@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gb30IzHObLTmTcQezvbOKcBoC4niDfq2i22x801ZwX9j5iS7oinfKT2aj8qui+MGw4O3gSLNiz+aVCN7e/DPmA==",
+  "dgSpecHash": "dRMXVZXq7lVgof0x/wQ3IqMszH4wG4E/1loXjnJX988paNlAYHJ5uMXt+ToP6vrLmG/ae74YgO3E366r1GrySg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\beho5\\OneDrive\\Skrivebord\\School\\BasicThreading\\BasicThreading\\BasicThreading.csproj",
+  "projectFilePath": "C:\\Code\\School\\H2\\ThreadSync\\BasicThreading\\BasicThreading\\BasicThreading.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

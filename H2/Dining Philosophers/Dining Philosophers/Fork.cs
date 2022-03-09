@@ -8,6 +8,6 @@ namespace Dining_Philosophers
 {
     public class Fork
     {
-        public static bool[] forks = new bool[5];
+        public static bool[] _forks = new bool[5];
     }
 }
