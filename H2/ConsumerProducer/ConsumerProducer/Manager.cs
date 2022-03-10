@@ -8,8 +8,10 @@ namespace ConsumerProducer
 {
     public class Manager
     {
-        public static Product[][] ProductList { get; set; } //Jagged array list of products
+        //List of products, using jagged array
+        public static Product[][] ProductList { get; set; } 
 
+        #region Example of jagged array
         //  Example of jagged array:
         //
         //              Items in store:
@@ -17,9 +19,10 @@ namespace ConsumerProducer
         //  (Cacao)     1,  1,  1,  1,  1,  1,  1
         //  (Sprite)    1,  1,  1
         //  (Beer)      1,  1,  1,  1,  1
+        #endregion
 
         //Starts filling up jagged array with specified products and product count
-        public void Start(string[] productName, int[] productLimit)
+        public void Start(string[] productName, int[] productionLimit)
         {
 
             //Makes specified products with a constructor and puts in jagged array
@@ -28,16 +31,10 @@ namespace ConsumerProducer
             //Temporary jagged array, used to fill up product array
             Product[][] tmp = new Product[productName.Length][];
 
-            //Loops through products
+            //Adds product rows to array
             for (int i = 0; i < productName.Length; i++)
             {
-                tmp[i] = new Product[productLimit[i]];
-
-                ////Adds amount of item for product
-                //for (int j = 0; j < productLimit[i]; j++)
-                //{
-                //    tmp[i][j] = new Product(j, productName[i]);
-                //}
+                tmp[i] = new Product[productionLimit[i]];
             }
 
             //Transfers dataset to productList
@@ -47,20 +44,35 @@ namespace ConsumerProducer
             //Makes factories and consumers for products
             for(int i = 0; i < productName.Length; i++)
             {
-                _ = new Factory(i, i, productLimit[i]);
-                _ = new Consumer(i, i);
+                _ = new Factory(i, i, productName[i], productionLimit[i]);
+                _ = new Consumer((productName.Length + i + 1), i, productName[i]);
             }
-
-            ////Writes out products
-            //for(int i = 0; i < ProductList.Length; i++)
-            //{
-            //    for (int j = 0; j < ProductList[i].Length; j++)
-            //    {
-            //        Console.WriteLine($"Name: {ProductList[i][j].Name}, ID: {ProductList[i][j].Id}");
-            //    }
-            //}
 
             Console.ReadKey();
         }
     }
 }
+
+
+#region Remember?
+////Writes out products
+//for(int i = 0; i < ProductList.Length; i++)
+//{
+//    for (int j = 0; j < ProductList[i].Length; j++)
+//    {
+//        Console.WriteLine($"Name: {ProductList[i][j].Name}, ID: {ProductList[i][j].Id}");
+//    }
+//}
+
+
+
+////Adds amount of item for product
+//for (int j = 0; j < productLimit[i]; j++)
+//{
+//    tmp[i][j] = new Product(j, productName[i]);
+//}
+
+
+//Console.WriteLine($"Factory: {Id}, is producing {Manager.ProductList[ProductId][0].Name}");
+//Console.WriteLine($"Consumer: {Id}, is consuming {Manager.ProductList[ProductId][0].Name}");
+#endregion
