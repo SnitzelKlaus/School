@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Flaskeautomaten
 {
-    internal class Drink
+    public class Drink
     {
+        public string Name { get; set; }
+        public Drink(string name)
+        {
+            Name = name;
+        }
     }
 }
