@@ -1,0 +1,15 @@
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\bin\Debug\net6.0\ProducerConusmer.exe
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\bin\Debug\net6.0\ProducerConusmer.deps.json
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\bin\Debug\net6.0\ProducerConusmer.runtimeconfig.json
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\bin\Debug\net6.0\ProducerConusmer.dll
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\bin\Debug\net6.0\ProducerConusmer.pdb
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.csproj.AssemblyReference.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.AssemblyInfoInputs.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.AssemblyInfo.cs
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.csproj.CoreCompileInputs.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.dll
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\refint\ProducerConusmer.dll
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.pdb
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ProducerConusmer.genruntimeconfig.cache
+C:\Users\beho5\OneDrive\Skrivebord\School\ProducerConusmer\ProducerConusmer\obj\Debug\net6.0\ref\ProducerConusmer.dll
