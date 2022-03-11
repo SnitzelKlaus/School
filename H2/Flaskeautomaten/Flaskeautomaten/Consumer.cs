@@ -24,55 +24,53 @@ namespace Flaskeautomaten
         {
             while (true)
             {
-                while (true)
+                //Switch used to determine what product the consumer are going to consume
+                switch (ProductName)
                 {
-                    switch (ProductName)
-                    {
-                        case "Beer":
-                            Monitor.Enter(Manager.Beer);
+                    case "Beer":
+                        Monitor.Enter(Manager.Beer);
 
-                            if (Manager.Beer.Count == 0)
-                            {
-                                Console.WriteLine("Consumer waiting for Beer");
-                                Monitor.Wait(Manager.Beer);
-                            }
+                        if (Manager.Beer.Count == 0)
+                        {
+                            Console.WriteLine("Consumer waiting for Beer");
+                            Monitor.Wait(Manager.Beer);
+                        }
 
-                            Manager.Beer.Dequeue();
-                            Console.WriteLine("Consumer drinking Beer");
-                            Thread.Sleep(200);
-                            break;
+                        Manager.Beer.Dequeue();
+                        Console.WriteLine("Consumer drinking Beer");
+                        Thread.Sleep(200);
+                        break;
 
-                        case "Cola":
-                            Monitor.Enter(Manager.Cola);
+                    case "Cola":
+                        Monitor.Enter(Manager.Cola);
 
-                            if (Manager.Cola.Count == 0)
-                            {
-                                Console.WriteLine("Consumer waiting for Cola");
-                                Monitor.Wait(Manager.Cola);
-                            }
+                        if (Manager.Cola.Count == 0)
+                        {
+                            Console.WriteLine("Consumer waiting for Cola");
+                            Monitor.Wait(Manager.Cola);
+                        }
 
-                            Manager.Cola.Dequeue();
-                            Console.WriteLine("Consumer drinking Cola");
-                            Thread.Sleep(200);
-                            break;
+                        Manager.Cola.Dequeue();
+                        Console.WriteLine("Consumer drinking Cola");
+                        Thread.Sleep(200);
+                        break;
 
-                        case "Squash":
-                            Monitor.Enter(Manager.Squash);
+                    case "Squash":
+                        Monitor.Enter(Manager.Squash);
 
-                            if (Manager.Squash.Count == 0)
-                            {
-                                Console.WriteLine("Consumer waiting for Squash");
-                                Monitor.Wait(Manager.Squash);
-                            }
+                        if (Manager.Squash.Count == 0)
+                        {
+                            Console.WriteLine("Consumer waiting for Squash");
+                            Monitor.Wait(Manager.Squash);
+                        }
 
-                            Manager.Squash.Dequeue();
-                            Console.WriteLine("Consumer drinking Squash");
-                            Thread.Sleep(200);
-                            break;
-                        default:
-                            Console.WriteLine("Consumer couldn't find a product");
-                            break;
-                    }
+                        Manager.Squash.Dequeue();
+                        Console.WriteLine("Consumer drinking Squash");
+                        Thread.Sleep(200);
+                        break;
+                    default:
+                        Console.WriteLine("Consumer couldn't find a product");
+                        break;
                 }
             }
         }

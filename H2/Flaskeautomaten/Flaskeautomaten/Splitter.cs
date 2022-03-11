@@ -35,7 +35,7 @@ namespace Flaskeautomaten
                     Monitor.Wait(Manager.ProductList);
                 }
 
-                for (int i = 0; i < ProductSplit.Length; i++)
+                for (int i = 0; i < ProductSplit.Length; i++) //Loops through
                 {
                     for (int j = 0; j < Manager.ProductList.Count; j++)
                     {
