@@ -3,11 +3,13 @@ using System.Threading;
 
 namespace BagageSortingSystem
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            Airport airport = new Airport();
 
+            airport.Copenhagen();
         }
     }
 }

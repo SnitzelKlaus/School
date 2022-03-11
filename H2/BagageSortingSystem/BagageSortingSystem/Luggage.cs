@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    internal class Luggage
+    public class Luggage
     {
+        public string RFID { get; set; }
+
+
     }
 }

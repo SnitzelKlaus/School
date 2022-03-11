@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    internal class Airport
+    public class Airport
     {
+        public static Queue<Luggage> Conveyor = new Queue<Luggage>();
+        public static Queue<Luggage> Terminal1 = new Queue<Luggage>();
+        public static Queue<Luggage> Terminal2 = new Queue<Luggage>();
+        public static Queue<Luggage> Terminal3 = new Queue<Luggage>();
+
+        public void Copenhagen()
+        {
+            
+        }
     }
 }

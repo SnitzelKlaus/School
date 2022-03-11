@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    public class LuggageSorter
+    public class GraphicalUI
     {
     }
 }

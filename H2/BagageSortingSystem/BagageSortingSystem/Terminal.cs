@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    internal class DataStorage
+    public class Terminal
     {
     }
 }
