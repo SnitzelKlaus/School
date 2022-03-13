@@ -8,14 +8,46 @@ namespace BagageSortingSystem
 {
     public class Plane
     {
-        string Destination = DestinationList.GetRandomDestination();
-        int Terminal { get; set; }
-        DateTime TakeOff { get; set; }
-        public Plane(string destination, int terminal, DateTime takeOff)
+        public int Id { get; set; }
+        public DateTime TakeOff { get; set; }
+        public string Destination
         {
-            Destination = destination;
-            Terminal = terminal;
-            TakeOff = takeOff;
+            get
+            {
+                return Destination;
+            }
+            set
+            {
+                Destination = DestinationList.GetRandom();
+            }
+        }
+
+        public int Terminal
+        {
+            get
+            {
+                return Terminal;
+            }
+            set
+            {
+                bool terminalFound = false;
+                while (!terminalFound)
+                {
+                    for (int i = 0; i < Airport.Terminals.Count; i++)
+                    {
+                        if (Airport.Terminals[i].IsAvailable)
+                        {
+                            Terminal = i;
+                            terminalFound = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        public Plane(int id)
+        {
+            Id = id;
         }
     }
 }

@@ -8,12 +8,21 @@ namespace BagageSortingSystem
 {
     public class Luggage
     {
-        public int Id { get; set; }
-        public string Destination = DestinationList.GetRandomDestination();
-        public Luggage (int id, string destination)
+        public string Id { get; set; }
+        public string Destination { 
+            get
+            {
+                return Destination;
+            }
+            set
+            {
+                Destination = DestinationList.GetRandom();
+            }
+        }
+
+        public Luggage (string id)
         {
             Id = id;
-            Destination = destination;
         }
     }
 }

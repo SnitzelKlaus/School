@@ -10,7 +10,7 @@ namespace BagageSortingSystem
     {
         public static List<string> Destinations { get; set; }
 
-        public static string GetRandomDestination()
+        public static string GetRandom()
         {
             Random random = new Random();
             return Destinations[random.Next(0, Destinations.Count)];

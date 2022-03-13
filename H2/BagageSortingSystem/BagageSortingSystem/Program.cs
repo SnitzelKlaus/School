@@ -7,9 +7,9 @@ namespace BagageSortingSystem
     {
         static void Main(string[] args)
         {
-            int terminals = 3;
-            int checkIns = 3;
-            int planes = 3;
+            int terminals = 5;
+            int checkIns = 5;
+            int planes = 5;
 
             Airport airport = new Airport();
             airport.Copenhagen(terminals, checkIns, planes);

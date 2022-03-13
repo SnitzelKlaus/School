@@ -1,0 +1,15 @@
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\bin\Debug\net6.0\BagageSortingSystem.exe
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\bin\Debug\net6.0\BagageSortingSystem.deps.json
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\bin\Debug\net6.0\BagageSortingSystem.runtimeconfig.json
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\bin\Debug\net6.0\BagageSortingSystem.dll
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\bin\Debug\net6.0\BagageSortingSystem.pdb
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.csproj.AssemblyReference.cache
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.AssemblyInfoInputs.cache
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.AssemblyInfo.cs
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.dll
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\refint\BagageSortingSystem.dll
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.pdb
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\BagageSortingSystem.genruntimeconfig.cache
+C:\Code\School\H2\BagageSortingSystem\BagageSortingSystem\obj\Debug\net6.0\ref\BagageSortingSystem.dll
