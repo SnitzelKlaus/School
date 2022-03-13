@@ -8,6 +8,14 @@ namespace BagageSortingSystem
 {
     public class Plane
     {
-        int F { get; set; }
+        string Destination = DestinationList.GetRandomDestination();
+        int Terminal { get; set; }
+        DateTime TakeOff { get; set; }
+        public Plane(string destination, int terminal, DateTime takeOff)
+        {
+            Destination = destination;
+            Terminal = terminal;
+            TakeOff = takeOff;
+        }
     }
 }

@@ -10,9 +10,10 @@ namespace BagageSortingSystem
     {
         public int Id { get; set; }
         public int LuggageBuffer { get; set; }
+        public bool IsAlive { get; set; }
         private int LuggageCounter { get; set; }
 
-        public CheckIn(int id, int luggageBuffer)
+        public CheckIn(int id, int luggageBuffer, bool isAlive)
         {
             Id = id;
             LuggageBuffer = luggageBuffer;
@@ -25,7 +26,11 @@ namespace BagageSortingSystem
         {
             while (true)
             {
-
+                if (IsAlive)
+                {
+                    Monitor.Enter(Airport.Conveyor);
+                    
+                }
             }
         }
     }

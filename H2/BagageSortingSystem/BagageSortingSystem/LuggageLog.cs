@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    public class Log
+    public class LuggageLog
     {
         int LuggageId { get; set; }
         DateTime DateTime { get; set; }
-        public Log (int luggageId, DateTime dateTime)
+        string LogData { get; set; }
+        public LuggageLog (int luggageId, DateTime dateTime, string logData)
         {
             LuggageId = luggageId;
             DateTime = dateTime;
+            LogData = logData;
         }
     }
 }
