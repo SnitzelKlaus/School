@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    public class Counter
+    public class UI
     {
-        public int Id { get; set; }
-        public int LuggageBuffer { get; set; }
-        public int 
     }
 }

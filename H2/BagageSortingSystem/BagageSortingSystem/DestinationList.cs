@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace BagageSortingSystem
 {
-    public class Luggage
+    public class DestinationList
     {
-        public int Id { get; set; }
+        public static List<string> Destinations = new List<string>();
         public string Destination { get; set; }
-        public Luggage (int id, string destination)
-        {
-            Id = id;
-            Destination = destination;
-        }
+        public 
     }
 }

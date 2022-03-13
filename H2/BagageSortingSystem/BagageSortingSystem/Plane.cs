@@ -8,5 +8,6 @@ namespace BagageSortingSystem
 {
     public class Plane
     {
+        int F { get; set; }
     }
 }
