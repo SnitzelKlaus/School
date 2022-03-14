@@ -1,0 +1,15 @@
+C:\Code\School\H2\Geometri\Geometri\bin\Debug\net6.0\Geometri.exe
+C:\Code\School\H2\Geometri\Geometri\bin\Debug\net6.0\Geometri.deps.json
+C:\Code\School\H2\Geometri\Geometri\bin\Debug\net6.0\Geometri.runtimeconfig.json
+C:\Code\School\H2\Geometri\Geometri\bin\Debug\net6.0\Geometri.dll
+C:\Code\School\H2\Geometri\Geometri\bin\Debug\net6.0\Geometri.pdb
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.csproj.AssemblyReference.cache
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.AssemblyInfoInputs.cache
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.AssemblyInfo.cs
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.dll
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\refint\Geometri.dll
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.pdb
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\Geometri.genruntimeconfig.cache
+C:\Code\School\H2\Geometri\Geometri\obj\Debug\net6.0\ref\Geometri.dll
