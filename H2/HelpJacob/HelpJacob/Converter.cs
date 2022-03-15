@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace HelpJacob
 {
-    internal class Converter
+    public class Converter
     {
+        public string ConvertBodyToHTML(string plainText)
+        {
+            return "" + plainText + "";
+        }
     }
 }

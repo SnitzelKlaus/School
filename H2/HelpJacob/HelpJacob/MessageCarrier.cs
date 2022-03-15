@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace HelpJacob
 {
-    internal class MessageCarrier
-    {
-    }
+    public enum MessageCarrier { Smtp, VMessage }
 }
