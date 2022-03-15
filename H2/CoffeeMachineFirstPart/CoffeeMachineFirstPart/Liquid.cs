@@ -8,7 +8,7 @@ namespace CoffeeMachineFirstPart
 {
     public class Liquid : Container
     {
-        public Liquid(string item, int amount, int maxAmount):base(item, amount, maxAmount)
+        public Liquid(string item, double amount, double maxAmount):base(item, amount, maxAmount)
         {
 
         }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CoffeeMachineFirstPart
 {
-    internal class Content
+    public class Content : Container
     {
+        public Content(string item, double amount, double maxAmount) : base(item, amount, maxAmount)
+        {
+
+        }
     }
 }

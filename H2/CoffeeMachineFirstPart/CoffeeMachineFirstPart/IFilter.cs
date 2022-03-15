@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CoffeeMachineFirstPart
 {
-    internal class IFilter
+    interface IFilter
     {
+        bool Filter { get; set; }
+
+        void FilterUsed();
+        void ReplaceFilter();
     }
 }

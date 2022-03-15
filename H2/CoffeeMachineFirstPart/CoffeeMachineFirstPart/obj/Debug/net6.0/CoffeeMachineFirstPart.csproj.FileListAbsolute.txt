@@ -1,0 +1,15 @@
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\bin\Debug\net6.0\CoffeeMachineFirstPart.exe
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\bin\Debug\net6.0\CoffeeMachineFirstPart.deps.json
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\bin\Debug\net6.0\CoffeeMachineFirstPart.runtimeconfig.json
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\bin\Debug\net6.0\CoffeeMachineFirstPart.dll
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\bin\Debug\net6.0\ref\CoffeeMachineFirstPart.dll
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\bin\Debug\net6.0\CoffeeMachineFirstPart.pdb
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.csproj.AssemblyReference.cache
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.AssemblyInfoInputs.cache
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.AssemblyInfo.cs
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.dll
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\ref\CoffeeMachineFirstPart.dll
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.pdb
+C:\Code\School\H2\CoffeeMachineFirstPart\CoffeeMachineFirstPart\obj\Debug\net6.0\CoffeeMachineFirstPart.genruntimeconfig.cache

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CoffeeMachineFirstPart
 {
-    public class CoffeeMachine : Machine, IFilter
+    public class EspressoMachine : Machine, IFilter
     {
-        public CoffeeMachine()
+        public EspressoMachine()
         {
-            Content = new Content("Caffee", 500, 1000);
-            Liquid = new Liquid("Water", 1000, 2000);
+            Content = new Content("Espresso", 500, 1000);
+            Liquid = new Liquid("Milk", 1000, 2000);
         }
 
         public bool Filter { get; set; }
@@ -28,15 +28,15 @@ namespace CoffeeMachineFirstPart
 
         public override string Produce(double cupSize)
         {
-            double coffeeMix = cupSize / 5;
-            double waterMix = coffeeMix - cupSize;
+            double espressoMix = cupSize / 3;
+            double waterMix = espressoMix - cupSize;
 
             try
             {
                 Liquid.DecreaseItem(waterMix);
-                Content.DecreaseItem(coffeeMix);
+                Content.DecreaseItem(espressoMix);
 
-                return $"Produced 1 cup of coffee, amount: {cupSize} ml.";
+                return $"Produced 1 cup of espresso, amount: {cupSize} ml.";
             }
             catch (Exception no)
             {

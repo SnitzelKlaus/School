@@ -8,42 +8,47 @@ namespace CoffeeMachineFirstPart
 {
     public abstract class Container
     {
-        private string _item;
-        private int _currentAmount;
-        private int _maxAmount;
-
         public string Item { get => _item; set => _item = value; }
-        public int Amount { get => _currentAmount; set => _currentAmount = value; }
-        public int MaxAmount { get => _maxAmount; set => _maxAmount = value; }
+        public double Amount { get => _currentAmount; set => _currentAmount = value; }
+        public double MaxAmount { get => _maxAmount; set => _maxAmount = value; }
 
-        public Container(string item, int amount, int maxAmount)
+        private string _item;
+        private double _currentAmount;
+        private double _maxAmount;
+
+        public Container(string item, double amount, double maxAmount)
         {
             _item = item;
             _currentAmount = amount;
             _maxAmount = maxAmount;
         }
 
-        public virtual void IncreaseItem(int input)
+        public virtual void IncreaseItem(double input)
         {
-            if(input < MaxAmount)
+            if(input < MaxAmount && input >= 0)
             {
                 Amount = Amount + input;
             }
-            else
+            else if(input > MaxAmount)
             {
                 MaxAmount = Amount;
+
                 Console.WriteLine("You've filled the container to the top!");
             }
+            else
+            {
+                throw new ArgumentException("Something went wrong :(");
+            }
         }
-        public virtual void DecreaseItem(int input)
+        public virtual void DecreaseItem(double input)
         {
-            if(input > Amount)
+            if(input < Amount)
             {
                 Amount = Amount - input;
             }
             else
             {
-                Console.WriteLine("The container is running low, please fill it up and try again!");
+                throw new ArgumentException("The container is running low, please fill it up and try again!");
             }
         }
     }
