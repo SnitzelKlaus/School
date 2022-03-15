@@ -10,8 +10,8 @@ namespace CoffeeMachine
     {
         public TeaMachine()
         {
-            Content = new Content("Tea", 500, 1000);
-            Liquid = new Liquid("Milk", 1000, 2000);
+            Content = new Content("Tea", 0, 1000); //   (name, amount, maxAmount)
+            Liquid = new Liquid("Milk", 0, 2000);
         }
 
         public bool Filter { get; set; }
@@ -21,15 +21,22 @@ namespace CoffeeMachine
             Filter = false;
         }
 
-        public void ReplaceFilter()
+        public void FilterRenew()
         {
             Filter = true;
         }
 
         public override string Produce(double cupSize)
         {
+            //Defines values for mixing
             double teaMix = cupSize / 3;
             double waterMix = teaMix - cupSize;
+
+            if (!IsAlive)
+                return $"Please turn the machine on";
+
+            if (!Filter)
+                return $"Please insert new filter in TeaMachine";
 
             try
             {

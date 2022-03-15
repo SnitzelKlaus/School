@@ -11,6 +11,6 @@ namespace CoffeeMachine
         bool Filter { get; set; }
 
         void FilterUsed();
-        void ReplaceFilter();
+        void FilterRenew();
     }
 }

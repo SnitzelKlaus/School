@@ -10,8 +10,8 @@ namespace CoffeeMachine
     {
         public EspressoMachine()
         {
-            Content = new Content("Espresso", 500, 1000);
-            Liquid = new Liquid("Milk", 1000, 2000);
+            Content = new Content("Espresso", 0, 1000); //   (name, amount, maxAmount)
+            Liquid = new Liquid("Milk", 0, 2000);
         }
 
         public bool Filter { get; set; }
@@ -21,22 +21,29 @@ namespace CoffeeMachine
             Filter = false;
         }
 
-        public void ReplaceFilter()
+        public void FilterRenew()
         {
             Filter = true;
         }
 
         public override string Produce(double cupSize)
         {
+            //Defines values for mixing
             double espressoMix = cupSize / 3;
             double waterMix = espressoMix - cupSize;
+
+            if (!IsAlive)
+                return $"Please turn the machine on";
+
+            if (!Filter)
+                return $"Please insert new filter in EspressoMachine";
 
             try
             {
                 Liquid.DecreaseItem(waterMix);
                 Content.DecreaseItem(espressoMix);
 
-                return $"Produced 1 cup of espresso, amount: {cupSize} ml.";
+                return $"Produced 1 cup of Espresso, amount: {cupSize} ml.";
             }
             catch (Exception no)
             {
