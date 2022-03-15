@@ -17,6 +17,11 @@ namespace CoffeeMachineFirstPart
             espressoMachine.Content.IncreaseItem(500);
             Console.WriteLine(espressoMachine.Produce(690));
 
+            TeaMachine teaMachine = new TeaMachine();
+            teaMachine.Liquid.IncreaseItem(500);
+            teaMachine.Content.IncreaseItem(500);
+            Console.WriteLine(teaMachine.Produce(690.420690));
+
             Console.ReadKey();
         }
     }
