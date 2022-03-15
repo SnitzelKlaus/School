@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CoffeeMachine
 {
-    public class TeaMachine : Machine, IFilter
+    public class EspressoMachine : Machine, IFilter
     {
-        public TeaMachine()
+        public EspressoMachine()
         {
-            Content = new Content("Tea", 0, 1000); //   (name, amount, maxAmount)
+            Content = new Content("Espresso", 0, 1000); //   (name, amount, maxAmount)
             Liquid = new Liquid("Milk", 0, 2000);
         }
 
@@ -29,21 +29,21 @@ namespace CoffeeMachine
         public override string Produce(double cupSize)
         {
             //Defines values for mixing
-            double teaMix = cupSize / 3;
-            double waterMix = teaMix - cupSize;
+            double espressoMix = cupSize / 3;
+            double waterMix = espressoMix - cupSize;
 
             if (!IsAlive)
-                return $"Please turn the machine on";
+                return $"Please turn the EspressoMachine on";
 
             if (!Filter)
-                return $"Please insert new filter in TeaMachine";
+                return $"Please insert new filter in EspressoMachine";
 
             try
             {
                 Liquid.DecreaseItem(waterMix);
-                Content.DecreaseItem(teaMix);
+                Content.DecreaseItem(espressoMix);
 
-                return $"Produced 1 cup of Tea, amount: {cupSize} ml.";
+                return $"Produced 1 cup of Espresso, amount: {cupSize} ml.";
             }
             catch (Exception no)
             {

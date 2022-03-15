@@ -33,7 +33,7 @@ namespace CoffeeMachine
             double waterMix = coffeeMix - cupSize;
 
             if (!IsAlive)
-                return $"Please turn the machine on";
+                return $"Please turn the CoffeeMachine on";
 
             if (!Filter)
                 return $"Please insert new filter in CoffeeMachine";

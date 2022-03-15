@@ -19,7 +19,7 @@ namespace CoffeeMachine
 
             #region TeaMachine
             TeaMachine teaMachine = new TeaMachine();
-            //teaMachine.FilterRenew();
+            teaMachine.FilterRenew();
             teaMachine.Liquid.IncreaseItem(500);
             teaMachine.Content.IncreaseItem(500);
             teaMachine.TurnOn();
