@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public interface IWizard
+    public interface IMagic
     {
         public void Teleport(int x, int y);
 

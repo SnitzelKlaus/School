@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public interface IBarbarian
+    public interface ITeleport
     {
-        public void Bash();
-        public void Cleave();
-        public void Slash();
+        public void Teleport(int x, int y);
     }
 }

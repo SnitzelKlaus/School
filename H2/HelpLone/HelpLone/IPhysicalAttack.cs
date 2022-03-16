@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public interface IWitch
+    public interface IPhysicalAttack
     {
-        public void RaiseShield();
-        public void ShieldGlare();
-        public void Teleport(int x, int y);
+        public void Bash();
+        public void Cleave();
+        public void Slash();
     }
 }

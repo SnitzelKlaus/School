@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public class Wizard : ICharacter, IWizard
+    public class Wizard : ICharacter, ITeleport, IMagic
     {
         public void Die()
         {

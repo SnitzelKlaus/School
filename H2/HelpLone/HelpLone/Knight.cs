@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public class Knight : ICharacter, IKnight
+    public class Knight : ICharacter, ISheild, IPhysicalAttack
     {
         public void Bash()
         {

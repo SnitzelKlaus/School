@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public class Witch : ICharacter, IWitch
+    public class Witch : ITeleport, ISheild, ICharacter
     {
         public void Die()
         {
@@ -23,6 +23,11 @@ namespace HelpLone
             Console.WriteLine("I'm healing");
         }
 
+        public void Teleport(int x, int y)
+        {
+            Console.WriteLine("I'm teleporting to " + x + " " + y);
+        }
+
         public void RaiseShield()
         {
             Console.WriteLine("I'm raising my shield");
@@ -31,11 +36,6 @@ namespace HelpLone
         public void ShieldGlare()
         {
             Console.WriteLine("I'm throwing shield glare");
-        }
-
-        public void Teleport(int x, int y)
-        {
-            Console.WriteLine("I'm teleporting to " + x + " " + y);
         }
     }
 }

@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace HelpLone
 {
-    public interface IKnight
+    public interface ISheild
     {
-        public void Bash();
-        public void Cleave();
         public void RaiseShield();
         public void ShieldGlare();
-        public void Slash();
     }
 }
