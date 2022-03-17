@@ -8,6 +8,7 @@ namespace MyBanker.Interfaces
     {
         int GetCreditLimit();
         int GetMonthlyLimit();
+        
         //@TODO Fix this
         int GetDailyLimit();
     }

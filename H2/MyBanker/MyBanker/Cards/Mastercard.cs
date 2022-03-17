@@ -26,12 +26,18 @@ namespace MyBanker.Cards
 
         public override string GenerateNumber()
         {
-            throw new NotImplementedException();
+            string cardNum = "5018";
+            while (cardNum.Length <= 19)
+            {
+                cardNum += ran.Next(0, 10);
+            }
+
+            return cardNum;
         }
 
         public override double GetCurrentSaldo()
         {
-            throw new NotImplementedException();
+            return ran.Next(0, 20000);
         }
 
         public override int GetExpiryMonth()

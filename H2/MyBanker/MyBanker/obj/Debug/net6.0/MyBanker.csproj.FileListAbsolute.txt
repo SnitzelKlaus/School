@@ -1,0 +1,5 @@
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.csproj.AssemblyReference.cache
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.AssemblyInfoInputs.cache
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.AssemblyInfo.cs
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.csproj.CoreCompileInputs.cache

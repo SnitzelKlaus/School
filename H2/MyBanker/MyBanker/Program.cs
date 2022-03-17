@@ -8,12 +8,8 @@ namespace MyBanker
     {
         static void Main(string[] args)
         {
-
-            CreateCards createCards = new CreateCards();
-            List<Card> cards = createCards.CreateCardList();
-            DisplayCards displayCards = new DisplayCards();
-            displayCards.DisplayAllCards(cards);
-            
+            CardOwner owner = new CardOwner();
+            owner.Name = "Per";
 
         }
     }

@@ -24,8 +24,8 @@ namespace MyBanker.Cards
 
         public override string GenerateNumber()
         {
-            string cardNum = "4";
-            while (cardNum.Length <= 16)
+            string cardNum = "5018";
+            while (cardNum.Length <= 19)
             {
                 cardNum += ran.Next(0, 10);
             }
