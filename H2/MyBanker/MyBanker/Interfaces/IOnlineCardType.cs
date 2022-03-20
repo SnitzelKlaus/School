@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBanker.Interfaces
+namespace H2MyBanker.Interfaces
 {
     public interface IOnlineCardType
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyBanker.Interfaces;
+using H2MyBanker.Interfaces;
 
-namespace MyBanker
+namespace H2MyBanker
 {
     public abstract class ExtendedDebitCard : DebitCard, IExpiryingCardType, IInternationalCardType, IOnlineCardType
     {
-        protected ExtendedDebitCard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
-            : base(cardOwner, cardType, account)
+        protected ExtendedDebitCard(ICardOwner cardOwner, IAccount account) 
+            : base(cardOwner, account)
         {
         }
 

@@ -1,57 +1,57 @@
-﻿using MyBanker.Interfaces;
+﻿using H2MyBanker.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBanker.Cards
+namespace H2MyBanker.Cards
 {
-    public class VisaElectron : ExtendedDebitCard
+    public class VISAElectron : ExtendedDebitCard
     {
-        public VisaElectron(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, cardType, account)
+        private readonly string[] prefix = new string[]
+          {
+                "4026",
+                "417500",
+                "4508",
+                "4844",
+                "4913",
+                "4917",
+          };
+        public VISAElectron(ICardOwner cardOwner, IAccount account) : base(cardOwner, account)
         {
         }
-
-        public override string GenerateNumber()
+        public override string GenerateCardNumber()
         {
-            string cardNum = "4026";
-            while (cardNum.Length <= 16)
+            string cardNum = prefix[ran.Next(0, prefix.Length)];
+            while (cardNum.Length < 16)
             {
                 cardNum += ran.Next(0, 10);
             }
-
             return cardNum;
         }
-
         public override int GetAgeLimit()
         {
             return 15;
         }
-
         public override string GetCardName()
         {
-            return "VISA Electron";
+            return "Maestro";
         }
-
         public override double GetCurrentSaldo()
         {
-            return ran.Next(0, 20000);
+            return ran.Next(1, 20000);
         }
-
         public override int GetExpiryMonth()
         {
             return ran.Next(1, 13);
         }
-
         public override int GetExpiryYear()
         {
             return ran.Next(2022, 2027);
         }
-
         public override bool IsPayableInternational()
         {
             return true;
         }
-
         public override bool IsPayableOnline()
         {
             return true;

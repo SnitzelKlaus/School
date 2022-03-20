@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyBanker.Interfaces;
+using H2MyBanker.Interfaces;
 
-namespace MyBanker
+namespace H2MyBanker
 {
     public abstract class CreditCard : Card, ICreditCardType
     {
-        protected CreditCard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
-            : base(cardOwner, cardType, account)
+        protected CreditCard(ICardOwner cardOwner, IAccount account) 
+            : base(cardOwner, account)
         {
         }
 

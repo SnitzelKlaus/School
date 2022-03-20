@@ -3,3 +3,13 @@ C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.GeneratedMSBuildEd
 C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.AssemblyInfoInputs.cache
 C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.AssemblyInfo.cs
 C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\MyBanker\MyBanker\bin\Debug\net6.0\MyBanker.exe
+C:\Code\School\H2\MyBanker\MyBanker\bin\Debug\net6.0\MyBanker.deps.json
+C:\Code\School\H2\MyBanker\MyBanker\bin\Debug\net6.0\MyBanker.runtimeconfig.json
+C:\Code\School\H2\MyBanker\MyBanker\bin\Debug\net6.0\MyBanker.dll
+C:\Code\School\H2\MyBanker\MyBanker\bin\Debug\net6.0\ref\MyBanker.dll
+C:\Code\School\H2\MyBanker\MyBanker\bin\Debug\net6.0\MyBanker.pdb
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.dll
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\ref\MyBanker.dll
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.pdb
+C:\Code\School\H2\MyBanker\MyBanker\obj\Debug\net6.0\MyBanker.genruntimeconfig.cache

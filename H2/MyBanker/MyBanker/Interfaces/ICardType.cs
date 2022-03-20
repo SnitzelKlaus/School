@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBanker.Interfaces
+namespace H2MyBanker.Interfaces
 {
     public interface ICardType
     {
         string GetCardName();
         CardType GetCardType();
-        string GenerateNumber();
+        string GenerateCardNumber();
         double GetCurrentSaldo();
         
     }
