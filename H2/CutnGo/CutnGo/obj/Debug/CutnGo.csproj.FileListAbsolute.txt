@@ -1,6 +1,3 @@
-C:\Code\School\H2\CutnGo\MovieWebApp\bin\MovieWebApp.dll.config
-C:\Code\School\H2\CutnGo\MovieWebApp\bin\MovieWebApp.dll
-C:\Code\School\H2\CutnGo\MovieWebApp\bin\MovieWebApp.pdb
 C:\Code\School\H2\CutnGo\MovieWebApp\bin\roslyn\csc.exe
 C:\Code\School\H2\CutnGo\MovieWebApp\bin\roslyn\csc.exe.config
 C:\Code\School\H2\CutnGo\MovieWebApp\bin\roslyn\csc.rsp
@@ -57,5 +54,8 @@ C:\Code\School\H2\CutnGo\MovieWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompi
 C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\CutnGo.csproj.AssemblyReference.cache
 C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\CutnGo.csproj.CoreCompileInputs.cache
 C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\CutnGo.csproj.CopyComplete
-C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\MovieWebApp.dll
-C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\MovieWebApp.pdb
+C:\Code\School\H2\CutnGo\MovieWebApp\bin\CutnGo.dll.config
+C:\Code\School\H2\CutnGo\MovieWebApp\bin\CutnGo.dll
+C:\Code\School\H2\CutnGo\MovieWebApp\bin\CutnGo.pdb
+C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\CutnGo.dll
+C:\Code\School\H2\CutnGo\MovieWebApp\obj\Debug\CutnGo.pdb
