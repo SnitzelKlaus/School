@@ -1,0 +1,6 @@
+C:\Code\School\H2\Battleship\Battleship\obj\Debug\Battleship.csproj.AssemblyReference.cache
+C:\Code\School\H2\Battleship\Battleship\obj\Debug\Battleship.csproj.SuggestedBindingRedirects.cache
+C:\Code\School\H2\Battleship\Battleship\obj\Debug\MainWindow.g.cs
+C:\Code\School\H2\Battleship\Battleship\obj\Debug\App.g.cs
+C:\Code\School\H2\Battleship\Battleship\obj\Debug\Battleship_MarkupCompile.cache
+C:\Code\School\H2\Battleship\Battleship\obj\Debug\Battleship_MarkupCompile.lref
