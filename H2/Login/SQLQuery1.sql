@@ -1,0 +1,8 @@
+CREATE TABLE Users ( 
+id int IDENTITY(1,1) PRIMARY KEY,
+Username VARCHAR(64) NOT NULL,
+Password VARCHAR(255) NOT NULL,
+Salt VARCHAR(255) NOT NULL);
+
+/*test User*/
+INSERT INTO Users (Username, Password, Salt) VALUES ('test', '6bC8+OEdNHKF8JNU8PsyDYF7saEbyvrExgGP/C94nVDwZ1puvGEN1zgbUU8Eo4ASB4cOXOvYHyimjIFatUhHRi5UBcEuVQ==','LwSkfaDbwN7bDnOmK/8wFOV59Alhpu80nHVVS2NqJ3GPSJjrf1JprPHlRujXXM8GiNqwZ5WD2EaRfmZibA+o9YDa+/XCvw==') 
