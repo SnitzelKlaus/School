@@ -1,0 +1,15 @@
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\DatabaseFirst.exe.config
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\DatabaseFirst.exe
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\DatabaseFirst.pdb
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.dll
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\System.Data.Common.dll
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\System.Data.SqlClient.dll
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.xml
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.csproj.AssemblyReference.cache
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.csproj.SuggestedBindingRedirects.cache
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.csproj.CopyComplete
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.exe
+C:\Code\School\H2\DatabaseFirst\DatabaseFirst\obj\Debug\DatabaseFirst.pdb
