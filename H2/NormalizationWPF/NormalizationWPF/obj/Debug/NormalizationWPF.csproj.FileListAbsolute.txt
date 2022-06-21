@@ -1,0 +1,16 @@
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.csproj.AssemblyReference.cache
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.csproj.SuggestedBindingRedirects.cache
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\MainWindow.g.cs
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\App.g.cs
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF_MarkupCompile.cache
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF_MarkupCompile.lref
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\bin\Debug\NormalizationWPF.exe.config
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\bin\Debug\NormalizationWPF.exe
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\bin\Debug\NormalizationWPF.pdb
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\MainWindow.baml
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.g.resources
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.Properties.Resources.resources
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.csproj.GenerateResource.cache
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.csproj.CoreCompileInputs.cache
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.exe
+C:\Code\School\H2\NormalizationWPF\NormalizationWPF\obj\Debug\NormalizationWPF.pdb
