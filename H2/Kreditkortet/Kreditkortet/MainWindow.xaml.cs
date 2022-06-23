@@ -14,15 +14,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace Kreditkortet
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
-        public CardManager cardManager = new CardManager();
+        public CardManager CardManage = new CardManager();
         private const char Separator = ',';
 
         public MainWindow()
@@ -42,7 +44,7 @@ namespace Kreditkortet
                 cards.Add(new Card(card));
             }
 
-            cardManager.Cards = cards;
+            CardManage.Cards = cards;
         }
 
         private void Button_Check(object sender, RoutedEventArgs e)
@@ -50,22 +52,23 @@ namespace Kreditkortet
             int validCount = 0;
             List<string> s = new List<string>();
 
-            foreach (Card card in cardManager.Cards)
+            foreach (Card card in CardManage.Cards)
             {
-                card.IsValid = cardManager.ValidateCard(card);
+                card.IsValid = CardManage.ValidateCard(card);
 
                 if (!card.IsValid)
                 {
                     StackPanel stack = new StackPanel { Orientation = (Orientation.Horizontal) };
                     stack.Children.Add(new Label
                     {
-                        Content = card.Number
+                        Content = card.Number,                       
                     });
 
                     invalidCardsPanel.Children.Add(stack);
 
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Code\School\H2\Kreditkortet\Kreditkortet\Sound\AirRaid.wav");
-                    player.Play();
+                    RandomSound();
+
+                    Thread.Sleep(120);
                 }
                 else if (card.IsValid)
                 {
@@ -73,6 +76,30 @@ namespace Kreditkortet
                     s.Add(card.Number);
                 }
             }
+        }
+
+        private void RandomSound()
+        {
+            Random random = new Random();
+
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer($"..\\..\\Sound\\Crunch\\{random.Next(1,6)}.wav");
+
+            player.Play();
+        }
+
+        private void UploadButton_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
+            
+            bool? response = openFileDialog.ShowDialog();
+
+            if(response == true)
+            {
+                string filepath = openFileDialog.FileName;
+
+                MessageBox.Show($"Uploaded file: {filepath}");
+            }
+
         }
     }
 }

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/airraid.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/crunch/5.wav")]
 
 
