@@ -19,10 +19,12 @@
         </Grid.RowDefinitions>
         <TextBox Name="cardReader" Width="200" Height="50" Grid.Row="0" Grid.Column="1" TextChanged="cardReader_TextChanged"/>
 
-        <ScrollViewer Grid.Row="1" Grid.Column="1">
-            <StackPanel Name="invalidCardsPanel" Orientation="Horizontal">
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Margin="10">
+            <StackPanel Name="invalidCardsPanel">
                 
             </StackPanel>
         </ScrollViewer>
+
+        <Button Width="100" Height="30" Margin="10" Grid.Row="1" Grid.Column="1" Content="Check" Click="Button_Check"/>
     </Grid>
 </Window>

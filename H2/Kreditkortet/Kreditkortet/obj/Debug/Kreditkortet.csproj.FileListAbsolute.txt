@@ -14,3 +14,4 @@ C:\Code\School\H2\Kreditkortet\Kreditkortet\obj\Debug\Kreditkortet.csproj.Genera
 C:\Code\School\H2\Kreditkortet\Kreditkortet\obj\Debug\Kreditkortet.csproj.CoreCompileInputs.cache
 C:\Code\School\H2\Kreditkortet\Kreditkortet\obj\Debug\Kreditkortet.exe
 C:\Code\School\H2\Kreditkortet\Kreditkortet\obj\Debug\Kreditkortet.pdb
+C:\Code\School\H2\Kreditkortet\Kreditkortet\obj\Debug\Kreditkortet_Content.g.cs

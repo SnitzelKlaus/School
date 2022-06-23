@@ -22,6 +22,7 @@ namespace Kreditkortet
     /// </summary>
     public partial class MainWindow : Window
     {
+        public CardManager cardManager = new CardManager();
         private const char Separator = ',';
 
         public MainWindow()
@@ -31,13 +32,46 @@ namespace Kreditkortet
 
         private void cardReader_TextChanged(object sender, TextChangedEventArgs e)
         {
-            List<string> cards = new List<string>();
+            string Text = string.Concat(cardReader.Text.Where(c => !char.IsWhiteSpace(c)));
+            string[] cardRead = Text.Split(Separator);
 
-            cards.AddRange(cardReader.Text.Split(Separator));
+            List<Card> cards = new List<Card>();
 
-            foreach (var card in cards)
+            foreach (var card in cardRead)
             {
+                cards.Add(new Card(card));
+            }
 
+            cardManager.Cards = cards;
+        }
+
+        private void Button_Check(object sender, RoutedEventArgs e)
+        {
+            int validCount = 0;
+            List<string> s = new List<string>();
+
+            foreach (Card card in cardManager.Cards)
+            {
+                card.IsValid = cardManager.ValidateCard(card);
+
+                if (!card.IsValid)
+                {
+                    StackPanel stack = new StackPanel { Orientation = (Orientation.Horizontal) };
+                    stack.Children.Add(new Label
+                    {
+                        Content = card.Number
+                    });
+
+                    invalidCardsPanel.Children.Add(stack);
+
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Code\School\H2\Kreditkortet\Kreditkortet\Sound\AirRaid.wav");
+                    player.Play();
+                }
+                else if (card.IsValid)
+                {
+                    validCount++;
+                    s.Add(card.Number);
+                }
             }
         }
     }

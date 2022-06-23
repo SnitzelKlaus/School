@@ -11,7 +11,6 @@ namespace Kreditkortet
         public string Number { get => _number; set => _number = value; }
         public bool IsValid { get => _isValid; set => _isValid = value; }
 
-
         private string _number;
         private bool _isValid;
 
