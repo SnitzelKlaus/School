@@ -40,7 +40,7 @@ namespace Kreditkortet
             //Splits text into array
             string[] cardRead = Text.Split(Separator);
 
-            //Makes list of cards from array
+            //Makes list of cards from the array
             #region Cards
             List<Card> cards = new List<Card>();
 
