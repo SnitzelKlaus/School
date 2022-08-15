@@ -41,8 +41,12 @@ namespace NormalizationWPF
                 Margin = new Thickness(10),
                 SelectedItem = new Binding(),
                 ItemsSource = new Binding() { ElementName = "ComboBoxItems", Source =  }
-            });
 
+                //ItemsSource 
+
+
+            });
+            
             //ComboBox cb = new ComboBox();
             //cb.ID = "cb1";
             //cb.DataSource = dt;
@@ -107,7 +111,8 @@ namespace NormalizationWPF
             comboBox.Width = width;
             comboBox.Margin = new Thickness(margin);
             comboBox.SelectedItem = new Binding();
-            comboBox.ItemsSource = new Binding() { ElementName = "ComboBoxItems", Source =  };
+            comboBox.ItemsSource = new object[] { dpcyPanel };
+
 
             //{
             //    Width = 100,
