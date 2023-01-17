@@ -1,0 +1,15 @@
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\bin\Debug\net6.0\ConsoleBrowser.exe
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\bin\Debug\net6.0\ConsoleBrowser.deps.json
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\bin\Debug\net6.0\ConsoleBrowser.runtimeconfig.json
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\bin\Debug\net6.0\ConsoleBrowser.dll
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\bin\Debug\net6.0\ConsoleBrowser.pdb
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.csproj.AssemblyReference.cache
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.AssemblyInfoInputs.cache
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.AssemblyInfo.cs
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.csproj.CoreCompileInputs.cache
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.dll
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\refint\ConsoleBrowser.dll
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.pdb
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ConsoleBrowser.genruntimeconfig.cache
+C:\Code\School\H3\Serverside\ConsoleBrowser\ConsoleBrowser\obj\Debug\net6.0\ref\ConsoleBrowser.dll
