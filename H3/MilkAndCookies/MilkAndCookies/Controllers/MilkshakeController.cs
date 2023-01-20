@@ -9,7 +9,7 @@ namespace MilkAndCookies.Controllers
     {
         // GET api/milkshake/Chocolate
         [HttpGet("favmilkshake")]
-        public string Get(string milkshake)
+        public string GetMilkshake(string milkshake)
         {
             CookieOptions co = new CookieOptions();
             co.Expires = DateTime.Now.AddMinutes(5);
