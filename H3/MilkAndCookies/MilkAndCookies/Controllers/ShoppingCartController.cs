@@ -8,7 +8,7 @@ namespace MilkAndCookies.Controllers
     [ApiController]
     public class ShoppingCartController : ControllerBase
     {
-        [HttpGet("{productName}/{productPrice}")]
+        [HttpGet("add")]
         public IEnumerable<Product> Get(string productName, double productPrice)
         {
             List<Product> products = new List<Product>();
@@ -20,12 +20,27 @@ namespace MilkAndCookies.Controllers
             if (HttpContext.Session.GetObjectFromJson<List<Product>>("Basket") == null)
             {
                 products.Add(product);
-                HttpContext.Session.GetObjectFromJson<List<Product>>("Basket");
+                HttpContext.Session.SetObjectAsJson("Basket", products);
             }
             else
             {
                 products = HttpContext.Session.GetObjectFromJson<List<Product>>("Basket");
                 products.Add(product);
+                HttpContext.Session.SetObjectAsJson("Basket", products);
+            }
+
+            return products;
+        }
+
+        [HttpDelete("delete")]
+        public IEnumerable<Product> Delete(string productName)
+        {
+            List<Product> products = new List<Product>();
+
+            if (HttpContext.Session.GetObjectFromJson<List<Product>>("Basket") != null)
+            {
+                products = HttpContext.Session.GetObjectFromJson<List<Product>>("Basket");
+                products.RemoveAll(x => x.Name == productName);
                 HttpContext.Session.SetObjectAsJson("Basket", products);
             }
 
