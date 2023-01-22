@@ -22,10 +22,10 @@ namespace Vittighedsmaskinen.Controllers
             home.Add("To set language, use the following URL: /api/joke/language?la=language");
             home.Add("");
             home.Add("Use the following options:");
-            home.Add("---{Categories:}---");
-            foreach (string category in access.Catagories.Values)
+            home.Add("---{Catagories:}---");
+            foreach (string catagory in access.Catagories.Values)
             {
-                home.Add(category);
+                home.Add(catagory);
             }
             home.Add("---{Languages:}---");
             foreach (string language in access.Languages.Values)
@@ -92,7 +92,7 @@ namespace Vittighedsmaskinen.Controllers
             List<Joke> oldJokes = new List<Joke>();
 
             // Checks session for OldJokes and adds it to the list
-            if (HttpContext.Session.GetObjectFromJson<Joke>("OldJokes") != null)
+            if (HttpContext.Session.GetObjectFromJson<List<Joke>>("OldJokes") != null)
                 oldJokes = HttpContext.Session.GetObjectFromJson<List<Joke>>("OldJokes");
 
             #region Gets possible jokes
@@ -101,18 +101,50 @@ namespace Vittighedsmaskinen.Controllers
             List<Joke> possibleJokes = new List<Joke>();
 
             if (Request.Cookies["Language"] != null && Request.Cookies["Catagory"] != null)
-                possibleJokes = access.database.Jokes.Where(j => j.JokeLanguage.ToLower() == Request.Cookies["Language"] && j.JokeCategory.ToLower() == Request.Cookies["Catagory"]).Except(oldJokes).ToList();
+                possibleJokes = access.database.Jokes.Where(j => j.JokeLanguage.ToLower() == Request.Cookies["Language"] && j.JokeCategory.ToLower() == Request.Cookies["Catagory"]).ToList();
             else if (Request.Cookies["Language"] != null)
-                possibleJokes = access.database.Jokes.Where(j => j.JokeLanguage.ToLower() == Request.Cookies["Language"]).Except(oldJokes).ToList();
+                possibleJokes = access.database.Jokes.Where(j => j.JokeLanguage.ToLower() == Request.Cookies["Language"]).ToList();
             else if (Request.Cookies["Catagory"] != null)
-                possibleJokes = access.database.Jokes.Where(j => j.JokeCategory.ToLower() == Request.Cookies["Catagory"]).Except(oldJokes).ToList();
+                possibleJokes = access.database.Jokes.Where(j => j.JokeCategory.ToLower() == Request.Cookies["Catagory"]).ToList();
             else
                 possibleJokes = access.database.Jokes;
+
+            #region Work in progress...
+            if (oldJokes.Count > 0)
+            {
+                // Check for duplicates
+                for(int i = 0; i < oldJokes.Count; i++)
+                {
+                    bool isChecked = false;
+
+                    for(int j = 0; j < oldJokes.Count; j++)
+                    {
+                        if (oldJokes[i].Id == oldJokes[j].Id)
+                        {
+                            if (isChecked == true)
+                                oldJokes.Remove(oldJokes[i]);
+                            else
+                                isChecked = true;
+                        }
+                    }
+                }
+
+                // Remove old jokes from possible jokes
+                for(int i = 0; i < possibleJokes.Count; i++)
+                {
+                    for(int j = 0; j < oldJokes.Count; j++)
+                    {
+                        if (possibleJokes[i].Id == oldJokes[j].Id)
+                            possibleJokes.Remove(possibleJokes[i]);
+                    }
+                }
+            }
+            #endregion
 
             #endregion
 
             // Return if possibleJokes are null
-            if (possibleJokes == null)
+            if (possibleJokes.Count <= 0)
                 return "You've seen all available jokes.";
 
             // Generates a random joke

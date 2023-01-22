@@ -10,7 +10,7 @@ namespace Vittighedsmaskinen
         // Dictionary for languages
         public IDictionary<string, string> Languages
         {
-            get
+            get // Loops through jokes and adds available languages to dictionary
             {
                 IDictionary<string, string> languages = new Dictionary<string, string>();
 
@@ -27,8 +27,8 @@ namespace Vittighedsmaskinen
 
         // Dictionary for catagories
         public IDictionary<string, string> Catagories 
-        { 
-            get 
+        {
+            get // Loops through jokes and adds available catagories to dictionary
             {
                 IDictionary<string, string> catagories = new Dictionary<string, string>();
 
