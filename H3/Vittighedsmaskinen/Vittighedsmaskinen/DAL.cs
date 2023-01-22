@@ -42,54 +42,5 @@ namespace Vittighedsmaskinen
                 return catagories;
             }
         }
-
-        // Gets a random joke
-        public Joke GetRandomJoke(IEnumerable<Joke>? oldJokes, string? language, string? catagory)
-        {
-            if(language != null && catagory != null)
-            {
-                foreach(Joke joke in database.Jokes)
-                {
-                    foreach(Joke oldJoke in oldJokes)
-                    {
-                        if (joke.JokeLanguage.ToLower() == language.ToLower() && joke.JokeCategory.ToLower() == catagory.ToLower() && joke.Id != oldJoke.Id)
-                            return joke;
-                    }
-                }
-            }
-            else if (language != null)
-            {
-                foreach (Joke joke in database.Jokes)
-                {
-                    foreach (Joke oldJoke in oldJokes)
-                    {
-                        if (joke.JokeLanguage.ToLower() == language.ToLower() && joke.Id != oldJoke.Id)
-                            return joke;
-                    }
-                }
-            }
-            else if (catagory != null)
-            {
-                foreach (Joke joke in database.Jokes)
-                {
-                    foreach (Joke oldJoke in oldJokes)
-                    {
-                        if (joke.JokeCategory.ToLower() == catagory.ToLower() && joke.Id != oldJoke.Id)
-                            return joke;
-                    }
-                }
-            }
-            else
-            {
-                foreach (Joke joke in database.Jokes)
-                {
-                    foreach (Joke oldJoke in oldJokes)
-                    {
-                        if (joke.Id != oldJoke.Id)
-                            return joke;
-                    }
-                }
-            }
-        }
     }
 }
