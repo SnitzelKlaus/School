@@ -198,13 +198,13 @@
       "mscorlib.dll": "sha256-wmk56X5dbt29rrFZKEFpOFjotkZA+JSxA4fqkgmBsOU=",
       "netstandard.dll": "sha256-CvlfDmNgFRYT7l\/xZKu91FlbTFyLG\/5cH7YX63k9ghE=",
       "System.Private.CoreLib.dll": "sha256-aF4imeOpA59D6F5qCLabzkeY7MvRZzNYzavhB\/bdxvM=",
-      "DatagridPWA.dll": "sha256-hNmM6b3uHlFIgNJTUJgkL26pvqYGNVS7L9IB1OweNTg="
+      "DatagridPWA.dll": "sha256-u531khN\/TJ5BxEO35k6guXPo8No+kvltLwJw0L4NcJU="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "DatagridPWA.pdb": "sha256-4PQzmKrmXBhstq9igMupBIZ7cP1+QBZNQoCxp6Nwf6Q="
+      "DatagridPWA.pdb": "sha256-eTN9NnwzdfUpXmCNiJHW8nF4gqMhxyGyz68VBBdA6oM="
     },
     "runtime": {
       "dotnet.6.0.7.bn1rqjxqcz.js": "sha256-pvJcJ6jtDSfxgXm03QYRTm4aAi9PSzMSJODReHtvASY=",

@@ -3,11 +3,10 @@
 
 <h1>Works about 69/420 evertime</h1>
 
-<button @onclick="AddFile">Add LocalStorage</button>
 <button @onclick="ClearFiles">Clear LocalStorage</button>
 <InputFile OnChange="@SingleUpload" />
 
-@if (files == null)
+@if (_files == null)
 {
     <p><em>No files</em></p>
 }
@@ -20,7 +19,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var file in files)
+            @foreach (var file in _files)
             {
                 <tr>
                     <td>@file</td>
@@ -32,21 +31,13 @@ else
 
 
 @code {
-    private List<string>? files;
+    private List<byte[]>? _files;
 
     protected override async Task OnInitializedAsync()
     {
-        files = await localStorage.GetItemAsync<List<string>>("files") ?? new List<string>();
+        _files = await localStorage.GetItemAsync<List<byte[]>>("files") ?? new List<byte[]>();
     }
 
-    public async Task AddFile()
-    {
-        var files = await localStorage.GetItemAsync<List<string>>("files") ?? new List<string>();
-        files.Add("test");
-        
-        await localStorage.SetItemAsync("files", files);
-    }
-    
     public async void ClearFiles()
     {
         await localStorage.ClearAsync();
@@ -54,8 +45,14 @@ else
 
     private async Task SingleUpload(InputFileChangeEventArgs e)
     {
+        List<byte[]> files = await localStorage.GetItemAsync<List<byte[]>>("files") ?? new List<byte[]>();
+
         MemoryStream ms = new MemoryStream();
         await e.File.OpenReadStream().CopyToAsync(ms);
-        var bytes = ms.ToArray();
+        byte[] bytes = ms.ToArray();
+
+        files.Add(bytes);
+
+        await localStorage.SetItemAsync("files", files);
     }
 }
