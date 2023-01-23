@@ -1,12 +1,11 @@
 ﻿@page "/datagrid"
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 
-<h1>Weather forecast</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
+<h1>Works about 69/420 evertime</h1>
 
 <button @onclick="AddFile">Add LocalStorage</button>
 <button @onclick="ClearFiles">Clear LocalStorage</button>
+<InputFile OnChange="@SingleUpload" />
 
 @if (files == null)
 {
@@ -50,7 +49,13 @@ else
     
     public async void ClearFiles()
     {
-        //this will clear the local storage 
         await localStorage.ClearAsync();
+    }
+
+    private async Task SingleUpload(InputFileChangeEventArgs e)
+    {
+        MemoryStream ms = new MemoryStream();
+        await e.File.OpenReadStream().CopyToAsync(ms);
+        var bytes = ms.ToArray();
     }
 }
