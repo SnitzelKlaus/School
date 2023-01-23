@@ -1,0 +1,56 @@
+﻿@page "/datagrid"
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<button @onclick="AddFile">Add LocalStorage</button>
+<button @onclick="ClearFiles">Clear LocalStorage</button>
+
+@if (files == null)
+{
+    <p><em>No files</em></p>
+}
+else
+{
+    <table class="fileTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var file in files)
+            {
+                <tr>
+                    <td>@file</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    private List<string>? files;
+
+    protected override async Task OnInitializedAsync()
+    {
+        files = await localStorage.GetItemAsync<List<string>>("files") ?? new List<string>();
+    }
+
+    public async Task AddFile()
+    {
+        var files = await localStorage.GetItemAsync<List<string>>("files") ?? new List<string>();
+        files.Add("test");
+        
+        await localStorage.SetItemAsync("files", files);
+    }
+    
+    public async void ClearFiles()
+    {
+        //this will clear the local storage 
+        await localStorage.ClearAsync();
+    }
+}
