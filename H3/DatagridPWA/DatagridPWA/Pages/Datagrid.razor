@@ -5,44 +5,46 @@
 
 <h1>Works about 69/420 at a time</h1>
 
-<div class="d-flex flex-row my-2">
-    <button id="add" @onclick="AddFile">Add Data</button>
-    <button id="del" @onclick="DelFile">Delete Data</button>
-    <button id="update" @onclick="UpdateFile">Update Data</button>
-</div>
+<InputFile OnChange="@AddFile" />
 
-@*<InputFile OnChange="@SingleUpload" />*@
-@*
-@if (_files == null)
-{
-    <p><em>No files</em></p>
-}*@
-else
-{
-    <table class="fileTable">
-        <thead>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var data in GridData)
+        {
             <tr>
-                <th>Name</th>
+                <td>@data.Id</td>
+                <td>@data.Name</td>
+                <td>@data.LastModified</td>
+                <td><img src="@ConvertBase64(data.Data)"/></td>
             </tr>
-        </thead>
-        <tbody>
-@*            @foreach (var file in _files)
-            {
-                <tr>
-                    <td>@file</td>
-                </tr>
-            }*@
-        </tbody>
-    </table>
-}
-
+        }
+    </tbody>
+</table>
 
 @code {
+    private string ConvertBase64(byte[] bytes)
+    {
+        var base64 = Convert.ToBase64String(bytes);
+        return String.Format("data:image/gif;base64,{0}", base64);
+    }
+    
     public ObservableCollection<File> GridData { get; set; } = new ObservableCollection<File>();
 
     protected override void OnInitialized()
     {
-        //GridData = OrdersDetailsObserveData.GetRecords();
+        GetFiles();
+    }
+
+    public void AddFile()
+    {
+        //GridData.Add(new OrdersDetailsObserveData(32341, "ALFKI", 4343, 2.3 * 43, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
     }
 
     public void DelFile()
@@ -56,47 +58,122 @@ else
         //a.CustomerID = "Update";
     }
 
-    private async Task AddFile(InputFileChangeEventArgs e)
+    public async void ClearFiles()
     {
-        GridData = await localStorage.GetItemAsync<List<ObservableCollection<File>>>("files");
-                
+        await localStorage.ClearAsync();
+    }
+    
+    private async Task AddFile(InputFileChangeEventArgs e)
+    {                
         MemoryStream ms = new MemoryStream();
         await e.File.OpenReadStream().CopyToAsync(ms);
         byte[] bytes = ms.ToArray();
 
-        var file = new File(new Guid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now);
+        var file = new File(Guid.NewGuid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now);
 
         GridData.Add(file);
 
         await localStorage.SetItemAsync("files", GridData);
     }
 
-
-
-    
-
-    //protected override async Task OnInitializedAsync()
-    //{
-
-    //}
-
-    //public async void ClearFiles()
-    //{
-    //    await localStorage.ClearAsync();
-    //}
-
-    //private async Task SingleUpload(InputFileChangeEventArgs e)
-    //{
-    //    _files = await localStorage.GetItemAsync<List<IObservable<FileType>>>("files") ?? new List<IObservable<FileType>>();
-
-    //    MemoryStream ms = new MemoryStream();
-    //    await e.File.OpenReadStream().CopyToAsync(ms);
-    //    byte[] bytes = ms.ToArray();
-
-    //    var file = new FileType(e.File.Name, e.File.ContentType, e.File.Size, bytes);
-
-    //    _files.Add(file);
-
-    //    await localStorage.SetItemAsync("files", _files);
-    //}
+    public async Task GetFiles()
+    {
+        if (await localStorage.ContainKeyAsync("files"))
+        {
+            GridData = await localStorage.GetItemAsync<ObservableCollection<File>>("files");
+        }
     }
+
+
+    public class File : INotifyPropertyChanged
+    {    
+        public File()
+        {
+
+        }
+        public File(Guid id, string name, string type, long size, byte[] data, DateTime lastModified)
+        {
+            _id = id;
+            _name = name;
+            _type = type;
+            _size = size;
+            _data = data;
+            _lastModified = lastModified;
+        }
+
+        private Guid _id;
+        private string _name;
+        private string _type;
+        private long _size;
+        private byte[] _data;
+        private DateTime _lastModified;
+
+
+        public Guid Id
+        {
+            get { return _id; }
+            set
+            {
+                _id = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+        public string Name
+        {
+
+            get { return _name; }
+            set
+            {
+                _name = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+        public string Type
+        {
+            get { return _type; }
+            set
+            {
+                _type = value;
+                NotifyPropertyChanged("Type");
+            }
+        }
+        public long Size
+        {
+            get { return _size; }
+            set
+            {
+                _size = value;
+                NotifyPropertyChanged("Size");
+            }
+        }
+        public byte[] Data
+        {
+            get { return _data; }
+            set
+            {
+                _data = value;
+                NotifyPropertyChanged("Data");
+            }
+        }
+        public DateTime LastModified
+        {
+            get { return _lastModified; }
+            set
+            {
+                _lastModified = value;
+                NotifyPropertyChanged("LastModified");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        private void NotifyPropertyChanged(String propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        
+    }
+}
