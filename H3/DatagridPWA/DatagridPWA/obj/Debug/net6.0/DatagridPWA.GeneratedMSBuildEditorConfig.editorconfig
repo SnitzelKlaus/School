@@ -5,10 +5,8 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = browser
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = true
-build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = DatagridPWA
 build_property.RootNamespace = DatagridPWA
 build_property.ProjectDir = C:\Code\School\H3\DatagridPWA\DatagridPWA\
@@ -22,16 +20,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/School/H3/DatagridPWA/DatagridPWA/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Code/School/H3/DatagridPWA/DatagridPWA/Pages/Datagrid.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YWdyaWQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Code/School/H3/DatagridPWA/DatagridPWA/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Code/School/H3/DatagridPWA/DatagridPWA/Pages/Index.razor]
