@@ -5,8 +5,9 @@
 
 <h1>Works about 69/420 at a time</h1>
 
-<InputFile class="btn bg-dark text-white" OnChange="@AddFile" />
+<InputFile class="btn bg-light text-black" OnChange="@AddFile" />
 <a class="btn bg-warning text-black" @onclick="() => SaveFiles()">Save Changes</a>
+<a class="btn bg-dark text-white" @onclick="() => GetFiles()">Undo Changes</a>
 
 <table class="table">
     <thead>
@@ -33,11 +34,17 @@
 
                 <tr>
                     <td class="form-inline py-3">
-                        <input type="text" class="form-control" />
-                        <input type="text" class="form-control" />
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <EditForm Model="data">
+                            <div class="mb-2">
+                                <InputText id="name" @bind-Value="data.Name" placeholder="Enter Name"></InputText>
+                            </div>
+                            <a class="btn bg-info text-white">Update</a>
+                        </EditForm>
                     </td>
-                    @*<td></td>*@
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             }
         }
@@ -78,11 +85,6 @@
         var file = new File(Guid.NewGuid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now, false);
 
         GridData.Add(file);
-    }
-
-    private void UpdateFile(Guid guid)
-    {
-
     }
 
     private void DelFile(Guid guid)
