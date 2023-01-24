@@ -1,15 +1,22 @@
 ﻿@page "/datagrid"
+@using System.ComponentModel
+@using System.Collections.ObjectModel
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 
 <h1>Works about 69/420 at a time</h1>
 
-<button @onclick="ClearFiles">Clear LocalStorage</button>
-<InputFile OnChange="@SingleUpload" />
+<div class="d-flex flex-row my-2">
+    <button id="add" @onclick="AddFile">Add Data</button>
+    <button id="del" @onclick="DelFile">Delete Data</button>
+    <button id="update" @onclick="UpdateFile">Update Data</button>
+</div>
 
+@*<InputFile OnChange="@SingleUpload" />*@
+@*
 @if (_files == null)
 {
     <p><em>No files</em></p>
-}
+}*@
 else
 {
     <table class="fileTable">
@@ -19,40 +26,77 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var file in _files)
+@*            @foreach (var file in _files)
             {
                 <tr>
                     <td>@file</td>
                 </tr>
-            }
+            }*@
         </tbody>
     </table>
 }
 
 
 @code {
-    private List<byte[]>? _files;
+    public ObservableCollection<File> GridData { get; set; } = new ObservableCollection<File>();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        _files = await localStorage.GetItemAsync<List<byte[]>>("files") ?? new List<byte[]>();
+        //GridData = OrdersDetailsObserveData.GetRecords();
     }
 
-    public async void ClearFiles()
+    public void DelFile()
     {
-        await localStorage.ClearAsync();
+        //GridData.Remove(GridData.First());
     }
 
-    private async Task SingleUpload(InputFileChangeEventArgs e)
+    public void UpdateFile()
     {
-        List<byte[]> files = await localStorage.GetItemAsync<List<byte[]>>("files") ?? new List<byte[]>();
+        //var a = GridData.First();
+        //a.CustomerID = "Update";
+    }
 
+    private async Task AddFile(InputFileChangeEventArgs e)
+    {
+        GridData = await localStorage.GetItemAsync<List<ObservableCollection<File>>>("files");
+                
         MemoryStream ms = new MemoryStream();
         await e.File.OpenReadStream().CopyToAsync(ms);
         byte[] bytes = ms.ToArray();
 
-        files.Add(bytes);
+        var file = new File(new Guid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now);
 
-        await localStorage.SetItemAsync("files", files);
+        GridData.Add(file);
+
+        await localStorage.SetItemAsync("files", GridData);
     }
-}
+
+
+
+    
+
+    //protected override async Task OnInitializedAsync()
+    //{
+
+    //}
+
+    //public async void ClearFiles()
+    //{
+    //    await localStorage.ClearAsync();
+    //}
+
+    //private async Task SingleUpload(InputFileChangeEventArgs e)
+    //{
+    //    _files = await localStorage.GetItemAsync<List<IObservable<FileType>>>("files") ?? new List<IObservable<FileType>>();
+
+    //    MemoryStream ms = new MemoryStream();
+    //    await e.File.OpenReadStream().CopyToAsync(ms);
+    //    byte[] bytes = ms.ToArray();
+
+    //    var file = new FileType(e.File.Name, e.File.ContentType, e.File.Size, bytes);
+
+    //    _files.Add(file);
+
+    //    await localStorage.SetItemAsync("files", _files);
+    //}
+    }
