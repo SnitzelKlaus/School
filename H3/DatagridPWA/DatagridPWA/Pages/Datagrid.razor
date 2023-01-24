@@ -5,9 +5,10 @@
 
 <h1>Works about 69/420 at a time</h1>
 
-<InputFile OnChange="@AddFile" />
+<InputFile class="btn bg-dark text-white" OnChange="@AddFile" />
+<a class="btn bg-warning text-black" @onclick="() => SaveFiles()">Save Changes</a>
 
-    <table class="table">
+<table class="table">
     <thead>
         <tr>
             <th></th>
@@ -21,48 +22,75 @@
         @foreach (var data in GridData)
         {
             <tr>
-                <td>
-                    <a class="btn bg-danger text-white">X</a>
-                </td>
+                <td><a class="btn bg-danger text-white" @onclick="() => DelFile(data.Id)">X</a></td>
                 <td>@data.Name</td>
                 <td>@data.LastModified</td>
                 <td><img width="100" height="100" src="@ConvertBase64(data.Data)"/></td>
-                <td>
-                    <a class="btn bg-success text-white">Edit</a>
-                </td>
+                <td><a class="btn bg-success text-white" @onclick="() => ActivateEdit(data.Id)">Edit</a></td>
             </tr>
+            if (data.IsEditActivated)
+            {
+
+                <tr>
+                    <td class="form-inline py-3">
+                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" />
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </td>
+                    @*<td></td>*@
+                </tr>
+            }
         }
     </tbody>
 </table>
 
 @code {
     public ObservableCollection<File> GridData { get; set; } = new ObservableCollection<File>();
+    private Guid _userEditId { get; set; }
+
 
     protected override async void OnInitialized()
     {
         await GetFiles();
     }
-    
+
+    private void ActivateEdit(Guid guid)
+    {
+        foreach(var file in GridData)
+        {
+            if(file.Id == guid)
+            {
+                if (!file.IsEditActivated)
+                    file.IsEditActivated = true;
+                else
+                    file.IsEditActivated = false;
+                break;
+            }
+        }
+    }
+
     private async Task AddFile(InputFileChangeEventArgs e)
-    {                
+    {
         MemoryStream ms = new MemoryStream();
         await e.File.OpenReadStream().CopyToAsync(ms);
         byte[] bytes = ms.ToArray();
 
-        var file = new File(Guid.NewGuid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now);
+        var file = new File(Guid.NewGuid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now, false);
 
         GridData.Add(file);
-
-        await localStorage.SetItemAsync("files", GridData);
     }
-    private async Task UpdateFile()
+
+    private void UpdateFile(Guid guid)
     {
 
     }
-    private async Task DelFile(Guid guid)
-    {
 
+    private void DelFile(Guid guid)
+    {
+        var gridData = GridData.Where(x => x.Id != guid);
+        GridData = new ObservableCollection<File>(gridData);
     }
+
     private async Task GetFiles()
     {
         if (await localStorage.ContainKeyAsync("files"))
@@ -70,6 +98,12 @@
             GridData = await localStorage.GetItemAsync<ObservableCollection<File>>("files");
         }
     }
+
+    private async Task SaveFiles()
+    {
+        await localStorage.SetItemAsync("files", GridData);
+    }
+
     private async Task ClearFiles()
     {
         await localStorage.ClearAsync();

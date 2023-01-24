@@ -6,11 +6,7 @@ namespace DatagridPWA
 {
     public class File : INotifyPropertyChanged
     {
-        public File()
-        {
-
-        }
-        public File(Guid id, string name, string type, long size, byte[] data, DateTime lastModified)
+        public File(Guid id, string name, string type, long size, byte[] data, DateTime lastModified, bool isEditActivated)
         {
             _id = id;
             _name = name;
@@ -18,6 +14,7 @@ namespace DatagridPWA
             _size = size;
             _data = data;
             _lastModified = lastModified;
+            _isEditActivated = isEditActivated;
         }
 
         private Guid _id;
@@ -26,6 +23,7 @@ namespace DatagridPWA
         private long _size;
         private byte[] _data;
         private DateTime _lastModified;
+        private bool _isEditActivated;
 
 
         public Guid Id
@@ -83,9 +81,18 @@ namespace DatagridPWA
                 NotifyPropertyChanged("LastModified");
             }
         }
+        public bool IsEditActivated
+        {
+            get { return _isEditActivated; }
+            set
+            {
+                _isEditActivated = value;
+                NotifyPropertyChanged("IsEditActivated");
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         
         private void NotifyPropertyChanged(String propertyName)
         {
