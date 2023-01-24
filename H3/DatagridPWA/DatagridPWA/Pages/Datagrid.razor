@@ -5,15 +5,22 @@
 
 <h1>Works about 69/420 at a time</h1>
 
+@* File input box - Allows upload of file *@
 <InputFile class="btn bg-light text-black" OnChange="@AddFile" />
-<a class="btn bg-warning text-black" @onclick="() => SaveFiles()">Save Changes</a>
-<a class="btn bg-dark text-white" @onclick="() => GetFiles()">Undo Changes</a>
 
+@* Saves button - Saves current list to localstorage *@
+<a class="btn bg-warning text-black" @onclick="() => SaveLocalStorage()">Save Changes</a>
+
+@* Undo button - Overwrites current list with data from localstorage *@
+<a class="btn bg-dark text-white" @onclick="() => GetLocalStorage()">Undo Changes</a>
+
+@* Table of data *@
 <table class="table">
     <thead>
         <tr>
             <th></th>
             <th>Name:</th>
+            <th>Size:</th>
             <th>Date:</th>
             <th>Image:</th>
             <th></th>
@@ -23,22 +30,33 @@
         @foreach (var data in GridData)
         {
             <tr>
+                @* Delete button - Deletes file using file id (guid) *@
                 <td><a class="btn bg-danger text-white" @onclick="() => DelFile(data.Id)">X</a></td>
+
                 <td>@data.Name</td>
+                <td>@data.Size</td>
                 <td>@data.LastModified</td>
-                <td><img width="100" height="100" src="@ConvertBase64(data.Data)"/></td>
+                <td><img width="100" height="100" src="@ConvertToBase64(data.Data)"/></td>
+
+                @* Edit button (activates editing for file) *@
                 <td><a class="btn bg-success text-white" @onclick="() => ActivateEdit(data.Id)">Edit</a></td>
             </tr>
+
+            @* Runs code if editing is activated on specified file *@
             if (data.IsEditActivated)
             {
-
-                <tr>
-                    <td class="form-inline py-3">
+                <tr class="bg-light">
+                    <td></td>
+                    <td>
+                        @* Form for editing file data - Saves edits directly to GridData (list) using @bind-Value *@
                         <EditForm Model="data">
-                            <div class="mb-2">
-                                <InputText id="name" @bind-Value="data.Name" placeholder="Enter Name"></InputText>
+                            <div class="d-inline-flex">
+                                @* Allows renaming of file name *@
+                                <div>
+                                    <label>Rename file: </label>
+                                    <InputText id="name" @bind-Value="data.Name" placeholder="Enter Name"></InputText>
+                                </div>
                             </div>
-                            <a class="btn bg-info text-white">Update</a>
                         </EditForm>
                     </td>
                     <td></td>
@@ -52,21 +70,28 @@
 </table>
 
 @code {
+    // Observable list of files - Used for manipulating data and saving to local storage
     public ObservableCollection<File> GridData { get; set; } = new ObservableCollection<File>();
-    private Guid _userEditId { get; set; }
 
-
+    // Initializes localstorage to GridData (list)
     protected override async void OnInitialized()
     {
-        await GetFiles();
+        // Gets data from local storage
+        await GetLocalStorage();
+
+        // Refreshes page on startup
+        StateHasChanged();
     }
 
+    // Enables/disables editing for files
     private void ActivateEdit(Guid guid)
     {
+        // Loops through each file until a matching id from the input is found
         foreach(var file in GridData)
         {
             if(file.Id == guid)
             {
+                // Sets file editing to either true or false depending on the condition
                 if (!file.IsEditActivated)
                     file.IsEditActivated = true;
                 else
@@ -76,42 +101,58 @@
         }
     }
 
+    // Adds new file object to GridData (list)
     private async Task AddFile(InputFileChangeEventArgs e)
     {
+        // Opens up a memory stream to read file data
         MemoryStream ms = new MemoryStream();
         await e.File.OpenReadStream().CopyToAsync(ms);
+
+        // Copies filedata to byte array (used to display image using Base64 converter)
         byte[] bytes = ms.ToArray();
 
+        // Creates new file object, and adds data from the filestream
         var file = new File(Guid.NewGuid(), e.File.Name, e.File.ContentType, e.File.Size, bytes, DateTime.Now, false);
 
+        // Sends new file object to the GridData list (This only adds file object to the list. 
+        // It doesn't get saved to local storage)
         GridData.Add(file);
     }
 
+    // Deletes file via file id (guid)
     private void DelFile(Guid guid)
     {
+        // Creates new list of elements but leaves out element with matching id
         var gridData = GridData.Where(x => x.Id != guid);
+
+        // Send data to list
         GridData = new ObservableCollection<File>(gridData);
     }
 
-    private async Task GetFiles()
+    // Gets files from local storage and sets data to GridData (list)
+    private async Task GetLocalStorage()
     {
+        // If local storage exist, send data to GridData list
         if (await localStorage.ContainKeyAsync("files"))
         {
             GridData = await localStorage.GetItemAsync<ObservableCollection<File>>("files");
         }
     }
 
-    private async Task SaveFiles()
+    // Saves files from GridData (list) to local storage
+    private async Task SaveLocalStorage()
     {
         await localStorage.SetItemAsync("files", GridData);
     }
 
-    private async Task ClearFiles()
+    // Clears localstorage
+    private async Task ClearStorage()
     {
         await localStorage.ClearAsync();
     }
 
-    private string ConvertBase64(byte[] bytes)
+    // Converts byte array to base64 string
+    private string ConvertToBase64(byte[] bytes)
     {
         var base64 = Convert.ToBase64String(bytes);
         return String.Format("data:image/gif;base64,{0}", base64);
