@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Code\School\H3\DatagridPWA\DatagridPWA\bin\Release\net6.0\browser-wasm\publish\</_PublishTargetUrl>
-    <History>True|2023-01-25T15:34:56.6893774Z;</History>
+    <History>True|2023-01-25T15:50:13.1992433Z;True|2023-01-25T16:34:56.6893774+01:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

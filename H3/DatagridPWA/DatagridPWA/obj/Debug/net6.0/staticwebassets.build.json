@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5lgqNDxro9q8F+Bzqmfl9/6m4Zro5gIkzLzHDJZIEHI=",
+  "Hash": "j7fHe4q0poq14/Wc3RD9OsgtGeRVqFjRj5KmdfLHryI=",
   "Source": "DatagridPWA",
   "BasePath": "/",
   "Mode": "Root",
@@ -7257,23 +7257,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manifest.json"
-    },
-    {
-      "Identity": "C:\\Code\\School\\H3\\DatagridPWA\\DatagridPWA\\wwwroot\\sample-data\\weather.json",
-      "SourceId": "DatagridPWA",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Code\\School\\H3\\DatagridPWA\\DatagridPWA\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     },
     {
       "Identity": "C:\\Users\\beho5\\.nuget\\packages\\matblazor\\2.8.0\\staticwebassets\\dist\\matBlazor.css",

@@ -61,16 +61,12 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-FnuQEa\/5Xw\/YGs1h\/fM0moSdC+YCm\/DRh5kfOGa1uQk=",
+      "hash": "sha256-Yoms32jb4IcNJ9tJWBG+g6WgZ\/8z6Ii\/8y6EXC+Lmzs=",
       "url": "index.html"
     },
     {
       "hash": "sha256-9pmM4HUQUSS+e5L08jbz\/4mglcVqCDcrjVDSyo8eXTE=",
       "url": "manifest.json"
-    },
-    {
-      "hash": "sha256-yzFf+O\/mlH+Q9klUSqXP2kxGKOUFLPxaww8da8fKhGU=",
-      "url": "sample-data\/weather.json"
     },
     {
       "hash": "sha256-iIGmRMOXijM6Pw6DFXhoPzrG2QlqoPyKvylPp8RZuD0=",
@@ -869,11 +865,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Lesm34LeuX+YOF4tdyqSMGGkmHrSJBD3NeWwBhFyTxs=",
+      "hash": "sha256-cdbxIkQ7k1hagj1zMNscKeD0wfSvRKEVJkWDD8vg7ZQ=",
       "url": "_framework\/DatagridPWA.dll"
     },
     {
-      "hash": "sha256-uSIIK+X1QqULA6Pf4YcGozMHm\/C9mlOP+xcEBKzYnqQ=",
+      "hash": "sha256-GQpyxVZLDG1F8A4p6FToXtthoH4xqjYoT4RqXjDZtpI=",
       "url": "_framework\/DatagridPWA.pdb"
     },
     {
@@ -881,7 +877,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-Eds7Sf6NwgXFYwrmTyf6R4qRpuWCYS6BIseE9AiVaZ8=",
+      "hash": "sha256-r\/sowP8U8bMLJOyoIfE1wXNYQ0rJ3ZkTofOR\/ePl\/8Y=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -893,5 +889,5 @@
       "url": "_content\/MatBlazor\/dist\/matBlazor.js"
     }
   ],
-  "version": "i3tRROv3"
+  "version": "yY2Hmp7s"
 };
