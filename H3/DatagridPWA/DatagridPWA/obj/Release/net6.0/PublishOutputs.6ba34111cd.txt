@@ -1,0 +1,1 @@
+C:\Code\School\H3\DatagridPWA\DatagridPWA\obj\Release\net6.0\browser-wasm\PubTmp\Out\web.config
