@@ -1,5 +1,16 @@
 package com.example.opslagstavlenapp;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -7,17 +18,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.provider.MediaStore;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,5 +58,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    float x, y;
+    float dx, dy;
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        if(event.getAction()==MotionEvent.ACTION_DOWN){
+            x = event.getX();
+            y = event.getY();
+        }
 
+        if(event.getAction() == MotionEvent.ACTION_MOVE){
+            dx = event.getX()-x;
+            dy = event.getY()-y;
+
+            imageView.setX(imageView.getX()+dx);
+            imageView.setY(imageView.getY()+dy);
+
+            x = event.getX();
+            y = event.getY();
+        }
+
+        return super.onTouchEvent(event);
+    }
 }
