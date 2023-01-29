@@ -10,8 +10,26 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Internal Storage for images
+ *
+ * This class is used for loading/saving/deleting images to internal storage.
+ *
+ * @author Benjamin Hoffmeyer
+ * @version 1.0
+ * @since 1.0
+ */
 public class InternalStorage {
 
+    /**
+     * Method that saves images to internal storage.
+     *
+     * @param context The context of current app state. (Used to determine filepath)
+     * @param bitmap The bitmap of image.
+     * @param name The name/id of image.
+     * @param extension The extension of image (jpg, png, svg).
+     * @result Saves the image (bitmap, name, extension) to internal storage
+     */
     public static void saveImage(Context context, Bitmap bitmap, String name, String extension){
 
         // Directory path to save image
@@ -35,8 +53,15 @@ public class InternalStorage {
         }
     }
 
+
+    /**
+     * Method that loads images from internal storage
+     *
+     * @param context The context of current app state. (Used to determine filepath)
+     * @return List of images with the following attributes: 'bitmap, name, extension'
+     */
     public List<Image> loadImages(Context context){
-        List<Image> imageViews = new ArrayList<>();
+        List<Image> images = new ArrayList<>();
 
         // Directory path to get image
         File directory = context.getDir("images", Context.MODE_PRIVATE);
@@ -46,12 +71,19 @@ public class InternalStorage {
             String name = file.getName().substring(0, file.getName().lastIndexOf("."));
             String extension = file.getName().substring(file.getName().lastIndexOf(".") + 1);
 
-            imageViews.add(new Image(bitmap, name, extension));
+            images.add(new Image(bitmap, name, extension));
         }
 
-        return imageViews;
+        return images;
     }
 
+
+    /**
+     * Method that deletes all images.
+     *
+     * @param context The context of current app state. (Used to determine filepath)
+     * @return The deletion of ALL files in directory: 'images'
+     */
     public void deleteImages(Context context){
         // Directory path to delete image
         File directory = context.getDir("images", Context.MODE_PRIVATE);

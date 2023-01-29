@@ -25,10 +25,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Main Activity for application
+ *
+ * The first activity that loads for the application.
+ *
+ * @author Benjamin Hoffmeyer
+ * @version 1.0
+ * @since 1.0
+ */
 public class MainActivity extends AppCompatActivity {
     private final List<ImageView> _imageViews = new ArrayList<>();
     private RelativeLayout _boardLayout;
-
     ActivityResultLauncher<Intent> activityLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
@@ -41,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+
+    /**
+     * Method that starts on startup
+     *
+     * @param savedInstanceState Activities have the ability, under special circumstances,
+     *                           to restore themselves to a previous state using the data
+     *                           stored in this bundle.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +108,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    /**
+     * Method that loads images from internal storage and API (in progress)
+     *
+     * @return Void: Creates new imageViews from storage and API (in progress)
+     */
     private void loadImages(){
         // Load images from internal storage
         InternalStorage internalStorage = new InternalStorage();
@@ -101,7 +123,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Creates imageview from image
+
+    /**
+     * Method that creates new imageView
+     *
+     * @param bitmap The bitmap of image
+     * @param uniqueID The name/id of image
+     * @return Void: Creates new imageView and adds it to '_boardLayout' and list '_imageViews'
+     */
     @SuppressLint("ClickableViewAccessibility")
     private void createImageView(Bitmap bitmap, String uniqueID){
         ImageView imageView = new ImageView(this);
