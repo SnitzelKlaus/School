@@ -42,17 +42,10 @@ public class InternalStorage {
         File directory = context.getDir("images", Context.MODE_PRIVATE);
 
         for(File file : directory.listFiles()){
-            BitmapFactory.Options options;
-            Bitmap bitmap;
-            try{
-                bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-            }catch(OutOfMemoryError e){
-                Log.e("Error", e.getMessage());
-                continue;
-            }
-
+            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
             String name = file.getName().substring(0, file.getName().lastIndexOf("."));
             String extension = file.getName().substring(file.getName().lastIndexOf(".") + 1);
+
             imageViews.add(new Image(bitmap, name, extension));
         }
 
