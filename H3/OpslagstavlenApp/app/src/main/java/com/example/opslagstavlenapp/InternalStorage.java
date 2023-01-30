@@ -38,6 +38,7 @@ public class InternalStorage {
         // Creates file path
         File path = new File(directory, name + "." + extension);
 
+        // File stream for saving data
         FileOutputStream fileOutputStream = null;
         try{
             fileOutputStream = new FileOutputStream(path);
@@ -66,6 +67,7 @@ public class InternalStorage {
         // Directory path to get image
         File directory = context.getDir("images", Context.MODE_PRIVATE);
 
+        // Loops through files and adds to list of images
         for(File file : directory.listFiles()){
             Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
             String name = file.getName().substring(0, file.getName().lastIndexOf("."));

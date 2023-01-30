@@ -37,6 +37,8 @@ import java.util.UUID;
 public class MainActivity extends AppCompatActivity {
     private final List<ImageView> _imageViews = new ArrayList<>();
     private RelativeLayout _boardLayout;
+
+    // ActivityResult used to start activity for camera
     ActivityResultLauncher<Intent> activityLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     Intent intent = result.getData();
                     assert intent != null;
+
+                    // Gets bitmap from camera and creates an imageView
                     Bitmap bitmap = (Bitmap) intent.getExtras().get("data");
                     createImageView(bitmap, null);
                 }
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         loadImages();
 
+        // Checks permissions
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{
@@ -76,14 +81,17 @@ public class MainActivity extends AppCompatActivity {
             }, 100);
         }
 
+        // Camera button
         cameraButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                // Opens camera
                 Intent open_camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 activityLauncher.launch(open_camera);
             }
         });
 
+        // Delete button
         deleteButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -91,10 +99,13 @@ public class MainActivity extends AppCompatActivity {
                 InternalStorage internalStorage = new InternalStorage();
                 internalStorage.deleteImages(MainActivity.this);
 
+                // Clears layout and imageViews
                 _boardLayout.removeAllViews();
                 _imageViews.clear();
             }
         });
+
+        // Save button
         saveButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -118,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
         // Load images from internal storage
         InternalStorage internalStorage = new InternalStorage();
         List<Image> images = internalStorage.loadImages(this);
+
+        // Creates imageViews
         for(Image image : images){
             createImageView(image.getBitmap(), String.valueOf(image.getName()));
         }
@@ -133,12 +146,14 @@ public class MainActivity extends AppCompatActivity {
      */
     @SuppressLint("ClickableViewAccessibility")
     private void createImageView(Bitmap bitmap, String uniqueID){
+        // Creates imageView
         ImageView imageView = new ImageView(this);
         imageView.setImageBitmap(bitmap);
         imageView.setAdjustViewBounds(true);
         imageView.setMaxHeight(500);
         imageView.setMaxWidth(500);
 
+        // If id isn't set - Create new id
         if (uniqueID == null) {
             // Create unique id
             uniqueID = UUID.randomUUID().toString();
@@ -147,13 +162,19 @@ public class MainActivity extends AppCompatActivity {
         // Sets id to imageview
         imageView.setId(uniqueID.hashCode());
 
+        // Adds imageView to layout
         _boardLayout.addView(imageView);
+
+        // Adds imageView to list of imageviews (used for manipulating data)
         _imageViews.add(imageView);
 
+        // On touch listener for movement of image
         imageView.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")
+
             float x, y;
             float dx, dy;
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN){
