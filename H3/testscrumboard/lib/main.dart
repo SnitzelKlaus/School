@@ -1,5 +1,5 @@
-import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
 import 'package:flutter/material.dart';
+import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    _contents = List.generate(3, (index) {
+    _contents = List.generate(4, (index) {
       return DragAndDropList(
         header: Column(
           children: <Widget>[
@@ -52,14 +52,22 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        footer: OutlinedButton(
-          onPressed: () {},
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.white),
-          ),
-          child: const Text(
-            'Add',
-            style: TextStyle(color: Colors.black),
+        footer: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: OutlinedButton(
+            onPressed: () {},
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.white),
+              shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+            child: const Text(
+              'Add',
+              style: TextStyle(color: Colors.black),
+            ),
           ),
         ),
         children: <DragAndDropItem>[
