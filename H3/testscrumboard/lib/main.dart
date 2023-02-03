@@ -134,8 +134,8 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.only(right: 10),
             child: Icon(
               Icons.moped_rounded,
-              size: 45,
-              color: Color.fromARGB(255, 48, 144, 255),
+              size: 40,
+              color: Color.fromARGB(255, 65, 110, 195),
             ),
           ),
         ),
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
           child: Padding(
             padding: EdgeInsets.only(right: 10),
             child: Icon(
-              Icons.menu,
+              Icons.moped_rounded,
               color: Colors.blueGrey,
             ),
           ),
