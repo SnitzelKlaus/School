@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
+import 'package:testscrumboard/pages/loading.dart';
+import 'package:testscrumboard/pages/home.dart';
+import 'package:testscrumboard/pages/board_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Loading(),
+        '/home': (context) => const Home(),
+        '/board': (context) => const BoardView(),
+      },
+    ),
+  );
 }
 
+
+
+//import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
+
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -176,3 +192,5 @@ class _HomePageState extends State<HomePage> {
     });
   }
 }
+
+*/
