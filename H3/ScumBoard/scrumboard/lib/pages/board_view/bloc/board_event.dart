@@ -7,7 +7,7 @@ abstract class BoardEvent extends Equatable {
 class LoadApiEvent extends BoardEvent {
   final int id;
 
-  LoadApiEvent({required this.id});
+  const LoadApiEvent({required this.id});
 
   @override
   List<Object> get props => [id];

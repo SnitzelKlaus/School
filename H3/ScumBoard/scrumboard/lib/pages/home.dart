@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrumboard/services/board_service.dart';
+import 'package:scrumboard/pages/board_view/board_view.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Scrum Board Demo',
       home: MultiRepositoryProvider(
         providers: [
@@ -14,7 +16,7 @@ class Home extends StatelessWidget {
             create: (context) => BoardService(),
           ),
         ],
-        child: ,
+        child: const BoardView(),
       ),
     );
   }
