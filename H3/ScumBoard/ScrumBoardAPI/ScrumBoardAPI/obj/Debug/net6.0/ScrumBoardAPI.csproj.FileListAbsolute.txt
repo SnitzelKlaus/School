@@ -16,11 +16,6 @@ C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ScrumBo
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ScrumBoardAPI.csproj.CoreCompileInputs.cache
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ScrumBoardAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ScrumBoardAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.ScrumBoardAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.ScrumBoardAPI.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ScrumBoardAPI.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ScrumBoardAPI.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets.build.json
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets.development.json
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\scopedcss\bundle\ScrumBoardAPI.styles.css

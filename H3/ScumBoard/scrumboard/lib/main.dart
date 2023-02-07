@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:testscrumboard/pages/loading.dart';
-import 'package:testscrumboard/pages/home.dart';
-import 'package:testscrumboard/pages/board_view.dart';
+import 'package:scrumboard/pages/loading.dart';
+import 'package:scrumboard/pages/home.dart';
+import 'package:scrumboard/pages/board_view/board_view.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         '/': (context) => const Loading(),
         '/home': (context) => const Home(),

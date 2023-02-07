@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:testscrumboard/services/domain/board.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget {
@@ -11,8 +10,6 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   Future<void> setupBoard() async {
-
-
     /*
     try {
       // Get data from API
