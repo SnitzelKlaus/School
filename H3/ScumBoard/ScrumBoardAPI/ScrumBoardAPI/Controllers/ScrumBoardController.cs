@@ -16,6 +16,8 @@ namespace ScrumBoardAPI.Controllers
 
             string jsonString = JsonConvert.SerializeObject(access.database.Boards.Where(x => x.Id == id));
 
+            jsonString = jsonString.Substring(1, jsonString.Length - 2);
+
             return jsonString;
         }
 

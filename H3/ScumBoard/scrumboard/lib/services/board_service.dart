@@ -4,15 +4,17 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class BoardService {
-  Future<Board> getBoard() async {
+  Future<Board> getBoard(int id) async {
     try {
       final response = await http
-          .get(Uri.parse('https://localhost:7131/api/ScrumBoard/board?id=1'));
-      final responseJson = json.decode(response.body);
+          .get(Uri.parse('http://localhost:5123/api/ScrumBoard/board?id=$id'));
+      final board = boardFromJson(response.body);
 
-      return responseJson;
-    } catch (e) {
+      return board;
+    } catch (e, stacktrace) {
+      print(StackTrace.current);
       print(e);
+
       return Board(
         id: 0,
         title: 'Error',

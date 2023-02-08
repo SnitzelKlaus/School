@@ -26,8 +26,3 @@ C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ScrumBo
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ScrumBoardAPI.genruntimeconfig.cache
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\ref\ScrumBoardAPI.dll
 C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.ScrumBoardAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.ScrumBoardAPI.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ScrumBoardAPI.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ScrumBoardAPI.props
-C:\Code\School\H3\ScumBoard\ScrumBoardAPI\ScrumBoardAPI\obj\Debug\net6.0\staticwebassets.pack.json

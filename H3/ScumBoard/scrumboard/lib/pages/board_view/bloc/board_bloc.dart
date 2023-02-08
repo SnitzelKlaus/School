@@ -11,7 +11,7 @@ class BoardBloc extends Bloc<BoardEvent, BoardState> {
 
   BoardBloc(this._boardService) : super(BoardLoadingState()) {
     on<LoadApiEvent>((event, emit) async {
-      final board = await _boardService.getBoard();
+      final board = await _boardService.getBoard(1);
       emit(BoardLoadedState(
           id: board.id, title: board.title, description: board.description));
     });

@@ -31,7 +31,7 @@ namespace ScrumBoardAPI
                 posts1.Add(new Post(4, "Post4", notes1));
 
                 // Creates a board with posts
-                boards.Add(new Board(1, "Board1", "1", DateTime.Now, DateTime.Now, posts1));
+                boards.Add(new Board(1, "Board1", "This is a description of board1", DateTime.Now, DateTime.Now, posts1));
 
                 // Creates notes
                 List<Note> notes2 = new List<Note>();
@@ -51,7 +51,7 @@ namespace ScrumBoardAPI
                 posts2.Add(new Post(4, "Post4", notes1));
 
                 // Creates a board with posts
-                boards.Add(new Board(2, "Board2", "2", DateTime.Now, DateTime.Now, posts2));
+                boards.Add(new Board(2, "Board2", "This is a description of board2", DateTime.Now, DateTime.Now, posts2));
 
                 // Returns boards
                 return boards;
