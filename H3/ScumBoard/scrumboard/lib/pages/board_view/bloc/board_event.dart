@@ -12,3 +12,8 @@ class LoadApiEvent extends BoardEvent {
   @override
   List<Object> get props => [id];
 }
+
+class NoInternetEvent extends BoardEvent {
+  @override
+  List<Object> get props => [];
+}

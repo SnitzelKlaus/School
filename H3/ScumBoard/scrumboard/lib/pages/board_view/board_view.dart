@@ -34,6 +34,11 @@ class _BoardViewState extends State<BoardView> {
                   Text(state.id.toString()),
                   Text(state.title),
                   Text(state.description),
+                  ElevatedButton(
+                    onPressed: () => BlocProvider.of<BoardBloc>(context)
+                        .add(LoadApiEvent(id: 2)),
+                    child: Text('Load next board'),
+                  ),
                 ],
               );
             }

@@ -23,3 +23,8 @@ class BoardLoadedState extends BoardState {
   @override
   List<Object> get props => [id, title, description];
 }
+
+class BoardNoInternetState extends BoardState {
+  @override
+  List<Object> get props => [];
+}
