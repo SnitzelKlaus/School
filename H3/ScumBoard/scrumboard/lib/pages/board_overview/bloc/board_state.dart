@@ -10,18 +10,14 @@ class BoardLoadingState extends BoardState {
 }
 
 class BoardLoadedState extends BoardState {
-  final int id;
-  final String title;
-  final String description;
+  final List<Board> boards;
 
   const BoardLoadedState({
-    required this.id,
-    required this.title,
-    required this.description,
+    required this.boards,
   });
 
   @override
-  List<Object> get props => [id, title, description];
+  List<Object> get props => [boards];
 }
 
 class BoardNoInternetState extends BoardState {

@@ -1,36 +1,14 @@
+import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
 import 'package:flutter/material.dart';
-import 'package:scrumboard/pages/home.dart';
-import 'package:scrumboard/pages/board_overview/board_overview.dart';
-import 'package:scrumboard/pages/board_view.dart';
-import 'package:scrumboard/mockup.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      initialRoute: '/mockup',
-      routes: {
-        '/': (context) => const Home(),
-        '/board_view': (context) => const BoardView(),
-        '/board_overview': (context) => const BoardOverView(),
-        '/mockup': (context) => const Mockup(),
-      },
-    ),
-  );
-}
-
-
-
-//import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
-
-/*
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Mockup extends StatelessWidget {
+  const Mockup({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Scrum Board Demo',
+      title: 'Scrum Board Mockup',
       home: HomePage(),
     );
   }
@@ -194,5 +172,3 @@ class _HomePageState extends State<HomePage> {
     });
   }
 }
-
-*/

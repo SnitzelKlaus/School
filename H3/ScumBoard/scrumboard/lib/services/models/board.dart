@@ -34,7 +34,8 @@ class Board {
         description: json["description"],
         dateCreated: DateTime.parse(json["DateCreated"]),
         dateModified: DateTime.parse(json["DateModified"]),
-        posts: List<Post>.from(json["posts"].map((x) => Post.fromJson(x))).toList(),
+        posts: List<Post>.from(json["posts"].map((x) => Post.fromJson(x)))
+            .toList(),
       );
 
   Map<String, dynamic> toJson() => {

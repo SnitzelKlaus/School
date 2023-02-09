@@ -1,0 +1,101 @@
+
+[
+    {
+        "Id": 1,
+        "Title": "Board1",
+        "description": "This is a description of board1",
+        "DateCreated": "2023-02-08T21:33:26.4464301+01:00",
+        "DateModified": "2023-02-08T21:33:26.4464305+01:00",
+        "posts": [
+            {
+                "Id": 1,
+                "Title": "Post1",
+                "Notes": [
+                    {
+                        "Id": 1,
+                        "Title": "Test1",
+                        "Content": "Content1",
+                        "Date": "2023-02-08T21:33:26.4463203+01:00",
+                        "Priority": 1
+                    },
+                    {
+                        "Id": 2,
+                        "Title": "Test2",
+                        "Content": "Content2",
+                        "Date": "2023-02-08T21:33:26.4463848+01:00",
+                        "Priority": 2
+                    }
+                ]
+            },
+            {
+                "Id": 2,
+                "Title": "Post2",
+                "Notes": [
+                    {
+                        "Id": 1,
+                        "Title": "Test1",
+                        "Content": "Content1",
+                        "Date": "2023-02-08T21:33:26.4463203+01:00",
+                        "Priority": 1
+                    },
+                    {
+                        "Id": 2,
+                        "Title": "Test2",
+                        "Content": "Content2",
+                        "Date": "2023-02-08T21:33:26.4463848+01:00",
+                        "Priority": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Id": 2,
+        "Title": "Board2",
+        "description": "This is a description of board2",
+        "DateCreated": "2023-02-08T21:33:26.4464718+01:00",
+        "DateModified": "2023-02-08T21:33:26.446472+01:00",
+        "posts": [
+            {
+                "Id": 1,
+                "Title": "Post1",
+                "Notes": [
+                    {
+                        "Id": 1,
+                        "Title": "Test1",
+                        "Content": "Content1",
+                        "Date": "2023-02-08T21:33:26.4463203+01:00",
+                        "Priority": 1
+                    },
+                    {
+                        "Id": 2,
+                        "Title": "Test2",
+                        "Content": "Content2",
+                        "Date": "2023-02-08T21:33:26.4463848+01:00",
+                        "Priority": 2
+                    }
+                ]
+            },
+            {
+                "Id": 2,
+                "Title": "Post2",
+                "Notes": [
+                    {
+                        "Id": 1,
+                        "Title": "Test1",
+                        "Content": "Content1",
+                        "Date": "2023-02-08T21:33:26.4463203+01:00",
+                        "Priority": 1
+                    },
+                    {
+                        "Id": 2,
+                        "Title": "Test2",
+                        "Content": "Content2",
+                        "Date": "2023-02-08T21:33:26.4463848+01:00",
+                        "Priority": 2
+                    }
+                ]
+            }
+        ]
+    }
+]

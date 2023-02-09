@@ -22,18 +22,13 @@ namespace ScrumBoardAPI.Controllers
         }
 
         [HttpGet("all")]
-        public IEnumerable<string> GetAll()
+        public string GetAll()
         {
             DAL access = new DAL();
 
-            List<string> list = new List<string>();
+            string jsonString = JsonConvert.SerializeObject(access.database.Boards);
 
-            foreach(var board in access.database.Boards)
-            {
-                list.Add(JsonConvert.SerializeObject(board));
-            }
-
-            return list;
+            return jsonString;
         }
     }
 }

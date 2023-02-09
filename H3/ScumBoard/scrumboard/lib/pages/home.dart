@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrumboard/services/board_service.dart';
-import 'package:scrumboard/pages/board_view/board_view.dart';
+import 'package:scrumboard/pages/board_overview/board_overview.dart';
 import 'package:scrumboard/services/connectivity_service.dart';
 
 class Home extends StatelessWidget {
@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
             create: (context) => ConnectivityService(),
           ),
         ],
-        child: const BoardView(),
+        child: const BoardOverView(),
       ),
     );
   }

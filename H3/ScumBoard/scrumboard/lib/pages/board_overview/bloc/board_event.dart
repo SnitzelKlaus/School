@@ -5,12 +5,8 @@ abstract class BoardEvent extends Equatable {
 }
 
 class LoadApiEvent extends BoardEvent {
-  final int id;
-
-  const LoadApiEvent({required this.id});
-
   @override
-  List<Object> get props => [id];
+  List<Object> get props => [];
 }
 
 class NoInternetEvent extends BoardEvent {
