@@ -52,8 +52,8 @@ class _BoardOverViewState extends State<BoardOverView> {
                       BoardCard(
                         board: board,
                         view: () {
-                          //Navigator.pushNamed(context, '/board_view',
-                              //arguments: board);
+                          Navigator.pushNamed(context, '/board_view',
+                              arguments: board);
                         },
                         delete: () {
                           setState(() {
@@ -109,9 +109,10 @@ class _BoardOverViewState extends State<BoardOverView> {
 
 
 /*
-                  ElevatedButton(
-                    onPressed: () => BlocProvider.of<BoardBloc>(context)
-                        .add(LoadApiEvent()),
-                    child: Text('Load next board'),
-                  ),
+                            setState(
+                              () => {
+                                state.boards.add(createBoard('New board',
+                                    'Just a nice board', state.boards)),
+                              },
+                            )
 */

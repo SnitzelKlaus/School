@@ -1,0 +1,15 @@
+C:\Code\School\H3\Kryptering\Kryptering\bin\Debug\net6.0\Kryptering.exe
+C:\Code\School\H3\Kryptering\Kryptering\bin\Debug\net6.0\Kryptering.deps.json
+C:\Code\School\H3\Kryptering\Kryptering\bin\Debug\net6.0\Kryptering.runtimeconfig.json
+C:\Code\School\H3\Kryptering\Kryptering\bin\Debug\net6.0\Kryptering.dll
+C:\Code\School\H3\Kryptering\Kryptering\bin\Debug\net6.0\Kryptering.pdb
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.csproj.AssemblyReference.cache
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.AssemblyInfoInputs.cache
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.AssemblyInfo.cs
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.csproj.CoreCompileInputs.cache
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.dll
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\refint\Kryptering.dll
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.pdb
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\Kryptering.genruntimeconfig.cache
+C:\Code\School\H3\Kryptering\Kryptering\obj\Debug\net6.0\ref\Kryptering.dll

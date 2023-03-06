@@ -7,7 +7,7 @@ import 'package:scrumboard/mockup.dart';
 void main() {
   runApp(
     MaterialApp(
-      initialRoute: '/mockup',
+      initialRoute: '/',
       routes: {
         '/': (context) => const Home(),
         '/board_view': (context) => const BoardView(),
