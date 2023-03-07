@@ -12,7 +12,6 @@ namespace SecurePasswords
         public static string HashPassword(string password)
         {
             // Create a new instance of the SHA256
-            // cryptograpic service provider
             using (var sha256 = SHA256.Create())
             {
                 // ComputeHash - returns byte array
@@ -26,7 +25,6 @@ namespace SecurePasswords
         public static string HashPassword(string password, string salt)
         {
             // Create a new instance of the SHA256
-            // cryptograpic service provider
             using (var sha256 = SHA256.Create())
             {
                 // ComputeHash - returns byte array
