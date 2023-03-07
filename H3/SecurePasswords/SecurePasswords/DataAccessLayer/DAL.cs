@@ -48,6 +48,8 @@ namespace SecurePasswords.DataAccessLayer
         // Get a user from the database
         public Models.User GetUser(string username)
         {
+            Models.User user;
+
             // Create a new instance of the database context
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -76,26 +78,25 @@ namespace SecurePasswords.DataAccessLayer
                             reader.Read();
 
                             // Create a new instance of the User class
-                            Models.User user = new Models.User(
+                            user = new Models.User(
                             reader.GetString(1),
                             reader.GetString(2),
                             reader.GetString(3),
                             reader.GetInt32(4)
                             );
-
-                            // Return the user
-                            return user;
                         }
                         else
                         {
-                            // Returns null
-                            return null;
+                            user = new Models.User("","","", 0);
                         }
                     }
+
+                    // Close the connection
+                    connection.Close();
+
+                    return user;
                 }
 
-                // Close the connection
-                connection.Close();
             }
         }
     }

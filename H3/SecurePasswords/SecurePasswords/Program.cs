@@ -87,8 +87,10 @@ namespace SecurePasswords
             DataAccessLayer.DAL database = new DataAccessLayer.DAL();
             Models.User user = database.GetUser(username);
 
+            // Hashes login
             string loginHash = Hashing.HashPassword(password,user.Salt, user.Iterations);
 
+            // Checks loginHash with authentic Hash to verify login
             if(loginHash == user.Hash)
             {
                 Console.WriteLine("\nUser has logged in...");
