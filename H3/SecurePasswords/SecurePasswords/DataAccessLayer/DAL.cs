@@ -10,11 +10,17 @@ namespace SecurePasswords.DataAccessLayer
     public class DAL
     {
         // Connection string to the database
-        private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SecurePasswords.mdf;Integrated Security=True";
+        private string _connectionString = @"Data Source=ZBC-E-CH-SKP011;Initial Catalog=SecuredPasswords; Integrated Security=SSPI";
 
         // Add a new user to the database
         public void AddUser(Models.User user)
         {
+            // Checks if user already exists
+            if (UserExists(user.Username))
+            {
+                throw new Exception("User already exists");
+            }
+
             // Create a new instance of the database context
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -25,11 +31,11 @@ namespace SecurePasswords.DataAccessLayer
                 using (SqlCommand command = new SqlCommand())
                 {
                     // Set the command text
-                    command.CommandText = "INSERT INTO Users (Username, Hash, Salt, Iterations) VALUES (@Username, @Hash, @Salt, @Iterations)";
+                    command.CommandText = "INSERT INTO Users (username, password_hash, salt, iterations) VALUES (@Username, @PasswordHash, @Salt, @Iterations)";
 
                     // Add the parameters
                     command.Parameters.AddWithValue("@Username", user.Username);
-                    command.Parameters.AddWithValue("@Hash", user.Hash);
+                    command.Parameters.AddWithValue("@PasswordHash", user.Hash);
                     command.Parameters.AddWithValue("@Salt", user.Salt);
                     command.Parameters.AddWithValue("@Iterations", user.Iterations);
 
@@ -44,7 +50,7 @@ namespace SecurePasswords.DataAccessLayer
                 connection.Close();
             }
         }
-
+        
         // Get a user from the database
         public Models.User GetUser(string username)
         {
@@ -97,6 +103,44 @@ namespace SecurePasswords.DataAccessLayer
                     return user;
                 }
 
+            }
+        }
+
+        // Check if a user exists
+        public bool UserExists(string username)
+        {
+            // Create a new instance of the database context
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                // Open the connection
+                connection.Open();
+
+                // Create a new instance of the SqlCommand class
+                using (SqlCommand command = new SqlCommand())
+                {
+                    // Set the command text
+                    command.CommandText = "SELECT * FROM Users WHERE Username = @Username";
+
+                    // Add the parameters
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    // Set the connection
+                    command.Connection = connection;
+
+                    // Executes the command
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Check if there are any results
+                        if (reader.HasRows)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
             }
         }
     }

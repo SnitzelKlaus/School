@@ -10,11 +10,11 @@ namespace SecurePasswords
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("1. Sign Up");
-                Console.WriteLine("2. Login");
+                Console.WriteLine("1. Login");
+                Console.WriteLine("2. Sign Up");
                 Console.WriteLine("3. Exit");
 
-                Console.Write("Input: ");
+                Console.Write("\nInput: ");
                 char input = Console.ReadKey().KeyChar;
                 switch (input)
                 {
@@ -28,7 +28,7 @@ namespace SecurePasswords
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine(" {ERROR: Invalid argument}");
+                        Console.WriteLine("\nERROR: Invalid argument");
                         Console.ReadKey();
                         break;
                 }
@@ -37,34 +37,80 @@ namespace SecurePasswords
 
         private static void SignUp()
         {
+            // Vaildation for user input
+            InputValidation validate = new InputValidation();
+
+            // Database
+            DataAccessLayer.DAL database = new DataAccessLayer.DAL();
+
             // Clears console
             Console.Clear();
 
             // Username
             Console.Write("\nUsername: ");
-            string? username = Console.ReadLine();
+            string username = "";
+            
+            // Validation
+            bool validUsername = false;
+            while (!validUsername)
+            {
+                username = Console.ReadLine();
+                validUsername = validate.ValidateUsername(username);
+
+                if (!validUsername)
+                {
+                    Console.WriteLine("\nUsername must contain:");
+                    Console.WriteLine("1. 3-20 characters");
+                    Console.WriteLine("2. No special characters/symbols");
+                    Console.WriteLine("2. No punctuations");
+                    Console.WriteLine("3. No spaces");
+                    Console.Write("\n[]: ");
+                }
+            }
 
             // Password to hash
-            Console.Write("\nPassword: ");
-            string? password = Console.ReadLine();
+            Console.Write("Password: ");
+            string password = "";
+
+            // Validation
+            bool validPassword = false;
+            while (!validPassword)
+            {
+                password = Console.ReadLine();
+                validPassword = validate.ValidatePassword(password);
+
+                if (!validPassword)
+                {
+                    Console.WriteLine("\nPassword must contain:");
+                    Console.WriteLine("1. 8-20 characters");
+                    Console.WriteLine("2. No spaces");
+                    Console.Write("\n[]: ");
+                }
+            }
 
             // Generates a random salt
             string salt = Hashing.GenerateSalt(32);
-            Console.WriteLine($"\nSalt: {salt}");
 
             // Iterations
             int iterations = 10;
-            Console.WriteLine($"Hash iterations: {iterations}");
 
+            // Hasing password
             string hash = Hashing.HashPassword(password, salt, iterations);
 
-            // Hash the password and output the result
-            Console.WriteLine($"\nHashed password: {Hashing.HashPassword(password, salt, iterations)}");
-
             // Adds user to database
-            Models.User user = new Models.User(username, hash, salt, iterations);
-            DataAccessLayer.DAL database = new DataAccessLayer.DAL();
-            database.AddUser(user);
+            try
+            {
+                Models.User user = new Models.User(username, hash, salt, iterations);
+                database.AddUser(user);
+
+                Console.WriteLine($"\nSalt: {salt}");
+                Console.WriteLine($"Hash iterations: {iterations}");
+                Console.WriteLine($"Hash: {hash}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"ERROR: {e.Message}");
+            }
 
             // Wait for user input
             Console.ReadKey();
@@ -80,7 +126,7 @@ namespace SecurePasswords
             string? username = Console.ReadLine();
 
             // Password
-            Console.Write("\nPassword: ");
+            Console.Write("Password: ");
             string? password = Console.ReadLine();
 
             // Gets user from database
