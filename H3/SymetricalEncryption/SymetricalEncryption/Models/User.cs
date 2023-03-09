@@ -8,17 +8,17 @@ namespace SecurePasswords.Models
 {
     public class User
     {
-        public User(string username, string hash, string iv, int iterations)
+        public User(string username, string hash, string salt, int iterations)
         {
             _username = username;
             _hash = hash;
-            _iv = iv;
+            _salt = salt;
             _iterations = iterations;
         }
 
         private string _username;
         private string _hash;
-        private string _iv;
+        private string _salt;
         private int _iterations;
 
         public string Username
@@ -39,12 +39,12 @@ namespace SecurePasswords.Models
             }
         }
 
-        public string IV
+        public string Salt
         {
-            get { return _iv; }
+            get { return _salt; }
             set
             {
-                _iv = value;
+                _salt = value;
             }
         }
 
