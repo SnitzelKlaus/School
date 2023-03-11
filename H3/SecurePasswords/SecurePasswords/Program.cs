@@ -28,7 +28,7 @@ namespace SecurePasswords
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine(" {ERROR: Invalid argument}");
+                        Console.WriteLine("\nERROR: Invalid argument");
                         Console.ReadKey();
                         break;
                 }
