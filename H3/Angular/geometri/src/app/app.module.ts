@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GeometriComponent } from './components/geometri/geometri.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GeometryComponent } from './components/geometry/geometry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeometriComponent
+    GeometryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

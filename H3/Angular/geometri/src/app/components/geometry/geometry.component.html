@@ -1,0 +1,48 @@
+<!--Title-->
+<h1>{{title}}</h1>
+
+<!--Select shape type-->
+<div>
+    <label for="shapeType">Shape Type</label>
+    <select id="shapeType" name="shapeType" [(ngModel)]="selectedShape">
+        <option *ngFor="let shape of shapes" [ngValue]="shape">
+            {{shape.name}}
+        </option>
+    </select>
+</div>
+
+<!--Get's data from shape-->
+<div *ngIf="selectedShape">
+    <h5 style="padding: 20px;">Shape'n stuff:</h5>
+    <div>
+        <label for="shapeName">Name</label>
+        <input type="text" id="shapeName" name="shapeName" [(ngModel)]="selectedShape.name">
+
+        <label for="shapeWidth">Width</label>
+        <input type="number" id="shapeWidth" name="shapeWidth" [(ngModel)]="width">
+
+        <label for="shapeHeight">Height</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="height">
+
+        <label for="shapeHeight">Length</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="length">
+
+        <label for="shapeHeight">Base</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="base">
+
+        <label for="shapeHeight">Side A:</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="sideA">
+
+        <label for="shapeHeight">Side B:</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="sideB">
+
+        <label for="shapeHeight">Side C:</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="sideC">
+
+        <label for="shapeHeight">Side D:</label>
+        <input type="number" id="shapeHeight" name="shapeHeight" [(ngModel)]="sideD">
+
+        <label for="shapeArea">Shape Area</label>
+        <label for="shapeArea">{{selectedShape.getArea()}}</label>
+    </div>
+</div>
