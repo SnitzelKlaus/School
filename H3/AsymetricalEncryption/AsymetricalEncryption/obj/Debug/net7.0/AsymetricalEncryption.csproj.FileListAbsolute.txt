@@ -1,0 +1,15 @@
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\bin\Debug\net7.0\AsymetricalEncryption.exe
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\bin\Debug\net7.0\AsymetricalEncryption.deps.json
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\bin\Debug\net7.0\AsymetricalEncryption.runtimeconfig.json
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\bin\Debug\net7.0\AsymetricalEncryption.dll
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\bin\Debug\net7.0\AsymetricalEncryption.pdb
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.csproj.AssemblyReference.cache
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.AssemblyInfoInputs.cache
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.AssemblyInfo.cs
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.csproj.CoreCompileInputs.cache
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.dll
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\refint\AsymetricalEncryption.dll
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.pdb
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\AsymetricalEncryption.genruntimeconfig.cache
+C:\Code\School\H3\AsymetricalEncryption\AsymetricalEncryption\obj\Debug\net7.0\ref\AsymetricalEncryption.dll
