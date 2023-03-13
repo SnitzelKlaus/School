@@ -28,6 +28,12 @@ namespace AsymetricalEncryption
             return prime;
         }
 
+        public static int GenerateSecureRandomInt()
+        {
+            byte[] randomNumberBytes = new byte[4];
+            RandomNumberGenerator.Create().GetBytes(randomNumberBytes);
+            return BitConverter.ToInt32(randomNumberBytes, 0);
+        }
 
         public byte[] GenerateRandomBytes(int length)
         {

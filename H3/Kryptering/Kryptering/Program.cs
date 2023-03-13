@@ -12,7 +12,7 @@ namespace Kryptering
 
             // Input = number of tests. Each test consist of generating 10000 random secure/non-secure numbers.
             // Output is generated inside the method, which spits out the averege time in ms via Console.WriteLine();
-            test.RandomNumberTest(15);
+            //test.RandomNumberTest(15);
             #endregion
 
             // Message
@@ -31,6 +31,10 @@ namespace Kryptering
             ceasarMessage = Encryption.CeasarDecrypt(ceasarMessage, ceasarKey);
             Console.WriteLine($"Decrypted ceasar message: {ceasarMessage}");
 
+            for (int i = 0; i < 1000; i++)
+            {
+                Console.WriteLine($"{Encryption.GenerateSecureRandomInt(100, 1000)}");
+            }
             Console.ReadKey();
         }
     }    

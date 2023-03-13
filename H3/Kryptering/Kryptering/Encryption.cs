@@ -110,7 +110,7 @@ namespace Kryptering
         {
             byte[] randomNumberBytes = new byte[4];
             RandomNumberGenerator.Create().GetBytes(randomNumberBytes);
-            return BitConverter.ToInt32(randomNumberBytes, 0) % (max - min) + min;
+            return BitConverter.ToInt32(randomNumberBytes, 0) % (max);
         }
 
         public static int GenerateRandomInt(int min, int max)
