@@ -1,0 +1,7 @@
+<p>jokes works!</p>
+
+<div>
+    <button (click)="onClick()">Generate Joke</button>
+    <p *ngIf="(jokeSetup$ | async) as setup">{{setup}}</p>
+    <p *ngIf="(jokePunchline$ | async) as punchline">{{punchline}}</p>
+</div>

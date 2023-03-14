@@ -1,0 +1,6 @@
+<p>Observer works!</p>
+
+<div>
+    <button (click)="onClick()">Random Number</button>
+    <p *ngIf="(randomNumber$ | async) as number">{{number}}</p>
+</div>
