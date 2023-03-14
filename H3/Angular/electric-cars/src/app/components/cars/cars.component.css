@@ -1,0 +1,39 @@
+.even {
+    background-color: #696969;
+
+}
+
+.odd {
+    background-color: #424242;
+}
+
+.Car {
+    border-radius: 2px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #cecece;
+}
+
+.Title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #505050;
+    color: #cecece;
+}
+
+.a{
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.rainbow {
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
