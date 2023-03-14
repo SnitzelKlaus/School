@@ -17,6 +17,8 @@ import { EverythingShape } from 'src/app/classes/everythingShape';
 export class GeometryComponent {
   title = 'Geometry';
 
+  //selectedShape: Parallelogram | Rectangle | Square | Trapez | Triangle | Circle | undefined;
+
   selectedShape: EverythingShape | undefined;
 
   shapes: Shape[] = [
