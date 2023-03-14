@@ -1,12 +1,12 @@
 import { Shape } from "./shape";
 export class Square extends Shape {
-    constructor(public length: number) {
+    constructor(public width: number) {
         super("Square");
     }
     getArea(): number {
-        return this.length * this.length;
+        return this.width * this.width;
     }
     getPerimeter(): number {
-        return 4 * this.length;
+        return 4 * this.width;
     }
 }
