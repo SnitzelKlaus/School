@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { map, Observable } from 'rxjs';
-import { Joke } from 'src/app/interfaces/joke';
-import { JokeService } from 'src/app/services/joke.service';
+import { Observable } from 'rxjs';
+import { Joke } from 'app/interfaces/joke';
+import { JokeService } from 'app/services/joke.service';
 
 @Component({
   selector: 'app-jokes',
@@ -9,19 +9,23 @@ import { JokeService } from 'src/app/services/joke.service';
   styleUrls: ['./jokes.component.css']
 })
 export class JokesComponent {
-  jokeService = new JokeService();
-
-  jokeSetup$: Observable<string> | undefined;
-  jokePunchline$: Observable<string> | undefined;
 
   Constructor(jokeService: JokeService) {
     this.jokeService = jokeService;
   }
 
-  // Generates a random joke from click
+  jokeService = new JokeService();
+
+  //jokeSetup$: Observable<Joke> | undefined;
+
+  jokeSetup$: Observable<string> | undefined;
+  jokePunchline$: Observable<string> | undefined;
+
   onClick() {
-    this.jokeSetup$ = this.jokeService.getRandomJoke().pipe(map(joke => joke.setup));
+    const index = this.jokeService.getRandomJoke();
+    this.jokeSetup$ = this.jokeService.getJoke(index);
+    setTimeout(() => {
+      this.jokePunchline$ = this.jokeService.getPunchline(index);
+    }, 3000);
   }
-
-
 }

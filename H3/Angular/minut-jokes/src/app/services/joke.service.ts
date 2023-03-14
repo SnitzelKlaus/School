@@ -40,8 +40,16 @@ export class JokeService {
     }];
 
   // Gets a random joke
-  public getRandomJoke(): Observable<Joke> {
-    const randomIndex = Math.floor(Math.random() * this.joke.length);
-    return of(this.joke[randomIndex]);
+  public getRandomJoke(): number {
+    return Math.floor(Math.random() * this.joke.length);
+  }
+
+  // Get joke setup
+  public getJoke(id: number): Observable<string> {
+    return of(this.joke[id].setup);
+  }
+
+  public getPunchline(id: number): Observable<string> {
+    return of(this.joke[id].punchline);
   }
 }
