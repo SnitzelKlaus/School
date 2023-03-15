@@ -1,0 +1,23 @@
+<H1 class="Title">Electric cars:</H1>
+
+
+
+<!--If cars is loaded show cars-->
+<ng-container *ngIf="(fossilCars$ | async) as cars">
+    <thead class="Car rainbow">
+        <tr>
+            <th class="a">Rank</th>
+            <th class="a">Model</th>
+            <th class="a">Quantity</th>
+            <th class="a">Change Quantity Percent</th>
+        </tr>
+    </thead>
+    <div *ngFor="let car of cars; let even = even; let odd = odd" [ngClass]="{odd: odd, even: even}" class="Car">
+        <tr>
+            <td class="a rainbow">{{car.id}}</td>
+            <td class="a">{{car.model}}</td>
+            <td class="a">{{car.quantity}}</td>
+            <td class="a rainbow">{{car.changeQuantityPercent}}</td>
+        </tr>
+    </div>
+</ng-container>
