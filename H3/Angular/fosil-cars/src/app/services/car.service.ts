@@ -32,6 +32,15 @@ export class CarService {
     this.fossilCars[index] = car;
   }
 
+  // Checks car id to see if it exists in fossilCars array
+  // Returns true or false
+  carExistById(id: number | null): boolean {
+    if (id === null) {
+      return false;
+    }
+    return this.fossilCars.some((car) => car.id === id);
+  }
+
   emitFossilCars(): Observable<Array<Car>> {
     return of(this.fossilCars);
   }
