@@ -7,11 +7,67 @@
     background-color: #424242;
 }
 
-.Car {
-    border-radius: 2px;
+td {
+    width: 25%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    color: #cecece;
+}
+
+table {
+    width: 100%;
+}
+
+form {
+    width: 20%;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+/*mordernise input box*/
+input {
+    border-left: rgb(42, 42, 42) 2px solid;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+button {
+    border-radius: 5px;
+    background-color: #582020;
+    color: #cecece;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+.Form__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #cecece;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 1px;
+}
+
+.Form__input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #cecece;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 1px;
+}
+
+.Form__input>* {
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+    width: 50%;
+    padding: 5px;
     color: #cecece;
 }
 
@@ -22,14 +78,6 @@
     border-radius: 5px;
     background-color: #505050;
     color: #cecece;
-}
-
-.a {
-    padding-left: 25px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
 }
 
 .rainbow {

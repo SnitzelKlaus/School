@@ -2,6 +2,11 @@
 
 <!--Submit car form-->
 <form class="Form" [formGroup]="carForm" (ngSubmit)="onSubmit()">
+    <!--Info box-->
+    <div class="Form__info">
+        <span>Choose an existing id from the table to edit a car</span>
+        <span>Or enter a new id to add a new car to the table</span>
+    </div>
     <div class="Form__input">
         <label for="id">Id:</label>
         <input type="number" id="id" formControlName="id" />
@@ -22,21 +27,21 @@
 </form>
 
 <!--If cars is loaded show cars-->
-<ng-container *ngIf="(fossilCars$ | async) as cars">
-    <thead class="Car rainbow">
+<table class="table" *ngIf="(fossilCars$ | async) as cars">
+    <thead class="rainbow">
         <tr>
-            <th class="a">Rank</th>
-            <th class="a">Model</th>
-            <th class="a">Quantity</th>
-            <th class="a">Change Quantity Percent</th>
+            <th class="">Rank</th>
+            <th class="">Model</th>
+            <th class="">Quantity</th>
+            <th class="">Change Quantity Percent</th>
         </tr>
     </thead>
-    <div *ngFor="let car of cars; let even = even; let odd = odd" [ngClass]="{odd: odd, even: even}" class="Car">
+    <tbody *ngFor="let car of cars; let even = even; let odd = odd" [ngClass]="{odd: odd, even: even}" class="Car">
         <tr>
-            <td class="a rainbow">{{car.id}}</td>
-            <td class="a">{{car.model}}</td>
-            <td class="a">{{car.quantity}}</td>
-            <td class="a rainbow">{{car.changeQuantityPercent}}</td>
+            <td class="rainbow">{{car.id}}</td>
+            <td class="">{{car.model}}</td>
+            <td class="">{{car.quantity}}</td>
+            <td class="rainbow">{{car.changeQuantityPercent}}</td>
         </tr>
-    </div>
-</ng-container>
+    </tbody>
+</table>

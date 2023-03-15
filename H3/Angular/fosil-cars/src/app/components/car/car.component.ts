@@ -12,10 +12,6 @@ import { CarService } from 'src/app/services/car.service';
 export class CarComponent {
   fossilCars$: Observable<Array<Car>> = this.carService.emitFossilCars();
 
-  displayedColumns: string[] = ['Id', 'model', 'quantity', 'changeQuantityPercent'];
-  dataSource = this.fossilCars$;
-  clickedRows = new Set<Car>();
-
   carForm: FormGroup = new FormGroup({
     id: new FormControl(''),
     model: new FormControl(''),
