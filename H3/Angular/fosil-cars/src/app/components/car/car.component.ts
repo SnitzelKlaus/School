@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Car } from 'src/app/interfaces/car';
 import { CarService } from 'src/app/services/car.service';
@@ -15,13 +15,14 @@ export class CarComponent {
   // Creates a new FormGroup with FormControl objects
   // The FormControl objects are used to validate the form and to bind the form to the model
   carForm: FormGroup = new FormGroup({
-    id: new FormControl(),
-    model: new FormControl(),
-    quantity: new FormControl(),
-    changeQuantityPercent: new FormControl(),
+    id: new FormControl('', [Validators.required, Validators.min(1)]),
+    model: new FormControl('', [Validators.required, Validators.minLength(1)]),
+    quantity: new FormControl('', [Validators.required, Validators.min(1)]),
+    changeQuantityPercent: new FormControl('', [Validators.required, Validators.min(1)]),
   });
 
   // This method is called when the user clicks the "Submit" button
+  
   onSubmit(): void {
     // Create a new car object
     const car: Car = {
