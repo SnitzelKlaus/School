@@ -15,10 +15,10 @@ export class CarComponent {
   // Creates a new FormGroup with FormControl objects
   // The FormControl objects are used to validate the form and to bind the form to the model
   carForm: FormGroup = new FormGroup({
-    id: new FormControl(''),
-    model: new FormControl(''),
-    quantity: new FormControl(''),
-    changeQuantityPercent: new FormControl(''),
+    id: new FormControl(),
+    model: new FormControl(),
+    quantity: new FormControl(),
+    changeQuantityPercent: new FormControl(),
   });
 
   // This method is called when the user clicks the "Submit" button
