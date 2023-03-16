@@ -22,7 +22,6 @@ export class CarComponent {
   });
 
   // This method is called when the user clicks the "Submit" button
-  
   onSubmit(): void {
     // Create a new car object
     const car: Car = {

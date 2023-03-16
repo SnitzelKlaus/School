@@ -1,0 +1,18 @@
+<!--Submit text form-->
+<form class="Form" [formGroup]="morseForm" (ngSubmit)="onSubmit()">
+    <!--Info box-->
+    <div class="Form__info">
+        <span>Add text to convert to morse-code</span>
+    </div>
+    <div class="Form__input">
+        <label for="text">Text:</label>
+        <input type="text" id="text" formControlName="text" />
+    </div>
+    <button type="submit" [disabled]="morseForm.invalid">Submit</button>
+</form>
+
+<!--Output-->
+<div class="Form__output">
+    <span>Output:</span>
+    <p>{{ morseCode }}</p>
+</div>
