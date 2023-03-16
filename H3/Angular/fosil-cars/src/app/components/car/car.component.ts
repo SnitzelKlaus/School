@@ -12,6 +12,8 @@ import { CarService } from 'src/app/services/car.service';
 export class CarComponent {
   fossilCars$: Observable<Array<Car>> = this.carService.emitFossilCars();
 
+  // Creates a new FormGroup with FormControl objects
+  // The FormControl objects are used to validate the form and to bind the form to the model
   carForm: FormGroup = new FormGroup({
     id: new FormControl(''),
     model: new FormControl(''),
@@ -19,7 +21,9 @@ export class CarComponent {
     changeQuantityPercent: new FormControl(''),
   });
 
+  // This method is called when the user clicks the "Submit" button
   onSubmit(): void {
+    // Create a new car object
     const car: Car = {
       id: this.carForm.value.id,
       model: this.carForm.value.model,
@@ -27,6 +31,12 @@ export class CarComponent {
       changeQuantityPercent: this.carForm.value.changeQuantityPercent,
     };
 
+    // If carForm is invalid, do nothing
+    if (this.carForm.invalid) {
+      return;
+    }
+
+    // If carForm is valid, add or update car
     if (!this.carService.carExistById(car.id)) {
       this.carService.addFossilCar(car);
     } else {

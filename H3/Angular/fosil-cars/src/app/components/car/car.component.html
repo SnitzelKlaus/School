@@ -23,7 +23,7 @@
         <label for="changeQuantityPercent">Change Quantity Percent:</label>
         <input type="number" id="changeQuantityPercent" formControlName="changeQuantityPercent" />
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="carForm.invalid">Submit</button>
 </form>
 
 <!--If cars is loaded show cars-->
