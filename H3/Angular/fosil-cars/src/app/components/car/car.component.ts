@@ -10,7 +10,8 @@ import { CarService } from 'src/app/services/car.service';
   styleUrls: ['./car.component.css']
 })
 export class CarComponent {
-  fossilCars$: Observable<Array<Car>> = this.carService.emitFossilCars();
+  // Observable array
+  fossilCars$: Observable<Array<Car>>;
 
   // Creates a new FormGroup with FormControl objects
   // The FormControl objects are used to validate the form and to bind the form to the model
@@ -39,10 +40,19 @@ export class CarComponent {
     // If carForm is valid, add or update car
     if (!this.carService.carExistById(car.id)) {
       this.carService.addFossilCar(car);
+      this.carService.sortFossilCarsById();
     } else {
       this.carService.updateFossilCar(car);
     }
   }
 
-  constructor(private carService: CarService) { }
+  // This method is called when the user clicks the "Delete" button
+  onDelete(id: number): void {
+    this.carService.deleteFossilCar(id);
+  }
+
+  constructor(private carService: CarService) {
+    this.fossilCars$ = this.carService.emitFossilCars();
+    console.log(this.fossilCars$);
+  }
 }

@@ -30,7 +30,7 @@
 <table class="table" *ngIf="(fossilCars$ | async) as cars">
     <thead class="rainbow">
         <tr>
-            <th class="">Rank</th>
+            <th class="">ID</th>
             <th class="">Model</th>
             <th class="">Quantity</th>
             <th class="">Change Quantity Percent</th>
@@ -38,10 +38,23 @@
     </thead>
     <tbody *ngFor="let car of cars; let even = even; let odd = odd" [ngClass]="{odd: odd, even: even}" class="Car">
         <tr>
+            <!--Car object-->
             <td class="rainbow">{{car.id}}</td>
             <td class="">{{car.model}}</td>
             <td class="">{{car.quantity}}</td>
             <td class="rainbow">{{car.changeQuantityPercent}}</td>
+
+            <!--Car/id route-->
+            <td class="">
+                <a [routerLink]="['/car', car.id]">
+                    <button class="details-button">Info</button>
+                </a>
+            </td>
+
+            <!--Delete button-->
+            <td class="">
+                <button class="delete-button" (click)="onDelete(car.id)">Del</button>
+            </td>
         </tr>
     </tbody>
 </table>

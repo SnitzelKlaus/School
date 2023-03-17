@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { Car } from '../interfaces/car';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarService {
+  private subjectFossilCars: Subject<Array<Car>> = new BehaviorSubject<Car[]>([]);
+
   fossilCars: Array<Car>;
 
   constructor() {
@@ -23,10 +25,12 @@ export class CarService {
     ];
   }
 
+  // Adds a car object to fossilCars array
   addFossilCar(car: Car): void {
     this.fossilCars.push(car);
   }
 
+  // Updates a car object in fossilCars array
   updateFossilCar(car: Car): void {
     const index = this.fossilCars.findIndex((c) => c.id === car.id);
     this.fossilCars[index] = car;
@@ -41,7 +45,29 @@ export class CarService {
     return this.fossilCars.some((car) => car.id === id);
   }
 
+  // Deletes a car object from fossilCars array
+  deleteFossilCar(id: number): void {
+    this.fossilCars = this.fossilCars.filter((car) => car.id !== id);
+    this.subjectFossilCars.next(this.fossilCars);
+  }
+
+  // Returns a car object from fossilCars array
+  getFossilCarById(id: number): Car | undefined {
+    return this.fossilCars.find((car) => car.id === id);
+  }
+
+  // Sorts fossilCars array by id
+  sortFossilCarsById(): Array<Car> {
+    return this.fossilCars.sort((a, b) => a.id - b.id);
+  }
+
+  // Returns fossilCars array as an Observable
   emitFossilCars(): Observable<Array<Car>> {
-    return of(this.fossilCars);
+    this.subjectFossilCars.next(this.fossilCars);
+    return this.subjectFossilCars.asObservable();
+  }
+
+  ngOnInit(): void {
+    this.subjectFossilCars.next(this.fossilCars);
   }
 }
