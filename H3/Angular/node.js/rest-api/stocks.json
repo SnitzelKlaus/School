@@ -1,0 +1,54 @@
+{
+    "stocks": [
+        {
+            "name": "Apple",
+            "symbol": "AAPL",
+            "price": 100
+        },
+        {
+            "name": "Orange",
+            "symbol": "ORNG",
+            "price": 50
+        },
+        {
+            "name": "Banana",
+            "symbol": "BANA",
+            "price": 20
+        },
+        {
+            "name": "Pineapple",
+            "symbol": "PINE",
+            "price": 200
+        },
+        {
+            "name": "Grapes",
+            "symbol": "GRAP",
+            "price": 150
+        },
+        {
+            "name": "Watermelon",
+            "symbol": "WATR",
+            "price": 80
+        },
+        {
+            "name": "Mango",
+            "symbol": "MANG",
+            "price": 120
+        },
+        {
+            "name": "Papaya",
+            "symbol": "PAPA",
+            "price": 70
+        },
+        {
+            "name": "Strawberry",
+            "symbol": "STRA",
+            "price": 90
+        },
+        {
+            "name": "Pomegranate",
+            "symbol": "POME",
+            "price": 110
+        }
+    ]
+}
