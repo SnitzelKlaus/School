@@ -7,6 +7,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
 jsonArray = require('./stocks.json');
 jsonArray = jsonArray['stocks'];
 const array = [];
@@ -69,8 +73,4 @@ app.put('/update/stock/:symbol', (req, res) => {
 
     // Send the modified array as the response.
     res.send(array);
-});
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
 });
