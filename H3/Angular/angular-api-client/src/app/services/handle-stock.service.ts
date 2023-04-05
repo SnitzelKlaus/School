@@ -25,15 +25,15 @@ export class HandleStockService {
     return this.http.get<Stock[]>(this.url + this.endpointAllStocks);
   }
 
-  addCountry(stock: Stock): Observable<Stock> {
+  addStock(stock: Stock): Observable<Stock> {
     return this.http.post<Stock>(this.url + this.endpointAddStock, stock);
   }
 
-  deleteCountry(stock: Stock): Observable<Stock> {
+  deleteStock(stock: Stock): Observable<Stock> {
     return this.http.post<Stock>(this.url + this.endpointDeleteStock, stock);
   }
 
-  updateCountry(stock: Stock): Observable<Stock> {
+  updateStock(stock: Stock): Observable<Stock> {
     return this.http.post<Stock>(this.url + this.endpointUpdateStock, stock);
   }
 }

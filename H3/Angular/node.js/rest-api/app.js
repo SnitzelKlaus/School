@@ -3,6 +3,8 @@ const app = express();
 const cors = require('cors');
 const port = 3000;
 
+// Run API using following command: node app.js
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
