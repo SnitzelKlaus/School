@@ -1,0 +1,14 @@
+<div class="parent">
+    <div class="splitscreen">
+        <app-stock-master></app-stock-master>
+    </div>
+    <div class="splitscreen">
+        <router-outlet></router-outlet>
+        <div style="padding-top:40px; width: 100%">
+            <h2 style="margin-left:40px;">Stocks visited</h2>
+            <div style="margin-left:40px;">
+                <router-outlet name="visited"></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

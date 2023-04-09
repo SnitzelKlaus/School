@@ -1,0 +1,15 @@
+<h2>Stocks</h2>
+<div class="table headline">
+    <span class="h1-stock">Stock</span>
+    <span class="h1-symbol">Symbol</span>
+    <span class="h1-price">Price</span>
+</div>
+<ul class="stocks">
+    <li *ngFor="let stock of stockSubject$ | async">
+        <a [routerLink]="['/stock', stock.symbol]">
+            <span class="stock">{{stock.name}}</span>
+            <span class="symbol">{{stock.symbol}}</span>
+            <span class="price">{{stock.price}}</span>
+        </a>
+    </li>
+</ul> 

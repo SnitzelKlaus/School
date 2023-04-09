@@ -28,6 +28,16 @@ app.get('/stocks', (req, res) => {
     res.send(array)
 });
 
+app.get('/stocks/:symbol', (req, res) => {
+    const symbol = req.params.symbol;
+    const index = array.findIndex((stock) => stock.symbol === symbol);
+    if (index !== -1) {
+        res.send(array[index]);
+    } else {
+        res.send('Stock not found');
+    }
+});
+
 app.post('/add/stock', (req, res) => {
     const name = req.body.name;
     const symbol = req.body.symbol;

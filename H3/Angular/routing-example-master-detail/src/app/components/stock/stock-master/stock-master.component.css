@@ -1,0 +1,14 @@
+.stock{
+    list-style-type: none;
+    padding: 40;
+    margin-left: 60px;
+}
+
+.symbol{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.price{
+    color: #666;
+}

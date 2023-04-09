@@ -1,0 +1,17 @@
+<div>
+    <div *ngIf="stock$ | async as stock">
+        <h1>{{stock.name}}</h1>
+        <h3>{{stock.symbol}}</h3>
+        <h3>{{stock.price | currency:'USD':true:'1.2-2'}}</h3>
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" [(ngModel)]="stock.price" placeholder="price" />
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+<h3>{{stock.price | currency:'USD':true:'1.2-2'}}</h3>
+-->

@@ -1,0 +1,7 @@
+<div *ngIf="messageService.messages$">
+    <h3>Visited Stocks</h3>
+    <button type="button" (click)="messageService.clearMessages()">Clear</button>
+    <div *ngFor="let message of messageService.messages$ | async">
+        <p>{{message}}</p>
+    </div>
+</div>
