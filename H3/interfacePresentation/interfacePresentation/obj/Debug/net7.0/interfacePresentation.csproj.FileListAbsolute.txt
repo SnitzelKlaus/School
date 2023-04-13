@@ -1,0 +1,15 @@
+C:\Code\School\H3\interfacePresentation\interfacePresentation\bin\Debug\net7.0\interfacePresentation.exe
+C:\Code\School\H3\interfacePresentation\interfacePresentation\bin\Debug\net7.0\interfacePresentation.deps.json
+C:\Code\School\H3\interfacePresentation\interfacePresentation\bin\Debug\net7.0\interfacePresentation.runtimeconfig.json
+C:\Code\School\H3\interfacePresentation\interfacePresentation\bin\Debug\net7.0\interfacePresentation.dll
+C:\Code\School\H3\interfacePresentation\interfacePresentation\bin\Debug\net7.0\interfacePresentation.pdb
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.csproj.AssemblyReference.cache
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.AssemblyInfoInputs.cache
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.AssemblyInfo.cs
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.csproj.CoreCompileInputs.cache
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.dll
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\refint\interfacePresentation.dll
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.pdb
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\interfacePresentation.genruntimeconfig.cache
+C:\Code\School\H3\interfacePresentation\interfacePresentation\obj\Debug\net7.0\ref\interfacePresentation.dll
