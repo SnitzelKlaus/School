@@ -65,30 +65,27 @@ namespace interfacePresentation
 
 
             #region Stuff
+            // Stores direction
             ConsoleKey direction = ConsoleKey.DownArrow;
 
             // Disables console cursor
             Console.CursorVisible = false;
+
             while (true)
             {
                 foreach (IObject obj in objects)
                 {
                     if (obj.IsVisible)
                     {
-                        foreach (IObject obj2 in objects)
-                        {
-                            // Collision detection
-                            if (obj.X >= obj2.X && obj.X <= (obj2.X + obj2.Width) && obj.Y > obj2.Y && obj.Y < (obj2.Y + obj2.Height))
-                                break;
-
-                            obj.Draw(obj.X, obj.Y);
-                        }
+                        obj.Draw(obj.X, obj.Y);
                     }
                 }
 
                 // Gets input if key pressed
                 if (Console.KeyAvailable)
                 {
+                    Console.SetCursorPosition(sunfish.X-1, sunfish.Y-1);
+
                     // Stores pressed key
                     ConsoleKey keyPressed = Console.ReadKey().Key;
 
@@ -106,16 +103,16 @@ namespace interfacePresentation
                     switch (direction)
                     {
                         case ConsoleKey.LeftArrow:
-                            sunfish.X -= 2;
+                            shark.X -= 2;
                             break;
                         case ConsoleKey.RightArrow:
-                            sunfish.X += 2;
+                            shark.X += 2;
                             break;
                         case ConsoleKey.DownArrow:
-                            sunfish.Y += 1;
+                            shark.Y += 1;
                             break;
                         case ConsoleKey.UpArrow:
-                            sunfish.Y -= 1;
+                            shark.Y -= 1;
                             break;
                     }
                 }
