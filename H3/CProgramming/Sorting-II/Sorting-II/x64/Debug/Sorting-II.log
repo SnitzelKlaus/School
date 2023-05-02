@@ -1,0 +1,13 @@
+﻿  main.c
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\SelectionSort.h(22,19): warning C4047: '=': 'int *' differs in levels of indirection from 'int'
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(10,2): warning C4013: 'SelectionSortTest' undefined; assuming extern returning int
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(25,20): warning C4047: 'function': 'int' differs in levels of indirection from 'int (*)[5]'
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(25,16): warning C4024: 'selectionSort': different types for formal and actual parameter 1
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(25,28): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(25,22): warning C4024: 'selectionSort': different types for formal and actual parameter 2
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(30): warning C4716: 'SelectionSortTest': must return a value
+C:\Code\School\H3\CProgramming\Sorting-II\Sorting-II\main.c(49): warning C4716: 'InsertionSortTest': must return a value
+  Sorting-II.vcxproj -> C:\Code\School\H3\CProgramming\Sorting-II\x64\Debug\Sorting-II.exe

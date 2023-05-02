@@ -1,0 +1,18 @@
+﻿  main.c
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(13,2): warning C4013: 'fourthAssignment' undefined; assuming extern returning int
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(27,15): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[13]'
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(27,10): warning C4024: 'rString': different types for formal and actual parameter 1
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(20,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(43,25): warning C4047: 'function': 'int *' differs in levels of indirection from 'int (*)[11]'
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(43,21): warning C4024: 'bubbleSort': different types for formal and actual parameter 2
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(62,30): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[46]'
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(62,25): warning C4024: 'countWords': different types for formal and actual parameter 1
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(57,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(76,17): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[38]'
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(76,12): warning C4024: 'sortWords': different types for formal and actual parameter 1
+C:\Code\School\H3\CProgramming\CTry\CTry\main.c(72,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Code\School\H3\CProgramming\CTry\CTry\Word.h(36): warning C4716: 'sortWords': must return a value
+  CTry.vcxproj -> C:\Code\School\H3\CProgramming\CTry\x64\Debug\CTry.exe
