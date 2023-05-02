@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-void selectionSort(int length, int *ptr)
+// Selection sorting algorithm using pointers
+void selectionSort(int *ptr, int length)
 {
 	int i, j, tmp;
 	int *minVal;
@@ -29,4 +30,5 @@ void selectionSort(int length, int *ptr)
 		*minVal = *(ptr + i);
 		*(ptr + i) = tmp;
 	}
+	return 0;
 }

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "BubbleSort.h";
-#include "SelectionSort.h";
-#include "InsertionSort.h";
+#include "BubbleSort.h"
+#include "SelectionSort.h"
+#include "InsertionSort.h"
 
 void main() 
 {
