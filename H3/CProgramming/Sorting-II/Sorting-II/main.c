@@ -1,49 +1,86 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "BubbleSort.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
 
+#define TEST_SIZE 100000
+
 void main() 
 {
-	SelectionSortTest();
+	//SelectionSortTest();
+	InsertionSortTest();
+
 }
 
 int SelectionSortTest()
 {
-	int arr[] = { 12, 11, 13, 5, 6 };
-	int length = sizeof(arr) / sizeof(arr[0]);
+	int arr[TEST_SIZE];
 
 	int i;
-	for (i = 0; i < length; i++) {
+	for (i = 0; i < TEST_SIZE; i++) {
+		arr[i] = rand() % 100;
+	}
+
+	for (i = 0; i < TEST_SIZE; i++) {
 		printf("%d\n", arr[i]);
 	}
 
 	printf("\n");
 
-	selectionSort(&arr, length);
+	// Timer
+	clock_t start, end;
+	double cpu_time_used;
 
-	for (i = 0; i < length; i++) {
+	start = clock();
+	selectionSort(&arr, TEST_SIZE);
+	end = clock();
+
+	cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+	for (i = 0; i < TEST_SIZE; i++) {
 		printf("%d\n", arr[i]);
 	}
+
+	// Print time
+	printf("Time(seconds): %f\n", cpu_time_used);
+
+	return 0;
 }
 
 int InsertionSortTest()
 {
-	int arr[] = { 12, 11, 13, 5, 6 };
-	int length = sizeof(arr) / sizeof(arr[0]);
+	int arr[TEST_SIZE];
 
 	int i;
-	for (i = 0; i < length; i++) {
+	for (i = 0; i < TEST_SIZE; i++) {
+		arr[i] = rand() % 100;
+	}
+
+	for (i = 0; i < TEST_SIZE; i++) {
 		printf("%d\n", arr[i]);
 	}
 	
 	printf("\n");
 
-	insertionSort(arr, length);
+	// Timer
+	clock_t start, end;
+	double cpu_time_used;
 
-	for (i = 0; i < length; i++) {
+	start = clock();
+	insertionSort(&arr, TEST_SIZE);
+	end = clock();
+
+	cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+	for (i = 0; i < TEST_SIZE; i++) {
 		printf("%d\n", arr[i]);
 	}
+
+	// Print time
+	printf("Time(seconds): %f\n", cpu_time_used);
+
+	return 0;
 }

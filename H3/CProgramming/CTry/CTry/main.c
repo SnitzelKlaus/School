@@ -8,9 +8,9 @@
 int main()
 {
 	//firstAssignment();
-	//secondAssignment();
+	secondAssignment();
 	//thirdAssignment();
-	fourthAssignment();
+	//fourthAssignment();
 }
 
 int firstAssignment()
@@ -73,7 +73,7 @@ int fourthAssignment()
 
 	printf("%s\n", text);
 
-	sortWords(&text, length);
+	orderWords(&text, length);
 
 	printf("%s\n", text);
 

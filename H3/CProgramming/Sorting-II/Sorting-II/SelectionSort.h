@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-void selectionSort(int length, int *ptr)
+void selectionSortOriginal(int* ptr, int length)
 {
 	int i, j, tmp;
-	int *minVal;
+	int *minVal = ptr;
 
 	// Loops through all numbers
 	for (i = 0; i < length; i++)
@@ -28,5 +28,33 @@ void selectionSort(int length, int *ptr)
 		tmp = *minVal;
 		*minVal = *(ptr + i);
 		*(ptr + i) = tmp;
+	}
+	return 0;
+}
+
+void swap(int* x, int* y)
+{
+	int temp;
+
+	temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+void selectionSort(int* ptr, int length)
+{
+	int i, j, min;
+
+	for (i = 0; i < length - 1; i++)
+	{
+		min = i;
+		for (j = i + 1; j < length; j++)
+		{
+			if (ptr[j] < ptr[min])
+			{
+				min = j;
+			}
+		}
+		swap(&ptr[i], &ptr[min]);
 	}
 }
