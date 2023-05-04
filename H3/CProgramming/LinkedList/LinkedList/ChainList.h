@@ -21,48 +21,51 @@ void printList() {
     printf("]");
 }
 
-// Insert link at the first location
+// Insert node at the first location
 void insertNodeStart(int data) {
 	// Create a link
 	struct node* link = (struct node*)malloc(sizeof(struct node));
 
-	// Link info
+	// Inserts data to node
 	link->data = data;
 	
-    // Point it to old first node
+    // Creates link to old first node
 	link->next = head;
 	
-    // Point first to new first node
+    // Sets new node to head (first node)
 	head = link;
 }
 
+// Insert node at the end location
 void insertNodeEnd(int data) {
 	// Create a link
 	struct node* link = (struct node*)malloc(sizeof(struct node));
 	link->data = data;
+
 	struct node* p = head;
 	
-	// Point it to old first node
+	// Get's point to end node
 	while (p->next != NULL) {
 		p = p->next;
 	}
 
-	// Point first to new first node
-	link->next = p;
+	// Point end node to new node
+	p->next = link;
 }
 
-void insertNodeNextTo(struct node* prev, int data) {
+void insertNodeAtIndex(struct node* index, int data) {
 	// Create a link
 	struct node* link = (struct node*)malloc(sizeof(struct node));
 	link->data = data;
 	
-	// Point it to old node
-	link->next = prev->next;
+	// Takes over index's link/next node
+	link->next = index->next;
 	
-	// Point old node to new node
-	prev->next = link;
+	// Points index's node to new node
+	index->next = link;
 }
 
+// Delete first item
 void deleteFirstNode() {
 	// Save reference to first link
 	struct node* tempLink = head;
@@ -70,10 +73,11 @@ void deleteFirstNode() {
 	// Mark next link as first
 	head = head->next;
 	
-	// Return the deleted link
+	// Free's the memory of the deleted node
 	free(tempLink);
 }
 
+// Delete last item
 void deleteLastNode() {
 	// Save reference to first link
 	struct node* tempLink = head;
@@ -83,9 +87,8 @@ void deleteLastNode() {
 		tempLink = tempLink->next;
 	}
 	
-	// Return the deleted link
+	// Free's the memory of the deleted node
 	free(tempLink->next);
-	tempLink->next = NULL;
 }
 
 void deleteNode(int data) {
@@ -94,6 +97,8 @@ void deleteNode(int data) {
 	
 	if (tempLink != NULL && tempLink->data == data) {
 		head = tempLink->next;
+
+		// Free's the memory of the deleted node
 		free(tempLink);
 		return;
 	}
@@ -107,7 +112,7 @@ void deleteNode(int data) {
 		return;
 	}
 	
-	// Return the deleted link
+	// Free's the memory of the deleted node
 	free(tempLink->next);
 	
 	// Point old node to new node 
