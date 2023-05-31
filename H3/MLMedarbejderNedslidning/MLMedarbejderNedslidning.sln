@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLMedarbejderNedslidning", "MLMedarbejderNedslidning\MLMedarbejderNedslidning.csproj", "{CAF19A07-DE78-4138-9766-444D00DB0CA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAF19A07-DE78-4138-9766-444D00DB0CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF19A07-DE78-4138-9766-444D00DB0CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF19A07-DE78-4138-9766-444D00DB0CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF19A07-DE78-4138-9766-444D00DB0CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC5BCB5F-BD0F-471C-8843-32E12A9D3C30}
+	EndGlobalSection
+EndGlobal

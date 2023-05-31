@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MLMedarbejderNedslidning": {
+      "commandName": "Project",
+      "commandLineArgs": "predict ..\\..\\..\\Data\\inputData.json"
+    }
+  }
+}
