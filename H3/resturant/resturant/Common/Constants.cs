@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace resturant.Common
 {
-    internal class Constants
+    //public class Constants
+    //{
+    //    public const string MODEL_FILENAME = "ModelData.mdl";
+    //}
+
+    public class Constants
     {
-        public static string MODEL_FILENAME = "C:\\Code\\School\\H3\\resturant\\resturant\\Data\\sampledata.csv";
+        public const string MODEL_FILENAME = "chapter2.mdl";
     }
 }

@@ -12,29 +12,56 @@ namespace resturant.ML
 {
     public class Predictor : BaseML
     {
+        //public void Predict(string inputData)
+        //{
+        //    if (!File.Exists(ModelPath))
+        //    {
+        //        Console.WriteLine($"Failed to find model at {ModelPath}");
+        //        return;
+        //    }
+
+        //    ITransformer mlModel;
+        //    using (var stream = new FileStream(ModelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+        //    {
+        //        mlModel = MlContext.Model.Load(stream, out _);
+        //    }
+        //    if (mlModel == null)
+        //    {
+        //        Console.WriteLine("Failed to load model");
+        //        return;
+        //    }
+
+        //    var predEngine = MlContext.Model.CreatePredictionEngine<RestaurantFeedback, RestaurantPrediction>(mlModel);
+        //    var prediction = predEngine.Predict(new RestaurantFeedback { Text = inputData });
+
+        //    Console.WriteLine($"Based on \"{inputData}\", the feedback is predicted to be:{Environment.NewLine}{(prediction.Prediction? "Negative" : "Positive")} at a {prediction.Probability:P0} confidence");
+        //}
+
         public void Predict(string inputData)
         {
-            if (!File.Exists(_modelPath))
+            if (!File.Exists(ModelPath))
             {
-                Console.WriteLine($"Failed to find model at {_modelPath}");
+                Console.WriteLine($"Failed to find model at {ModelPath}");
                 return;
             }
 
             ITransformer mlModel;
-            using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+
+            using (var stream = new FileStream(ModelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                mlModel = _mlContext.Model.Load(stream, out _);
+                mlModel = MlContext.Model.Load(stream, out _);
             }
+
             if (mlModel == null)
             {
                 Console.WriteLine("Failed to load model");
                 return;
             }
 
-            var predEngine = _mlContext.Model.CreatePredictionEngine<RestaurantFeedback, RestaurantPrediction>(mlModel);
-            var prediction = predEngine.Predict(new RestaurantFeedback { Text = inputData });
-        
-            Console.WriteLine($"Based on \"{inputData}\", the feedback is predicted to be:{Environment.NewLine}{(prediction.Prediction? "Negative" : "Positive")} at a {prediction.Probability:P0} confidence");
+            var predictionEngine = MlContext.Model.CreatePredictionEngine<RestaurantFeedback, RestaurantPrediction>(mlModel);
+            var prediction = predictionEngine.Predict(new RestaurantFeedback { Text = inputData });
+
+            Console.WriteLine($"Based on \"{inputData}\", the feedback is predicted to be:{Environment.NewLine}{(prediction.Prediction ? "Negative" : "Positive")} at a {prediction.Probability:P0} confidence");
         }
     }
 }
