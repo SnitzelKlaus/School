@@ -1,0 +1,51 @@
+﻿using System;
+using System.IO;
+using CarBinaryKlassifikation.ML.Base;
+using CarBinaryKlassifikation.ML.Objects;
+using Microsoft.ML;
+using Newtonsoft.Json;
+
+namespace CarBinaryKlassifikation.ML
+{
+    public class Predictor : BaseML
+    {
+        public void Predict(string inputDataFile)
+        {
+            if (!File.Exists(ModelPath))
+            {
+                Console.WriteLine($"Failed to find model at {ModelPath}");
+                return;
+            }
+
+            if (!File.Exists(inputDataFile))
+            {
+                Console.WriteLine($"Failed to find input data at {inputDataFile}");
+                return;
+            }
+
+            ITransformer mlModel;
+            
+            using (var stream = new FileStream(ModelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                mlModel = MlContext.Model.Load(stream, out _);
+            }
+
+            if (mlModel == null)
+            {
+                Console.WriteLine("Failed to load model");
+                return;
+            }
+
+            var predictionEngine = MlContext.Model.CreatePredictionEngine<CarInventory, CarInventoryPrediction>(mlModel);
+
+            var json = File.ReadAllText(inputDataFile);
+
+            var prediction = predictionEngine.Predict(JsonConvert.DeserializeObject<CarInventory>(json));
+
+            Console.WriteLine(
+                $"Based on input json:{Environment.NewLine}" +
+                $"{json}{Environment.NewLine}" +
+                $"The car price is a {(prediction.PredictedLabel ? "good" : "bad")} deal, with a { prediction.Probability:P0} confidence");
+        }
+    }
+}   
