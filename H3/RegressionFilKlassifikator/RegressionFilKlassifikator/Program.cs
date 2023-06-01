@@ -22,7 +22,7 @@ namespace RegressionFilKlassifikator
 
             switch (args[0])
             {
-                case "extract":
+                case "extract":                         // extract ..\..\..\Data\SampleData.csv
                     new FeatureExtractor().Extract(args[1]);
                     break;
                 case "predict":                         // predict ..\..\..\Data\inputData.json
