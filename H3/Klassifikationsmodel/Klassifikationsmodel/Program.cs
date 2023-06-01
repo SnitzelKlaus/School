@@ -23,8 +23,8 @@ namespace CarBinaryKlassifikation
                 case "predict":                         // predict ..\..\..\Data\inputData.json
                     new Predictor().Predict(args[1]);
                     break;
-                case "train":                           // train ..\..\..\Data\SampleData.csv
-                    new Trainer().Train(args[1]);
+                case "train":                           // train ..\..\..\Data\sampledata.csv ..\..\..\Data\testdata.csv
+                    new Trainer().Train(args[1], args[2]);
                     break;
                 default:
                     Console.WriteLine($"{args[0]} is an invalid option");

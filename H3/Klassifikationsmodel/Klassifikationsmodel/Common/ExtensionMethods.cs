@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace RegressionFilKlassifikator.Common
+namespace CarBinaryKlassifikation.Common
 {
     public static class ExtensionMethods
     {

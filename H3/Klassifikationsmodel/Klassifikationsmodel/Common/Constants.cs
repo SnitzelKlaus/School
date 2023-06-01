@@ -1,4 +1,4 @@
-﻿namespace RegressionFilKlassifikator.Common
+﻿namespace CarBinaryKlassifikation.Common
 {
     public class Constants
     {

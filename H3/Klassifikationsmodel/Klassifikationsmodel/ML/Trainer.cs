@@ -13,7 +13,7 @@ namespace CarBinaryKlassifikation.ML
 {
     public class Trainer : BaseML
     {
-        public void Train(string trainingFileName)
+        public void Train(string trainingFileName, string testFileName)
         {
             if (!File.Exists(trainingFileName))
             {
@@ -21,41 +21,50 @@ namespace CarBinaryKlassifikation.ML
                 return;
             }
 
-            IEstimator<ITransformer> dataProcessPipeline = MlContext.Transforms.Concatenate(
-                "Features",
-                typeof(CarInventory).ToPropertyList<CarInventory>(nameof(CarInventory.Label)))
-                .Append(MlContext.Transforms.NormalizeMeanVariance(inputColumnName: "Features",
-                outputColumnName: "FeaturesNormalizedByMeanVar"));
+            if (!File.Exists(testFileName))
+            {
+                Console.WriteLine($"Failed to find test data file {testFileName}");
+                return;
+            }
 
-            var trainingDataView = MlContext.Data.LoadFromTextFile<FileInput>(trainingFileName);
+            var trainingDataView = MlContext.Data.LoadFromTextFile<CarInventory>(trainingFileName);
             var dataSplit = MlContext.Data.TrainTestSplit(trainingDataView, testFraction: 0.2);
 
-            var dataProcessPipeline = MlContext.Transforms.CopyColumns("Label", nameof(FileInput.Label))
-                .Append(MlContext.Transforms.Conversion.ConvertType("Label", outputKind: DataKind.Boolean))
-                .Append(MlContext.Transforms.Text.FeaturizeText("NGrams", nameof(FileInput.Strings)))
-                .Append(MlContext.Transforms.Concatenate("Features", "NGrams"));
+            var dataProcessPipeline = MlContext.Transforms.CopyColumns("Label", nameof(CarInventory.Label))
+                .Append(MlContext.Transforms.Concatenate("Features",    nameof(CarInventory.HasSunroof),
+                                                                        nameof(CarInventory.HasAC),
+                                                                        nameof(CarInventory.HasAutomaticTransmission),
+                                                                        nameof(CarInventory.Amount)))
+                .Append(MlContext.Transforms.NormalizeMeanVariance(inputColumnName: "Features", outputColumnName: "FeaturesNormalizedByMeanVar"));
 
-            var trainer = MlContext.BinaryClassification.Trainers.FastTree(labelColumnName:
-nameof(CarInventory.Label),
- featureColumnName: "FeaturesNormalizedByMeanVar",
- numberOfLeaves: 2,
- numberOfTrees: 1000,
- minimumExampleCountPerLeaf: 1,
- learningRate: 0.2);
+            var trainer = MlContext.BinaryClassification.Trainers.FastTree(labelColumnName: nameof(CarInventory.Label),
+                featureColumnName: "FeaturesNormalizedByMeanVar",
+                numberOfLeaves: 2,
+                numberOfTrees: 1000,
+                minimumExampleCountPerLeaf: 1,
+                learningRate: 0.2);
 
             var trainingPipeline = dataProcessPipeline.Append(trainer);
 
-            ITransformer trainedModel = trainingPipeline.Fit(dataSplit.TrainSet);
+            ITransformer trainedModel = trainingPipeline.Fit(trainingDataView);
+            MlContext.Model.Save(trainedModel, trainingDataView.Schema, ModelPath);
 
-            MlContext.Model.Save(trainedModel, dataSplit.TrainSet.Schema, ModelPath);
+            var testDataView = MlContext.Data.LoadFromTextFile<CarInventory>(testFileName, ',', hasHeader: false);
+            var testSetTransform = trainedModel.Transform(testDataView);
+            var modelMetrics = MlContext.BinaryClassification.Evaluate(data: testSetTransform,
+             labelColumnName: nameof(CarInventory.Label),
+             scoreColumnName: "Score");
 
-            //var testSetTransform = trainedModel.Transform(dataSplit.TestSet);
-            //var modelMetrics = MlContext.BinaryClassification.EvaluateNonCalibrated(testSetTransform);
-
-            //Console.WriteLine($"Accuracy: {modelMetrics.Accuracy:#.##}{Environment.NewLine}" +
-            // $"Positive Precision: {modelMetrics.PositivePrecision:#.##}{Environment.NewLine}" +
-            // $"Negative Precision: {modelMetrics.NegativePrecision:#.##}{Environment.NewLine}" +
-            // $"Area Under Precision Recall Curve: {modelMetrics.AreaUnderPrecisionRecallCurve:#.##}");
+            Console.WriteLine($"Accuracy: {modelMetrics.Accuracy:P2}");
+            Console.WriteLine($"Area Under Curve: {modelMetrics.AreaUnderRocCurve:P2}");
+            Console.WriteLine($"Area under Precision recall Curve: {modelMetrics.AreaUnderPrecisionRecallCurve:P2}");
+            Console.WriteLine($"F1Score: {modelMetrics.F1Score:P2}");
+            Console.WriteLine($"LogLoss: {modelMetrics.LogLoss:#.##}");
+            Console.WriteLine($"LogLossReduction: {modelMetrics.LogLossReduction:#.##}");
+            Console.WriteLine($"PositivePrecision: {modelMetrics.PositivePrecision:#.##}");
+            Console.WriteLine($"PositiveRecall: {modelMetrics.PositiveRecall:#.##}");
+            Console.WriteLine($"NegativePrecision: {modelMetrics.NegativePrecision:#.##}");
+            Console.WriteLine($"NegativeRecall: {modelMetrics.NegativeRecall:P2}");
         }
     }
 }
