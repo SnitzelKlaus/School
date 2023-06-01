@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RegressionFilKlassifikator": {
+      "commandName": "Project",
+      "commandLineArgs": "predict ..\\..\\..\\Data\\DataFile.txt"
+    }
+  }
+}
