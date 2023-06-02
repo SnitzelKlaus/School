@@ -3,17 +3,17 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Reflection;
-using RegressionFilKlassifikator.ML.Base;
-using RegressionFilKlassifikator.ML.Objects;
+using EmailMultiKlassifikation.ML.Base;
+using EmailMultiKlassifikation.ML.Objects;
 using Microsoft.ML;
-using RegressionFilKlassifikator.Common;
+using EmailMultiKlassifikation.Common;
 using Microsoft.ML.Data;
 
-namespace RegressionFilKlassifikator.ML
+namespace EmailMultiKlassifikation.ML
 {
     public class Trainer : BaseML
     {
-        public void Train(string trainingFileName)
+        public void Train(string trainingFileName, string testFileName)
         {
             if (!File.Exists(trainingFileName))
             {
@@ -21,34 +21,45 @@ namespace RegressionFilKlassifikator.ML
                 return;
             }
 
-            var trainingDataView = MlContext.Data.LoadFromTextFile<FileInput>(trainingFileName);
-            var dataSplit = MlContext.Data.TrainTestSplit(trainingDataView, testFraction: 0.2);
+            if (!File.Exists(testFileName))
+            {
+                Console.WriteLine($"Failed to find test data file {testFileName}");
+                return;
+            }
 
-            //var dataProcessPipeline = MlContext.Transforms.CopyColumns("Label", nameof(FileInput.Label))
-            //    .Append(MlContext.Transforms.Conversion.ConvertType("Label", outputKind: DataKind.Single))
-            //    .Append(MlContext.Transforms.Text.FeaturizeText("NGrams", nameof(FileInput.Strings)))
-            //    .Append(MlContext.Transforms.Concatenate("Features", "NGrams"));
+            var trainingDataView = MlContext.Data.LoadFromTextFile<Email>(
+                trainingFileName, ',', hasHeader: false);
 
-            var dataProcessPipeline = MlContext.Transforms.CopyColumns("Label", nameof(FileInput.Label))
-                .Append(MlContext.Transforms.Conversion.ConvertType("Label", outputKind: DataKind.Boolean))
-                .Append(MlContext.Transforms.Text.FeaturizeText("NGrams", nameof(FileInput.Strings)))
-                .Append(MlContext.Transforms.Concatenate("Features", "NGrams"));
+            var dataProcessPipeline = MlContext.Transforms.Conversion.MapValueToKey(
+            inputColumnName: nameof(Email.Category), outputColumnName: "Label")
+             .Append(MlContext.Transforms.Text.FeaturizeText(inputColumnName:
+            nameof(Email.Subject), outputColumnName: "SubjectFeaturized"))
+            .Append(MlContext.Transforms.Text.FeaturizeText(inputColumnName:
+            nameof(Email.Body), outputColumnName: "BodyFeaturized"))
+            .Append(MlContext.Transforms.Text.FeaturizeText(inputColumnName:
+            nameof(Email.Sender), outputColumnName: "SenderFeaturized"))
+            .Append(MlContext.Transforms.Concatenate("Features", "SubjectFeaturized",
+            "BodyFeaturized", "SenderFeaturized"))
+             .AppendCacheCheckpoint(MlContext);
 
-            var trainer = MlContext.BinaryClassification.Trainers.SdcaLogisticRegression(labelColumnName: "Label", featureColumnName: "Features");
+            var trainingPipeline = dataProcessPipeline
+                .Append(MlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Label", "Features"))
+                .Append(MlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
 
-            var trainingPipeline = dataProcessPipeline.Append(trainer);
+            ITransformer trainedModel = trainingPipeline.Fit(trainingDataView);
+            MlContext.Model.Save(trainedModel, trainingDataView.Schema, ModelPath);
 
-            ITransformer trainedModel = trainingPipeline.Fit(dataSplit.TrainSet);
+            var testDataView = MlContext.Data.LoadFromTextFile<Email>(testFileName, ',', hasHeader: false);
+            var testSetTransform = trainedModel.Transform(testDataView);
+            var modelMetrics = MlContext.MulticlassClassification.Evaluate(data: testSetTransform);
 
-            MlContext.Model.Save(trainedModel, dataSplit.TrainSet.Schema, ModelPath);
-
-            //var testSetTransform = trainedModel.Transform(dataSplit.TestSet);
-            //var modelMetrics = MlContext.BinaryClassification.EvaluateNonCalibrated(testSetTransform);
-
-            //Console.WriteLine($"Accuracy: {modelMetrics.Accuracy:#.##}{Environment.NewLine}" +
-            // $"Positive Precision: {modelMetrics.PositivePrecision:#.##}{Environment.NewLine}" +
-            // $"Negative Precision: {modelMetrics.NegativePrecision:#.##}{Environment.NewLine}" +
-            // $"Area Under Precision Recall Curve: {modelMetrics.AreaUnderPrecisionRecallCurve:#.##}");
+            Console.WriteLine($"Macro Accuracy: {modelMetrics.MacroAccuracy:P2}");
+            Console.WriteLine($"Log Loss: {modelMetrics.LogLoss:#.##}");
+            Console.WriteLine("Per Class Log Loss:");
+            for (int i = 0; i < modelMetrics.PerClassLogLoss.Count; i++)
+            {
+                Console.WriteLine($"Class {i}: {modelMetrics.PerClassLogLoss[i]:#.##}");
+            }
         }
     }
 }

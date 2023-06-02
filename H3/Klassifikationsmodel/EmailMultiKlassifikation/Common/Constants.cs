@@ -1,4 +1,4 @@
-﻿namespace RegressionFilKlassifikator.Common
+﻿namespace EmailMultiKlassifikation.Common
 {
     public class Constants
     {

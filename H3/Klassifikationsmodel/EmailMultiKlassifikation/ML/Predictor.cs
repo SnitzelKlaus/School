@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using RegressionFilKlassifikator.ML.Base;
-using RegressionFilKlassifikator.ML.Objects;
+using EmailMultiKlassifikation.ML.Base;
+using EmailMultiKlassifikation.ML.Objects;
 using Microsoft.ML;
 using Newtonsoft.Json;
 
-namespace RegressionFilKlassifikator.ML
+namespace EmailMultiKlassifikation.ML
 {
     public class Predictor : BaseML
     {
@@ -36,16 +36,16 @@ namespace RegressionFilKlassifikator.ML
                 return;
             }
 
-            var predictionEngine = MlContext.Model.CreatePredictionEngine<FileInput, FilePrediction>(mlModel);
+            var predictionEngine = MlContext.Model.CreatePredictionEngine<Email, EmailPrediction>(mlModel);
 
             var json = File.ReadAllText(inputDataFile);
 
-            var prediction = predictionEngine.Predict(new FileInput
-            {
-                Strings = GetStrings(File.ReadAllBytes(inputDataFile))
-            });
+            var prediction = predictionEngine.Predict(JsonConvert.DeserializeObject<Email>(json));
 
-            Console.WriteLine($"Based on the file ({inputDataFile}) the file is classified as {(prediction.IsMalicious ? "malicious" : "benign")}" + $" at a confidence level of {prediction.Probability:P0}");
+            Console.WriteLine(
+             $"Based on input json:{Environment.NewLine}" +
+             $"{json}{Environment.NewLine}" +
+             $"The email is predicted to be a {prediction.Category}");
         }
     }
 }   

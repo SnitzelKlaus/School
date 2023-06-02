@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using RegressionFilKlassifikator.Common;
+using EmailMultiKlassifikation.Common;
 using Microsoft.ML;
 using System.Text.RegularExpressions;
 using System.Text;
 
-namespace RegressionFilKlassifikator.ML.Base
+namespace EmailMultiKlassifikation.ML.Base
 {
     public class BaseML
     {

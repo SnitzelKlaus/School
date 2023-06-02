@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Klassifikationsmodel.Data
-{
-    class data
-    {
-    }
+﻿{
+  "Subject": "1231231",
+  "Body": "Hi, here's your order:'",
+  "Sender": "siberia@customerservice.com"
 }

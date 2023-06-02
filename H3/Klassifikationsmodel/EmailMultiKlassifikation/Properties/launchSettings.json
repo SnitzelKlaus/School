@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EmailMultiKlassifikation": {
+      "commandName": "Project",
+      "commandLineArgs": "predict ..\\..\\..\\Data\\data.json"
+    }
+  }
+}
