@@ -27,39 +27,28 @@ namespace StockPricePredictor.ML
                 return;
             }
 
-            var trainingDataView = MlContext.Data.LoadFromTextFile<Email>(
-                trainingFileName, ',', hasHeader: false);
+            var trainingDataView = MlContext.Data.LoadFromTextFile<Stock>(
+                trainingFileName, ',', hasHeader: true);
 
-            var dataProcessPipeline = MlContext.Transforms.Conversion.MapValueToKey(
-            inputColumnName: nameof(Email.Category), outputColumnName: "Label")
-             .Append(MlContext.Transforms.Text.FeaturizeText(inputColumnName:
-            nameof(Email.Subject), outputColumnName: "SubjectFeaturized"))
-            .Append(MlContext.Transforms.Text.FeaturizeText(inputColumnName:
-            nameof(Email.Body), outputColumnName: "BodyFeaturized"))
-            .Append(MlContext.Transforms.Text.FeaturizeText(inputColumnName:
-            nameof(Email.Sender), outputColumnName: "SenderFeaturized"))
-            .Append(MlContext.Transforms.Concatenate("Features", "SubjectFeaturized",
-            "BodyFeaturized", "SenderFeaturized"))
-             .AppendCacheCheckpoint(MlContext);
+            // Define the pipeline
+            var pipeline = MlContext.Transforms.CopyColumns(inputColumnName: "Close", outputColumnName: "Label")
+                .Append(MlContext.Transforms.Concatenate("Features", "Open", "High", "Low", "Close", "AdjClose", "Volume"))
+                .Append(MlContext.Regression.Trainers.FastTreeTweedie());
 
-            var trainingPipeline = dataProcessPipeline
-                .Append(MlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Label", "Features"))
-                .Append(MlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+            // Train the model
+            var model = pipeline.Fit(trainingDataView);
 
-            ITransformer trainedModel = trainingPipeline.Fit(trainingDataView);
-            MlContext.Model.Save(trainedModel, trainingDataView.Schema, ModelPath);
+            // Save the model
+            MlContext.Model.Save(model, trainingDataView.Schema, ModelPath);
 
-            var testDataView = MlContext.Data.LoadFromTextFile<Email>(testFileName, ',', hasHeader: false);
-            var testSetTransform = trainedModel.Transform(testDataView);
-            var modelMetrics = MlContext.MulticlassClassification.Evaluate(data: testSetTransform);
+            var testDataView = MlContext.Data.LoadFromTextFile<Stock>(testFileName, ',', hasHeader: true);
 
-            Console.WriteLine($"Macro Accuracy: {modelMetrics.MacroAccuracy:P2}");
-            Console.WriteLine($"Log Loss: {modelMetrics.LogLoss:#.##}");
-            Console.WriteLine("Per Class Log Loss:");
-            for (int i = 0; i < modelMetrics.PerClassLogLoss.Count; i++)
-            {
-                Console.WriteLine($"Class {i}: {modelMetrics.PerClassLogLoss[i]:#.##}");
-            }
+            // Evaluate the model
+            var predictions = model.Transform(testDataView);
+            var metrics = MlContext.Regression.Evaluate(predictions, "Label", "Score");
+            Console.WriteLine($"R-squared: {metrics.RSquared}");
+            Console.WriteLine($"Mean Absolute Error: {metrics.MeanAbsoluteError}");
+            Console.WriteLine($"Mean Squared Error: {metrics.MeanSquaredError}");
         }
     }
 }

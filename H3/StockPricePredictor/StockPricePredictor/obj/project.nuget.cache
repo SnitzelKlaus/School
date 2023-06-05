@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qgRUFaD/VV6bHytUPRBkmJl91KwIviAlE3bzLPJdsa10sDKWHcgheU+hbirKMuW928nZNmi/+5zRDjmk5UgRLA==",
+  "dgSpecHash": "+KDukGQs0LcbO4cKnDNTjkLOJcVKIW0ALT74+NA1nsKZrI5nb2ftaVmZAtWD+XfGplb06L82oq3VMjjTgwMvJw==",
   "success": true,
   "projectFilePath": "C:\\Code\\School\\H3\\StockPricePredictor\\StockPricePredictor\\StockPricePredictor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benj4651\\.nuget\\packages\\microsoft.ml\\2.0.1\\microsoft.ml.2.0.1.nupkg.sha512",
     "C:\\Users\\benj4651\\.nuget\\packages\\microsoft.ml.cpumath\\2.0.1\\microsoft.ml.cpumath.2.0.1.nupkg.sha512",
     "C:\\Users\\benj4651\\.nuget\\packages\\microsoft.ml.dataview\\2.0.1\\microsoft.ml.dataview.2.0.1.nupkg.sha512",
+    "C:\\Users\\benj4651\\.nuget\\packages\\microsoft.ml.fasttree\\2.0.1\\microsoft.ml.fasttree.2.0.1.nupkg.sha512",
     "C:\\Users\\benj4651\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\benj4651\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\benj4651\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",

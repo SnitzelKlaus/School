@@ -1,13 +1,13 @@
 ﻿using System;
-using CarBinaryKlassifikation.ML;
+using StockPricePredictor.ML;
 
-namespace CarBinaryKlassifikation
+namespace StockPricePredictor
 {
     class Program
     {
         static void Main(string[] args)
         {
-            if (args.Length != 2)
+            if (args.Length < 1)
             {
                 Console.WriteLine($"Invalid arguments passed in, exiting.{Environment.NewLine}{Environment.NewLine}" +
                     $"Usage: {Environment.NewLine}" +
@@ -20,10 +20,17 @@ namespace CarBinaryKlassifikation
 
             switch (args[0])
             {
-                case "predict":                         // predict ..\..\..\Data\inputData.json
+
+                // predict ..\..\..\Data\TSLA\TSLA.csv
+                // predict ..\..\..\Data\NVDA\NVDA.csv
+
+                case "predict":
                     new Predictor().Predict(args[1]);
                     break;
-                case "train":                           // train ..\..\..\Data\sampledata.csv ..\..\..\Data\testdata.csv
+
+                // train ..\..\..\Data\TSLA\sampledata.csv ..\..\..\Data\TSLA\testdata.csv
+                // train ..\..\..\Data\NVDA\sampledata.csv ..\..\..\Data\NVDA\testdata.csv
+                case "train":
                     new Trainer().Train(args[1], args[2]);
                     break;
                 default:

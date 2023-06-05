@@ -1,8 +1,9 @@
-﻿namespace EmailMultiKlassifikation.Common
+﻿namespace StockPricePredictor.Common
 {
     public class Constants
     {
-        public const string MODEL_FILENAME = "ModelData.mdl";
-        public const string SAMPLE_DATA = "SampleData.txt";
+        public const string MODEL_FILENAME = "modeldata.mdl";
+        public const string SAMPLE_DATA = "sampledata.csv";
+        public const string TEST_DATA = "testdata.csv";
     }
 }

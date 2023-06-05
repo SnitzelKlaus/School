@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using EmailMultiKlassifikation.ML.Base;
-using EmailMultiKlassifikation.ML.Objects;
+using StockPricePredictor.ML.Base;
+using StockPricePredictor.ML.Objects;
 using Microsoft.ML;
 using Newtonsoft.Json;
 
-namespace EmailMultiKlassifikation.ML
+namespace StockPricePredictor.ML
 {
     public class Predictor : BaseML
     {
@@ -24,7 +24,7 @@ namespace EmailMultiKlassifikation.ML
             }
 
             ITransformer mlModel;
-            
+
             using (var stream = new FileStream(ModelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 mlModel = MlContext.Model.Load(stream, out _);
@@ -36,16 +36,18 @@ namespace EmailMultiKlassifikation.ML
                 return;
             }
 
-            var predictionEngine = MlContext.Model.CreatePredictionEngine<Email, EmailPrediction>(mlModel);
+            // Read data from the file
+            var inputDataView = MlContext.Data.LoadFromTextFile<Stock>(inputDataFile, ',', hasHeader: true);
 
-            var json = File.ReadAllText(inputDataFile);
+            // Create predictions
+            var predictions = mlModel.Transform(inputDataView);
 
-            var prediction = predictionEngine.Predict(JsonConvert.DeserializeObject<Email>(json));
+            var predictedResults = MlContext.Data.CreateEnumerable<StockPrediction>(predictions, reuseRowObject: false);
 
-            Console.WriteLine(
-             $"Based on input json:{Environment.NewLine}" +
-             $"{json}{Environment.NewLine}" +
-             $"The email is predicted to be a {prediction.Category}");
+            foreach (var prediction in predictedResults)
+            {
+                Console.WriteLine($"Predicted Close: {prediction.Close}");
+            }
         }
     }
 }   

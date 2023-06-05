@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using EmailMultiKlassifikation.Common;
+using StockPricePredictor.Common;
 using Microsoft.ML;
 using System.Text.RegularExpressions;
 using System.Text;
 
-namespace EmailMultiKlassifikation.ML.Base
+namespace StockPricePredictor.ML.Base
 {
     public class BaseML
     {
