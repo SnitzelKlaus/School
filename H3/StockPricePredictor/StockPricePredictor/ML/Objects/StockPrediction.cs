@@ -7,9 +7,33 @@ using System.Threading.Tasks;
 
 namespace StockPricePredictor.ML.Objects
 {
-    public class StockPrediction
+    public class OpenPrediction
     {
         [ColumnName("Score")]
-        public float Close { get; set; }
+        public float Open;
+    }
+
+    public class HighPrediction
+    {
+        [ColumnName("Score")]
+        public float High;
+    }
+
+    public class LowPrediction
+    {
+        [ColumnName("Score")]
+        public float Low;
+    }
+
+    public class ClosePrediction
+    {
+        [ColumnName("Score")]
+        public float Close;
+    }
+
+    public class VolumePrediction
+    {
+        [ColumnName("Score")]
+        public float Volume;
     }
 }

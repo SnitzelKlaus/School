@@ -23,6 +23,8 @@ namespace StockPricePredictor
 
                 // predict ..\..\..\Data\TSLA\TSLA.csv
                 // predict ..\..\..\Data\NVDA\NVDA.csv
+                // predict ..\..\..\Data\AMZN\AMZN.csv
+                // predict ..\..\..\Data\ASTK\ASTK.csv
 
                 case "predict":
                     new Predictor().Predict(args[1]);
@@ -30,6 +32,8 @@ namespace StockPricePredictor
 
                 // train ..\..\..\Data\TSLA\sampledata.csv ..\..\..\Data\TSLA\testdata.csv
                 // train ..\..\..\Data\NVDA\sampledata.csv ..\..\..\Data\NVDA\testdata.csv
+                // train ..\..\..\Data\AMZN\sampledata.csv ..\..\..\Data\AMZN\testdata.csv
+                // train ..\..\..\Data\ASTK\sampledata.csv ..\..\..\Data\ASTK\testdata.csv
                 case "train":
                     new Trainer().Train(args[1], args[2]);
                     break;

@@ -9,51 +9,18 @@ namespace StockPricePredictor.ML.Base
 {
     public class BaseML
     {
-        protected static string ModelPath => Path.Combine(AppContext.BaseDirectory, Constants.MODEL_FILENAME);
+        protected static string ModelOpen => Path.Combine(AppContext.BaseDirectory, Constants.MODEL_OPEN);
+        protected static string ModelHigh => Path.Combine(AppContext.BaseDirectory, Constants.MODEL_HIGH);
+        protected static string ModelLow => Path.Combine(AppContext.BaseDirectory, Constants.MODEL_LOW);
+        protected static string ModelClose => Path.Combine(AppContext.BaseDirectory, Constants.MODEL_CLOSE);
+        protected static string ModelVolume => Path.Combine(AppContext.BaseDirectory, Constants.MODEL_VOLUME);
 
         protected readonly MLContext MlContext;
 
-        private static Regex _stringRex;
         protected BaseML()
         {
             MlContext = new MLContext(2020);
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            _stringRex = new Regex(@"[ -~\t]{8,}", RegexOptions.Compiled);
-        }
-
-        protected string GetStrings(byte[] data)
-        {
-            var stringLines = new StringBuilder();
-
-            if (data == null || data.Length == 0)
-            {
-                return stringLines.ToString();
-            }
-
-            using (var ms = new MemoryStream(data, false))
-            {
-                using (var streamReader = new StreamReader(ms, Encoding.GetEncoding(1252),
-               false, 2048, false))
-                {
-                    while (!streamReader.EndOfStream)
-                    {
-                        var line = streamReader.ReadLine();
-
-                        if (string.IsNullOrEmpty(line))
-                        {
-                            continue;
-                        }
-
-                        line = line.Replace("^", "").Replace(")", "").Replace("-", "");
-
-                        stringLines.Append(string.Join(string.Empty,
-                            _stringRex.Matches(line).Where(a => !string.IsNullOrEmpty(a.Value) &&
-                            !string.IsNullOrWhiteSpace(a.Value)).ToList()));
-
-                    }
-                    return string.Join(string.Empty, stringLines);
-                }
-            }
         }
     }
 }
