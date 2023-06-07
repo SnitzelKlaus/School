@@ -2,7 +2,7 @@
   "profiles": {
     "StockPricePredictor": {
       "commandName": "Project",
-      "commandLineArgs": "predict ..\\..\\..\\Data\\TSLA\\TSLA.csv"
+      "commandLineArgs": "predict ..\\..\\..\\Data\\NVDA\\NVDA.csv"
     }
   }
 }

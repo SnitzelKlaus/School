@@ -4,10 +4,11 @@ using StockPricePredictor.ML.Base;
 using StockPricePredictor.ML.Objects;
 using Microsoft.ML;
 using Newtonsoft.Json;
+using StockPricePredictor.ML.Interfaces;
 
 namespace StockPricePredictor.ML
 {
-    public class Predictor : BaseML
+    public class Predictor : BaseML, IPredictor
     {
         public void Predict(string inputDataFile)
         {
@@ -23,7 +24,8 @@ namespace StockPricePredictor.ML
                 return;
             }
 
-            MlContext.ComponentCatalog.RegisterAssembly(typeof(StockExtended).Assembly);
+            // Registers a custom mapping action. The "StockExtendedMapping" string is the contractName.
+            MlContext.ComponentCatalog.RegisterAssembly(typeof(StockExtendedMapping).Assembly);
 
             // Loads the models
             ITransformer openModel;
@@ -61,29 +63,33 @@ namespace StockPricePredictor.ML
             }
 
             // Reads data from the file
-            var inputDataView = MlContext.Data.LoadFromTextFile<StockExtended>(inputDataFile, ',', hasHeader: true);
+            var inputDataView = MlContext.Data.LoadFromTextFile<Stock>(inputDataFile, ',', hasHeader: true);
+
+            // Mapping data to the extended model
+            var conversionPipeline = MlContext.Transforms.CustomMapping(new StockExtendedMapping().GetMapping(), contractName: "StockExtendedMapping");
+            var convertedDataView = conversionPipeline.Fit(inputDataView).Transform(inputDataView);
 
             // Creates predictions for each model
-            var openPredictions = openModel.Transform(inputDataView);
-            var highPredictions = highModel.Transform(inputDataView);
-            var lowPredictions = lowModel.Transform(inputDataView);
-            var closePredictions = closeModel.Transform(inputDataView);
-            var volumePredictions = volumeModel.Transform(inputDataView);
+            var openPredictions = openModel.Transform(convertedDataView);
+            var highPredictions = highModel.Transform(convertedDataView);
+            var lowPredictions = lowModel.Transform(convertedDataView);
+            var closePredictions = closeModel.Transform(convertedDataView);
+            var volumePredictions = volumeModel.Transform(convertedDataView);
 
-            // Converts IDataView to IEnumerable for each model
+            // Converts InputDataView to IEnumerable for each model
             var openPredictedResults = MlContext.Data.CreateEnumerable<OpenPrediction>(openPredictions, reuseRowObject: false);
             var highPredictedResults = MlContext.Data.CreateEnumerable<HighPrediction>(highPredictions, reuseRowObject: false);
             var lowPredictedResults = MlContext.Data.CreateEnumerable<LowPrediction>(lowPredictions, reuseRowObject: false);
             var closePredictedResults = MlContext.Data.CreateEnumerable<ClosePrediction>(closePredictions, reuseRowObject: false);
             var volumePredictedResults = MlContext.Data.CreateEnumerable<VolumePrediction>(volumePredictions, reuseRowObject: false);
 
-            // Displaying the first prediction for demo purposes
             var openPrediction = openPredictedResults.First();
             var highPrediction = highPredictedResults.First();
             var lowPrediction = lowPredictedResults.First();
             var closePrediction = closePredictedResults.First();
             var volumePrediction = volumePredictedResults.First();
 
+            // Displaying the first prediction for demo purposes
             Console.WriteLine($"Predicted Open: {openPrediction.Open}");
             Console.WriteLine($"Predicted High: {highPrediction.High}");
             Console.WriteLine($"Predicted Low: {lowPrediction.Low}");

@@ -9,21 +9,25 @@ namespace StockPricePredictor.ML.Objects
 {
     public class Stock
     {
-        // Date,    Open,   High,   Low,    Close,  Adj Close,  Volume
-
         [LoadColumn(0)]
-        public DateTime Date { get; set; }
+        public string Date;
+
         [LoadColumn(1)]
-        public float Open { get; set; }
+        public float Open;
+
         [LoadColumn(2)]
-        public float High { get; set; }
+        public float High;
+
         [LoadColumn(3)]
-        public float Low { get; set; }
+        public float Low;
+
         [LoadColumn(4)]
-        public float Close { get; set; }
+        public float Close;
+
         [LoadColumn(5)]
-        public float AdjClose { get; set; }
+        public float AdjClose;
+
         [LoadColumn(6)]
-        public float Volume { get; set; }
+        public float Volume;
     }
 }

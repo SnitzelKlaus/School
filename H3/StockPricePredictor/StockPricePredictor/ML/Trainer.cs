@@ -8,6 +8,7 @@ using StockPricePredictor.ML.Objects;
 using Microsoft.ML;
 using StockPricePredictor.Common;
 using Microsoft.ML.Data;
+using Microsoft.ML.Transforms;
 
 namespace StockPricePredictor.ML
 {
@@ -30,52 +31,35 @@ namespace StockPricePredictor.ML
             var trainingDataView = MlContext.Data.LoadFromTextFile<Stock>(
                 trainingFileName, ',', hasHeader: true);
 
-            // The mapping function is used to convert the input data to the format expected by the model
-            // Here vi transforms date to a float representing the number of days since 1/1/2000
-            Action<Stock, StockExtended> mapping = (input, output) =>
-            {
-                output.Date = (float)(input.Date - new DateTime(2000, 1, 1)).TotalDays;
-                output.Open = input.Open;
-                output.High = input.High;
-                output.Low = input.Low;
-                output.Close = input.Close;
-                output.Volume = input.Volume;
-            };
+            // Registers a custom mapping action. The "StockExtendedMapping" string is the contractName.
+            MlContext.ComponentCatalog.RegisterAssembly(typeof(StockExtendedMapping).Assembly);
+            var pipeline = MlContext.Transforms.CustomMapping(new StockExtendedMapping().GetMapping(), contractName: "StockExtendedMapping");
+
 
             // Defining the pipelines
-            // We define separate pipelines for each of the columns we want to predict
-            // This is a workaround because ml.net does not yet support multi-output regression / Multitask regression models
-            // Sequential multi-output regression model
-
-            // Register the custom mapping action. The "CustomMapping" string is the contractName.
-            MlContext.ComponentCatalog.RegisterAssembly(typeof(StockExtended).Assembly);
-
-            // Mapping data to the format expected by the model
-            var pipeline = MlContext.Transforms.CustomMapping<Stock, StockExtended>(StockExtended.Mapping, contractName: "CustomMapping");
-
             var openPipeline = pipeline
                 .Append(MlContext.Transforms.CopyColumns(inputColumnName: "Open", outputColumnName: "Label"))
-                .Append(MlContext.Transforms.Concatenate("Features", "Date", "Open", "High", "Low", "Close", "Volume"))
+                .Append(MlContext.Transforms.Concatenate("Features", "DateFloat", "High", "Low", "Close", "Volume"))
                 .Append(MlContext.Regression.Trainers.FastTreeTweedie());
 
             var highPipeline = pipeline
                 .Append(MlContext.Transforms.CopyColumns(inputColumnName: "High", outputColumnName: "Label"))
-                .Append(MlContext.Transforms.Concatenate("Features", "Date", "Open", "High", "Low", "Close", "Volume"))
+                .Append(MlContext.Transforms.Concatenate("Features", "DateFloat", "Open", "Low", "Close", "Volume"))
                 .Append(MlContext.Regression.Trainers.FastTreeTweedie());
 
             var lowPipeline = pipeline
                 .Append(MlContext.Transforms.CopyColumns(inputColumnName: "Low", outputColumnName: "Label"))
-                .Append(MlContext.Transforms.Concatenate("Features", "Date", "Open", "High", "Low", "Close", "Volume"))
+                .Append(MlContext.Transforms.Concatenate("Features", "DateFloat", "Open", "High", "Close", "Volume"))
                 .Append(MlContext.Regression.Trainers.FastTreeTweedie());
 
             var closePipeline = pipeline
                 .Append(MlContext.Transforms.CopyColumns(inputColumnName: "Close", outputColumnName: "Label"))
-                .Append(MlContext.Transforms.Concatenate("Features", "Date", "Open", "High", "Low", "Close", "Volume"))
+                .Append(MlContext.Transforms.Concatenate("Features", "DateFloat", "Open", "High", "Low", "Volume"))
                 .Append(MlContext.Regression.Trainers.FastTreeTweedie());
 
             var volumePipeline = pipeline
                 .Append(MlContext.Transforms.CopyColumns(inputColumnName: "Volume", outputColumnName: "Label"))
-                .Append(MlContext.Transforms.Concatenate("Features", "Date", "Open", "High", "Low", "Close", "Volume"))
+                .Append(MlContext.Transforms.Concatenate("Features", "DateFloat", "Open", "High", "Low", "Close"))
                 .Append(MlContext.Regression.Trainers.FastTreeTweedie());
 
             // Training the models
