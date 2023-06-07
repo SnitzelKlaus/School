@@ -9,10 +9,11 @@ using Microsoft.ML;
 using StockPricePredictor.Common;
 using Microsoft.ML.Data;
 using Microsoft.ML.Transforms;
+using StockPricePredictor.ML.Interfaces;
 
 namespace StockPricePredictor.ML
 {
-    public class Trainer : BaseML
+    public class Trainer : BaseML, ITrainer
     {
         public void Train(string trainingFileName, string testFileName)
         {
@@ -28,10 +29,12 @@ namespace StockPricePredictor.ML
                 return;
             }
 
+            // Loads the training data
             var trainingDataView = MlContext.Data.LoadFromTextFile<Stock>(
                 trainingFileName, ',', hasHeader: true);
 
-            // Registers a custom mapping action. The "StockExtendedMapping" string is the contractName.
+            // Registers a custom mapping action.This is used to convert the date to a float.
+            // The "StockExtendedMapping" string is the contractName.
             MlContext.ComponentCatalog.RegisterAssembly(typeof(StockExtendedMapping).Assembly);
             var pipeline = MlContext.Transforms.CustomMapping(new StockExtendedMapping().GetMapping(), contractName: "StockExtendedMapping");
 
@@ -76,6 +79,7 @@ namespace StockPricePredictor.ML
             MlContext.Model.Save(closeModel, trainingDataView.Schema, ModelClose);
             MlContext.Model.Save(volumeModel, trainingDataView.Schema, ModelVolume);
 
+            // Evaluating the models
             var testDataView = MlContext.Data.LoadFromTextFile<Stock>(testFileName, ',', hasHeader: true);
 
             EvaluateModel(openModel, testDataView, "Open");

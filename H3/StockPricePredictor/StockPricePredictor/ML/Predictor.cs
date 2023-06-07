@@ -95,6 +95,25 @@ namespace StockPricePredictor.ML
             Console.WriteLine($"Predicted Low: {lowPrediction.Low}");
             Console.WriteLine($"Predicted Close: {closePrediction.Close}");
             Console.WriteLine($"Predicted Volume: {volumePrediction.Volume}");
+
+
+            //string outputPath = "path_to_your_data.csv"; // replace with the actual path to your csv file
+
+            //using (var writer = new StreamWriter(outputPath, append: true))
+            //{
+            //    if (new FileInfo(outputPath).Length == 0)
+            //    {
+            //        writer.WriteLine("Date,Open,High,Low,Close,Adj Close,Volume"); // writes headers if the file is empty
+            //    }
+
+            //    var nextDate = lastDate.AddDays(1); // next date is one day after the last date in your dataset
+
+            //    string lastLine = File.ReadLines(outputPath).Last();
+            //    string lastDateString = lastLine.Split(',')[0];
+            //    DateTime lastDate = DateTime.Parse(lastDateString);
+
+            //    writer.WriteLine($"{nextDate},{openPrediction.Open},{highPrediction.High},{lowPrediction.Low},{closePrediction.Close},{closePrediction.Close},{volumePrediction.Volume}");
+            //}
         }
     }
 }   
