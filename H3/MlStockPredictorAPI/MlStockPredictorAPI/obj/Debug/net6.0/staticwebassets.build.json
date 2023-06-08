@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VOKBLqRcxw8tfk61l7faNFhfnl3LO5xY9fFlnOwDb3c=",
+  "Source": "MlStockPredictorAPI",
+  "BasePath": "_content/MlStockPredictorAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

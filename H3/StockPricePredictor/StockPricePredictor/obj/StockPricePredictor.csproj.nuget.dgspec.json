@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\Code\\School\\H3\\StockPricePredictor\\StockPricePredictor\\StockPricePredictor.csproj",
         "projectName": "StockPricePredictor",
         "projectPath": "C:\\Code\\School\\H3\\StockPricePredictor\\StockPricePredictor\\StockPricePredictor.csproj",
-        "packagesPath": "C:\\Users\\beho5\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\benj4651\\.nuget\\packages\\",
         "outputPath": "C:\\Code\\School\\H3\\StockPricePredictor\\StockPricePredictor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\beho5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\benj4651\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
