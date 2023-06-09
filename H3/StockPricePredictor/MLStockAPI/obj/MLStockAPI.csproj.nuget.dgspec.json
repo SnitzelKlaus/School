@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\School\\H3\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning.csproj": {}
+    "C:\\Code\\School\\H3\\StockPricePredictor\\MLStockAPI\\MLStockAPI.csproj": {}
   },
   "projects": {
-    "C:\\Code\\School\\H3\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning.csproj": {
+    "C:\\Code\\School\\H3\\StockPricePredictor\\MLStockAPI\\MLStockAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\School\\H3\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning.csproj",
-        "projectName": "MLMedarbejderNedslidning",
-        "projectPath": "C:\\Code\\School\\H3\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning.csproj",
+        "projectUniqueName": "C:\\Code\\School\\H3\\StockPricePredictor\\MLStockAPI\\MLStockAPI.csproj",
+        "projectName": "MLStockAPI",
+        "projectPath": "C:\\Code\\School\\H3\\StockPricePredictor\\MLStockAPI\\MLStockAPI.csproj",
         "packagesPath": "C:\\Users\\benj4651\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\School\\H3\\MLMedarbejderNedslidning\\MLMedarbejderNedslidning\\obj\\",
+        "outputPath": "C:\\Code\\School\\H3\\StockPricePredictor\\MLStockAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,13 +45,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.ML": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[2.0.1, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -66,6 +62,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
